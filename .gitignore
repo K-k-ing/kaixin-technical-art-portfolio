@@ -1,0 +1,43 @@
+# Local deployment outputs and tooling
+_site/
+netlify-deploy.zip
+netlify.toml
+_headers
+build-netlify.mjs
+audit-netlify.mjs
+.npm-cache/
+.codex-tools/
+
+# Local reports and legacy backup material
+PROJECT_03_CHANGE_REPORT.md
+新建文件夹/
+新建文件夹.zip
+
+# Original large videos are retained locally. GitHub Pages uses the web previews.
+assets/projects/json-generator/制作过程.mp4
+assets/projects/json-generator/video/json-generator-demo.mp4
+assets/projects/asset-weathering/video/weathering-pipeline-demo.mp4
+
+# Unused source documents and non-web-safe legacy assets
+assets/profile/微信图片_20240820144413.jpg
+assets/profile/材料.pdf
+assets/projects/ai-asset-pipeline/ai机器人/
+assets/projects/ai-asset-pipeline/ai无人机/
+assets/projects/ai-asset-pipeline/ai无人机拆解图/
+assets/projects/ai-asset-pipeline/ai生成/
+assets/projects/ai-asset-pipeline/ue渲染/
+assets/projects/ai-asset-pipeline/佛像/
+assets/projects/ai-asset-pipeline/场景/
+assets/projects/ai-asset-pipeline/场景模型/
+assets/projects/ai-asset-pipeline/场景渲染/
+assets/projects/ai-asset-pipeline/效果图/
+assets/projects/ai-asset-pipeline/无人机/
+assets/projects/ai-asset-pipeline/机器人/
+assets/projects/ai-asset-pipeline/过程图/
+assets/projects/ai-npc/ai NPC/
+assets/projects/json-generator/JSON/
+assets/projects/json-generator/参考图驱动的 AI 游戏场景生产管线测试.pdf
+assets/projects/json-generator/开源引用与工具说明.docx
+assets/projects/json-generator/开源引用与工具说明.pdf
+assets/projects/json-generator/总结与反思.docx
+assets/projects/json-generator/总结与反思.pdf

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Assisted Asset Weathering Pipeline — Kaixin Kang</title>
+  <meta name="description" content="A self-initiated Technical Art R&D project exploring Blender Python geometry analysis, UV-space mask generation, and adjustable real-time weathering materials in Unreal Engine 5.">
+  <meta property="og:title" content="AI-Assisted Asset Weathering Pipeline">
+  <meta property="og:description" content="Procedural geometry analysis, UV-space mask generation, and real-time material weathering in Unreal Engine 5.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="weathering-case">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Kaixin Kang home">KAIXIN KANG</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="../index.html#work" aria-current="page">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf" download>Resume</a>
+        <a href="mailto:122880509@qq.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-main" id="main">
+    <article class="container">
+      <header class="case-hero weathering-hero">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a class="text-link" href="../index.html#work">Back to Work</a>
+          <a class="text-link" href="ai-asset-pipeline.html">Next Project</a>
+        </nav>
+
+        <div class="case-title-wrap" data-reveal>
+          <h1>AI-Assisted Asset Weathering Pipeline</h1>
+          <p class="case-subtitle">Procedural Geometry Analysis, UV-Space Mask Generation, and Real-Time Material Weathering in Unreal Engine 5</p>
+        </div>
+
+        <figure class="case-hero-media weathering-hero-media" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge clean and weathered asset comparison">
+            <img src="../assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png" alt="Clean and weathered states of the same mechanical head asset rendered together in Unreal Engine 5" width="1640" height="987" fetchpriority="high" data-hide-on-error>
+          </button>
+        </figure>
+
+        <div class="weathering-hero-actions" data-reveal>
+          <a class="button button-primary" href="#demo">View Demo Video</a>
+          <a class="button" href="#results">View Results</a>
+          <a class="button" href="#pipeline">Pipeline Overview</a>
+        </div>
+
+        <dl class="case-metadata" data-reveal>
+          <div>
+            <dt>Role</dt>
+            <dd>Independent Technical Artist / Pipeline Developer</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>Blender Python / Unreal Engine 5</dd>
+          </div>
+          <div>
+            <dt>Duration</dt>
+            <dd>Focused one-day sprint + portfolio refinement</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Rapid Prototype and Technical Study</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Geometry Analysis / UV Masks / Materials</dd>
+          </div>
+        </dl>
+
+        <ul class="tags" aria-label="Project tools" data-reveal>
+          <li>Blender Python</li>
+          <li>Unreal Engine 5</li>
+          <li>Technical Art</li>
+          <li>Procedural Materials</li>
+          <li>UV Masks</li>
+          <li>Geometry Analysis</li>
+          <li>Pipeline Tools</li>
+        </ul>
+      </header>
+
+      <section class="case-section" aria-labelledby="overview-title" data-reveal>
+        <h2 id="overview-title">Overview</h2>
+        <p class="case-lede">This self-initiated Technical Art R&amp;D project explores a reusable workflow for generating initial weathering data from a game asset’s geometry and material properties. The pipeline produces UV-space wear, rust, and dirt masks in Blender, then uses those masks to drive adjustable real-time weathering in Unreal Engine 5.</p>
+        <p class="case-note">AI assisted the upstream asset-development context; the current weathering system itself is based on explainable geometry analysis, exported masks, and artist-controlled material parameters.</p>
+      </section>
+
+      <section class="problem-solution" aria-label="Problem and research question" data-reveal>
+        <article>
+          <h2>Problem</h2>
+          <p>While working with AI-assisted 3D assets, I found that generated models still required significant manual material work before they could be used in a real-time engine. Surface wear, oxidation, and dirt often had to be painted repeatedly, and the final result was difficult to adjust consistently across multiple assets.</p>
+        </article>
+        <article>
+          <h2>Research Question</h2>
+          <p>How could I generate a reusable first-pass weathering distribution from the asset itself, while keeping the final look editable inside the game engine?</p>
+        </article>
+      </section>
+
+      <section class="case-section" aria-labelledby="goals-title" data-reveal>
+        <h2 id="goals-title">Design Goals</h2>
+        <ul class="feature-list">
+          <li>Generate reusable first-pass weathering masks from mesh data</li>
+          <li>Keep the output editable in Substance, Blender, or a real-time engine</li>
+          <li>Allow artists to control weathering intensity without regenerating textures</li>
+          <li>Build a transparent and explainable pipeline rather than a black-box result</li>
+        </ul>
+      </section>
+
+      <section class="case-section" id="pipeline" aria-labelledby="pipeline-title" data-reveal>
+        <div class="section-title">
+          <h2 id="pipeline-title">Pipeline Overview</h2>
+          <p>The workflow separates geometry analysis, UV-space data generation, and final look development so each stage remains inspectable and adjustable.</p>
+        </div>
+        <ol class="technical-flow flow-seven" aria-label="Asset weathering pipeline">
+          <li>
+            <span class="flow-number">01</span>
+            <h3>Game Asset</h3>
+            <p>An existing mesh and material set provide the source data for the study.</p>
+          </li>
+          <li>
+            <span class="flow-number">02</span>
+            <h3>Mesh and UV Validation</h3>
+            <p>The current version checks that a usable mesh and UV map already exist.</p>
+          </li>
+          <li>
+            <span class="flow-number">03</span>
+            <h3>Geometry and Material Analysis</h3>
+            <p>Curvature, normal variation, metal regions, AO, and cavity signals are evaluated.</p>
+          </li>
+          <li>
+            <span class="flow-number">04</span>
+            <h3>UV-Space Mask Generation</h3>
+            <p>Per-vertex weights are interpolated across UV triangles to build grayscale masks.</p>
+          </li>
+          <li>
+            <span class="flow-number">05</span>
+            <h3>PNG Export</h3>
+            <p>WearMask, RustMask, and DirtMask are exported as reusable texture data.</p>
+          </li>
+          <li>
+            <span class="flow-number">06</span>
+            <h3>UE5 Master Material</h3>
+            <p>The exported masks drive surface blending inside M_AI_Weathering.</p>
+          </li>
+          <li>
+            <span class="flow-number">07</span>
+            <h3>Real-Time Control</h3>
+            <p>Material Instance parameters adjust wear, rust, and dirt without replacing the mesh.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section" aria-labelledby="blender-title">
+        <div class="section-title" data-reveal>
+          <h2 id="blender-title">Blender Python Pipeline</h2>
+          <p>The Blender stage generates a first-pass distribution from measurable mesh signals. It does not attempt to infer environmental meaning.</p>
+        </div>
+
+        <div class="weathering-signal-grid">
+          <article data-reveal>
+            <span class="flow-number">01 / WEAR</span>
+            <h3>Wear Mask</h3>
+            <p>Generated from curvature and normal variation to identify exposed edges and structural transitions.</p>
+          </article>
+          <article data-reveal>
+            <span class="flow-number">02 / RUST</span>
+            <h3>Rust Mask</h3>
+            <p>Combines metal-region information with AO and cavity signals to restrict oxidation to plausible metallic and occluded areas.</p>
+          </article>
+          <article data-reveal>
+            <span class="flow-number">03 / DIRT</span>
+            <h3>Dirt Mask</h3>
+            <p>Uses AO and cavity information to identify recessed, connected, and locally occluded regions.</p>
+          </article>
+        </div>
+
+        <figure class="weathering-documentation-figure" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge exported weathering mask outputs">
+            <img src="../assets/projects/asset-weathering/masks/weathering-mask-outputs.png" alt="Blender output folder showing separate DirtMask, RustMask, and WearMask textures" width="1382" height="858" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>Separate grayscale outputs keep the three weathering signals available for independent tuning or repainting.</figcaption>
+        </figure>
+
+        <div class="code-callout" data-reveal>
+          <div>
+            <p class="code-label">Simplified control flow</p>
+            <h3>Analysis remains visible in the handoff</h3>
+            <p>This portfolio excerpt summarizes the pipeline structure rather than presenting the entire implementation.</p>
+          </div>
+          <pre><code>analysis = analyze_scene(active_mesh)
+masks = generate_masks(analysis)
+export_masks(masks, output_directory)</code></pre>
+        </div>
+
+        <figure class="weathering-code-figure" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Blender Python workspace">
+            <img src="../assets/projects/asset-weathering/blender/weathering-blender-python-workspace.png" alt="Blender Python workspace showing the weathering pipeline script beside the imported game asset" width="2560" height="1080" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>The Blender workspace keeps the imported asset, Python entry point, and execution context visible during pipeline development.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section" aria-labelledby="uv-title" data-reveal>
+        <div class="section-title">
+          <h2 id="uv-title">UV-Space Generation</h2>
+          <p>The generated values become portable texture data that can be inspected and refined outside the analysis script.</p>
+        </div>
+        <div class="uv-process-grid">
+          <article>
+            <span class="flow-number">01</span>
+            <h3>Interpolate</h3>
+            <p>Per-vertex analysis weights are interpolated inside each UV triangle.</p>
+          </article>
+          <article>
+            <span class="flow-number">02</span>
+            <h3>Rasterize</h3>
+            <p>Each signal is written as a grayscale mask within the 0–1 UV tile.</p>
+          </article>
+          <article>
+            <span class="flow-number">03</span>
+            <h3>Pad</h3>
+            <p>Configurable padding and dilation extend values beyond UV island borders.</p>
+          </article>
+        </div>
+        <p class="case-note">Padding reduces sampling artifacts around UV islands, but complex mirrored, overlapping, or cross-island continuity remains an area for further development. The current version requires an existing valid UV map and does not include automatic unwrapping or UDIM support.</p>
+      </section>
+
+      <section class="case-section" aria-labelledby="ue-title">
+        <div class="section-title" data-reveal>
+          <h2 id="ue-title">Unreal Engine Material System</h2>
+          <p>The material converts reusable masks into non-destructive surface states controlled through a Material Instance.</p>
+        </div>
+
+        <figure class="material-graph-figure" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Unreal Engine weathering material graph">
+            <img src="../assets/projects/asset-weathering/ue5/weathering-ue5-material-graph.png" alt="Unreal Engine M_AI_Weathering material graph connecting wear, rust, and dirt masks to adjustable surface blending" width="2559" height="1362" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption class="material-annotation-grid">
+            <span><b>01</b> Mask Inputs</span>
+            <span><b>02</b> Age Controls</span>
+            <span><b>03</b> Surface Blending</span>
+            <span><b>04</b> Material Outputs</span>
+          </figcaption>
+        </figure>
+
+        <div class="weathering-media-pair">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge weathering material output section">
+              <img src="../assets/projects/asset-weathering/ue5/weathering-material-output.png" alt="Unreal Engine material output connections for base color, metallic, roughness, normal, and ambient occlusion" width="885" height="1008" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Material output connections keep the weathering logic within the same master material.</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge weathering Material Instance controls">
+              <img src="../assets/projects/asset-weathering/ue5/weathering-material-instance.png" alt="Unreal Engine Material Instance showing Dirt_Age, Rust_Age, and Weather_Age controls" width="2559" height="1362" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Material Instance controls expose Dirt_Age, Rust_Age, and Weather_Age for real-time adjustment.</figcaption>
+          </figure>
+        </div>
+
+        <p class="case-lede material-statement">The UE5 material keeps the weathering result non-destructive. The same mesh and master material can produce multiple asset states by changing instance parameters rather than replacing the entire texture set.</p>
+      </section>
+
+      <section class="case-section" aria-labelledby="controls-title" data-reveal>
+        <div class="section-title">
+          <h2 id="controls-title">Real-Time Controls</h2>
+          <p>Same Mesh / Same Master Material / Different Instance Parameters</p>
+        </div>
+        <div class="state-grid">
+          <article>
+            <span class="state-label">Clean</span>
+            <dl>
+              <div><dt>Weather_Age</dt><dd>0</dd></div>
+              <div><dt>Rust_Age</dt><dd>0</dd></div>
+              <div><dt>Dirt_Age</dt><dd>0</dd></div>
+            </dl>
+          </article>
+          <article>
+            <span class="state-label">Medium Weathering</span>
+            <p>Balanced Wear / Rust / Dirt Settings</p>
+          </article>
+          <article>
+            <span class="state-label">Heavy Weathering</span>
+            <dl>
+              <div><dt>Weather_Age</dt><dd>300</dd></div>
+              <div><dt>Rust_Age</dt><dd>300</dd></div>
+              <div><dt>Dirt_Age</dt><dd>300</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" id="results" aria-labelledby="results-title">
+        <div class="section-title" data-reveal>
+          <h2 id="results-title">Results</h2>
+          <p>The prototype established a validated Blender-to-Unreal loop: geometry-derived masks were generated, exported into UV space, and consumed by a parameterized real-time material.</p>
+        </div>
+
+        <figure class="result-figure" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge front clean and weathered comparison">
+            <img src="../assets/projects/asset-weathering/results/weathering-front-clean-vs-aged.png" alt="Front view comparison of weathered and clean states on the same mechanical head asset" width="1380" height="986" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>The final appearance is driven by the same mesh and material system, with different instance parameters controlling the weathering state.</figcaption>
+        </figure>
+
+        <div class="gallery-grid weathering-results-grid">
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge rear clean and weathered comparison">
+                <img src="../assets/projects/asset-weathering/results/weathering-rear-clean-vs-aged.png" alt="Rear view comparison showing clean panels and a weathered surface state" width="1289" height="837" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">01 / REAR SURFACE</p>
+              <h3>Surface Distribution</h3>
+              <p>The rear view shows how dirt and wear remain visible across broad panels and structural seams.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge three-quarter clean and weathered comparison">
+                <img src="../assets/projects/asset-weathering/results/weathering-three-quarter-clean-vs-aged.png" alt="Three-quarter comparison of weathered and clean mechanical head assets in Unreal Engine" width="1499" height="930" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">02 / THREE-QUARTER VIEW</p>
+              <h3>Material Readability</h3>
+              <p>The angled view makes edge wear, panel transitions, and recessed dirt easier to compare.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge clean and heavily weathered comparison">
+                <img src="../assets/projects/asset-weathering/results/weathering-clean-vs-aged-comparison.png" alt="Clean foreground asset and heavily weathered background asset sharing one Unreal Engine material system" width="1571" height="1014" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">03 / INSTANCE VARIATION</p>
+              <h3>Reusable Asset States</h3>
+              <p>Different instance settings produce distinct clean and aged states without swapping the mesh or rebuilding the material.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <figure class="weathering-video-figure" id="demo" data-reveal data-optional-section>
+          <div class="video-frame">
+            <video controls preload="none" playsinline poster="../assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png" aria-label="Asset weathering pipeline demonstration" data-hide-on-error>
+              <source src="../assets/projects/asset-weathering/video/weathering-pipeline-demo-web.mp4" type="video/mp4">
+              <p>Your browser cannot play this video. <a href="../assets/projects/asset-weathering/video/weathering-pipeline-demo-web.mp4">Download the 60-second web preview</a>.</p>
+            </video>
+          </div>
+          <figcaption>This 60-second web preview follows the validated workflow from Blender mask generation to adjustable real-time weathering in Unreal Engine 5.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section rapid-prototype" aria-labelledby="rapid-title" data-reveal>
+        <div>
+          <span class="flow-number">RAPID PROTOTYPING</span>
+          <h2 id="rapid-title">Rapid Prototype Validation</h2>
+        </div>
+        <div>
+          <p>The core prototype was validated during a focused one-day development sprint. Within that period, I established the Blender mask-generation workflow, exported UV-space textures, built the UE5 master material, and tested clean-to-weathered transitions on the AI Pilgrim Head asset.</p>
+          <p>This rapid iteration helped me focus on technical direction, debugging, and cross-software integration before expanding the feature scope.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="challenges-title" data-reveal>
+        <div class="section-title">
+          <h2 id="challenges-title">Challenges and Decisions</h2>
+          <p>Each decision keeps a technically useful first pass while preserving artist control and documenting the current limitations.</p>
+        </div>
+        <div class="decision-grid">
+          <article>
+            <span class="flow-number">01</span>
+            <h3>UV island boundaries and sampling artifacts</h3>
+            <p><b>Decision:</b> Use configurable padding and dilation while clearly documenting remaining seam limitations.</p>
+          </article>
+          <article>
+            <span class="flow-number">02</span>
+            <h3>Procedural masks can look technically correct but visually uniform</h3>
+            <p><b>Decision:</b> Separate Wear, Rust, and Dirt signals so artists can tune or repaint them independently.</p>
+          </article>
+          <article>
+            <span class="flow-number">03</span>
+            <h3>A baked final texture is difficult to iterate in-engine</h3>
+            <p><b>Decision:</b> Use generated masks as reusable data and perform final blending in a UE5 master material.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="scope-title" data-reveal>
+        <div class="section-title">
+          <h2 id="scope-title">Current Scope and Next Steps</h2>
+          <p>The current version proves the core handoff. Future work expands coverage and workflow convenience rather than being presented as completed functionality.</p>
+        </div>
+        <div class="scope-grid">
+          <article>
+            <h3>Implemented and Validated</h3>
+            <ul class="feature-list scope-list">
+              <li>Blender geometry analysis</li>
+              <li>Wear / Rust / Dirt mask generation</li>
+              <li>UV-space rasterization</li>
+              <li>PNG export</li>
+              <li>UV island padding</li>
+              <li>UE5 master material</li>
+              <li>Material Instance controls</li>
+              <li>Clean / Weathered demonstration</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Future Directions</h3>
+            <ul class="feature-list scope-list">
+              <li>Automatic UV unwrapping for assets without UVs</li>
+              <li>Batch asset processing</li>
+              <li>Preset saving and loading</li>
+              <li>Substance Painter export presets</li>
+              <li>Packed RGB mask export</li>
+              <li>Material-specific weathering profiles</li>
+              <li>Environment-aware semantic weathering</li>
+              <li>Optional AI-assisted refinement</li>
+            </ul>
+          </article>
+        </div>
+        <p class="case-note">AI-assisted refinement is a future direction, not a currently deployed inference system.</p>
+      </section>
+
+      <section class="case-section" aria-label="Contribution and takeaway" data-reveal>
+        <div class="closing-grid">
+          <article>
+            <h2>My Contribution</h2>
+            <p>I independently defined the technical direction, implemented and validated the Blender mask-generation workflow, built the UE5 material logic, tested the system on the AI Pilgrim Head asset, recorded the demo, and documented the complete workflow.</p>
+          </article>
+          <article>
+            <h2>Key Takeaway</h2>
+            <p>This project changed how I think about AI-assisted asset production. Generating an asset is only the beginning; the larger Technical Art challenge is building controllable, reusable, and explainable systems that allow generated content to enter a real game-production workflow.</p>
+          </article>
+        </div>
+      </section>
+
+      <nav class="project-pagination" aria-label="Project pagination">
+        <a href="json-generator.html">Previous: JSON Generator</a>
+        <a href="ai-asset-pipeline.html">Next: AI-Assisted 3D Asset Pipeline</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">Kaixin Kang</p>
+        <p class="footer-role">Technical Artist · Chongqing, China</p>
+      </div>
+      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>© 2026 Kaixin Kang</p>
+    </div>
+  </footer>
+</body>
+</html>

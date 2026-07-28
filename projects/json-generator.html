@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON-Driven Procedural Environment Generator for UE5 — Kaixin Kang</title>
+  <meta name="description" content="A Blueprint-based Unreal Engine 5 tool by Kaixin Kang that converts structured JSON data into configurable modular environments.">
+  <meta property="og:title" content="JSON-Driven Procedural Environment Generator for UE5">
+  <meta property="og:description" content="A technical art case study in data-driven UE5 environment generation.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/projects/json-generator/screens/final-environment.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Kaixin Kang home">KAIXIN KANG</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="../index.html#work" aria-current="page">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf" download>Resume</a>
+        <a href="mailto:122880509@qq.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-main" id="main">
+    <article class="container">
+      <header class="case-hero">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a class="text-link" href="../index.html#work">Back to Work</a>
+          <a class="text-link" href="asset-weathering.html">Next Project</a>
+        </nav>
+
+        <div class="case-title-wrap" data-reveal>
+          <h1>JSON-Driven Procedural Environment Generator for UE5</h1>
+          <p class="case-subtitle">A Blueprint-based procedural tool that converts structured JSON data into configurable real-time environments.</p>
+        </div>
+
+        <div class="case-hero-composite" data-reveal>
+          <figure class="case-hero-panel case-hero-panel-primary" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge final modular laboratory environment">
+              <img src="../assets/projects/json-generator/screens/final-environment.png" alt="Wide view of the final modular Unreal Engine 5 laboratory generated from structured scene parameters" width="1916" height="1035" fetchpriority="high" data-hide-on-error>
+            </button>
+            <figcaption>Generated Environment</figcaption>
+          </figure>
+          <figure class="case-hero-panel case-hero-panel-technical" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge artist-facing generator parameter panel">
+              <img src="../assets/projects/json-generator/screens/generator-parameters.png" alt="Unreal Engine Details panel exposing layout dimensions and modular mesh controls for the generator" width="1725" height="825" data-hide-on-error>
+            </button>
+            <figcaption>Artist-Facing Parameters</figcaption>
+          </figure>
+        </div>
+
+        <dl class="case-metadata" data-reveal>
+          <div><dt>Role</dt><dd>Technical Artist / Tool Designer</dd></div>
+          <div><dt>Type</dt><dd>Independent Project</dd></div>
+          <div><dt>Engine</dt><dd>Unreal Engine 5</dd></div>
+          <div><dt>Tools</dt><dd>Blueprint, Construction Script, JSON</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+        </dl>
+      </header>
+
+      <section class="case-section" aria-labelledby="overview-title" data-reveal>
+        <h2 id="overview-title">Overview</h2>
+        <p class="case-lede">This project explores how structured JSON data can be translated into modular Unreal Engine environments. The tool reads environment parameters and automatically rebuilds the scene through a Blueprint Construction Script, allowing designers to adjust layouts without manually repositioning every asset.</p>
+
+        <div class="problem-solution">
+          <article>
+            <h2>Problem</h2>
+            <p>Building multiple environment variations manually requires repeated placement, scaling, alignment, and parameter adjustment. This slows down iteration and makes it difficult to test different room configurations efficiently.</p>
+          </article>
+          <article>
+            <h2>Solution</h2>
+            <p>I created a Blueprint-based generator that maps JSON parameters to Unreal Engine variables and modular mesh slots. When values are updated, the Construction Script automatically regenerates the environment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="features-title" data-reveal>
+        <h2 id="features-title">Core Features</h2>
+        <ul class="feature-list">
+          <li>Configurable room width and length</li>
+          <li>Adjustable wall height and tile size</li>
+          <li>Custom cabinet and light counts</li>
+          <li>Randomized prop placement</li>
+          <li>Modular mesh assignment</li>
+          <li>Automatic Construction Script refresh</li>
+          <li>JSON-driven parameter mapping</li>
+          <li>Rapid layout iteration</li>
+        </ul>
+      </section>
+
+      <section class="case-section" aria-labelledby="architecture-title" data-reveal>
+        <div class="section-title">
+          <h2 id="architecture-title">System Architecture</h2>
+          <p>The internal logic translates structured scene data into artist-editable controls and a validated modular environment.</p>
+        </div>
+        <ol class="technical-flow flow-seven" aria-label="JSON generator system architecture">
+          <li>
+            <span class="flow-number">01</span>
+            <h3>JSON Input</h3>
+            <p>Structured environment parameters define room dimensions, asset counts, and generation settings.</p>
+          </li>
+          <li>
+            <span class="flow-number">02</span>
+            <h3>Parameter Mapping</h3>
+            <p>JSON values are translated into exposed Blueprint variables.</p>
+          </li>
+          <li>
+            <span class="flow-number">03</span>
+            <h3>Blueprint Variables</h3>
+            <p>Design parameters remain artist-facing and editable inside Unreal Engine.</p>
+          </li>
+          <li>
+            <span class="flow-number">04</span>
+            <h3>Construction Script</h3>
+            <p>The scene rebuilds automatically when values are updated.</p>
+          </li>
+          <li>
+            <span class="flow-number">05</span>
+            <h3>Modular Mesh Assignment</h3>
+            <p>Predefined mesh slots are used for floors, walls, cabinets, lights, tables, and props.</p>
+          </li>
+          <li>
+            <span class="flow-number">06</span>
+            <h3>Scene Generation</h3>
+            <p>The tool assembles the room and places modular assets based on the selected parameters.</p>
+          </li>
+          <li>
+            <span class="flow-number">07</span>
+            <h3>Editor Validation</h3>
+            <p>The generated layout is reviewed directly in Unreal Engine for scale, placement, and usability.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section" aria-labelledby="workflow-title" data-reveal>
+        <div class="section-title">
+          <h2 id="workflow-title">Workflow</h2>
+          <p>The production sequence moves from visual reference to structured data, tool setup, and editor testing.</p>
+        </div>
+        <ol class="workflow workflow-detailed">
+          <li><h3>Reference Image</h3><p>Establish the intended room layout, atmosphere, and spatial hierarchy.</p></li>
+          <li><h3>Visual Breakdown</h3><p>Identify room zones, repeatable modules, and assets that need exposed controls.</p></li>
+          <li><h3>Structured JSON</h3><p>Organize dimensions, asset counts, and generation settings as readable input data.</p></li>
+          <li><h3>Blueprint Variable Mapping</h3><p>Connect input values to editable variables inside the generator Blueprint.</p></li>
+          <li><h3>Modular Mesh Assignment</h3><p>Assign reusable environment assets to the appropriate exposed mesh slots.</p></li>
+          <li><h3>Construction Script Generation</h3><p>Rebuild the environment in the editor whenever the configuration changes.</p></li>
+          <li><h3>Unreal Engine Validation</h3><p>Review scale, circulation, placement, and modular fit in the final scene.</p></li>
+        </ol>
+      </section>
+
+      <section class="case-section" aria-labelledby="breakdown-title">
+        <div class="section-title" data-reveal>
+          <h2 id="breakdown-title">Technical Breakdown</h2>
+          <p>Each stage is documented with the source data, configurable parameters, modular setup, and validated scene output.</p>
+        </div>
+
+        <div class="breakdown-list">
+          <figure class="breakdown-item" data-reveal data-optional-media>
+            <div class="breakdown-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge structured JSON screenshot">
+                <img src="../assets/projects/json-generator/screens/structured-json.png" alt="Structured JSON configuration defining modular asset names, positions, rotations, and scale" width="1721" height="1004" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption class="breakdown-copy">
+              <p class="breakdown-number">01</p>
+              <h3>Structured Environment Data</h3>
+              <p>Structured JSON stores environment dimensions and asset counts as readable inputs, separating scene configuration from manual viewport editing.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="breakdown-item" data-reveal data-optional-media>
+            <div class="breakdown-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge mesh assignment panel screenshot">
+                <img src="../assets/projects/json-generator/screens/modular-mesh-assignment.png" alt="Unreal Engine details panel listing modular mesh assignment slots" width="1697" height="653" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption class="breakdown-copy">
+              <p class="breakdown-number">02</p>
+              <h3>Modular Mesh Assignment</h3>
+              <p>Editable mesh slots support floors, walls, back walls, ceiling lights, cabinets, tables, and props without changing the generator structure.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="breakdown-item" data-reveal data-optional-media>
+            <div class="breakdown-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge parameter panel screenshot">
+                <img src="../assets/projects/json-generator/screens/generator-parameters.png" alt="Unreal Engine generator parameter panel with layout and mesh controls" width="1725" height="825" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption class="breakdown-copy">
+              <p class="breakdown-number">03</p>
+              <h3>Artist-Facing Parameters</h3>
+              <p>Grouped Blueprint variables expose layout and asset choices in the Details panel, allowing artists to configure the scene without rebuilding the system manually.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="breakdown-item" data-reveal data-optional-media>
+            <div class="breakdown-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge graybox validation screenshot">
+                <img src="../assets/projects/json-generator/screens/graybox-validation.png" alt="Graybox room layout generated in Unreal Engine for spatial validation" width="1542" height="963" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption class="breakdown-copy">
+              <p class="breakdown-number">04</p>
+              <h3>Graybox Validation</h3>
+              <p>Early generated layouts are tested for scale, proportion, circulation, and modular fit before final assets are introduced.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="breakdown-item" data-reveal data-optional-media>
+            <div class="breakdown-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge modular environment assembly screenshot">
+                <img src="../assets/projects/json-generator/screens/modular-scene-assembly.png" alt="Modular display cabinets and environment assets assembled in the final Unreal Engine scene" width="1839" height="1026" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption class="breakdown-copy">
+              <p class="breakdown-number">05</p>
+              <h3>Modular Scene Assembly</h3>
+              <p>Final assets replace graybox components while preserving the same generation logic, configured spacing, and asset alignment.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="results-title" data-reveal>
+        <h2 id="results-title">Final Results</h2>
+        <figure class="result-figure" data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge final generated laboratory scene">
+            <img src="../assets/projects/json-generator/screens/final-laboratory.png" alt="Final detailed laboratory scene produced with the modular environment workflow" width="2118" height="1031" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>The generator successfully produced configurable room layouts using modular environment assets. It reduced repetitive manual placement and made it possible to test multiple scene variations through parameter changes.</figcaption>
+        </figure>
+        <div class="verified-results">
+          <h3>Verified Functionality</h3>
+          <ul class="feature-list">
+            <li>Supports configurable room width and length</li>
+            <li>Supports adjustable wall height and tile size</li>
+            <li>Supports cabinet and light count controls</li>
+            <li>Supports randomized prop placement</li>
+            <li>Uses modular mesh slots for environment assembly</li>
+            <li>Refreshes automatically through the Construction Script</li>
+            <li>Enables rapid layout variation inside the editor</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="video-title" data-optional-section data-reveal>
+        <h2 id="video-title">Demo Video — 60-Second Web Preview</h2>
+        <div class="video-frame">
+          <video controls preload="metadata" muted poster="../assets/projects/json-generator/screens/final-environment.png" data-hide-on-error>
+            <source src="../assets/projects/json-generator/video/json-generator-demo-web.mp4" type="video/mp4">
+            Your browser does not support the HTML5 video element.
+          </video>
+        </div>
+      </section>
+
+      <section class="case-section" aria-label="Project reflection" data-reveal>
+        <div class="closing-grid">
+          <article>
+            <h2>Limitations</h2>
+            <p>The current version is designed for rectangular interior environments and relies on predefined modular mesh slots. Future development could include nested JSON structures, editor utility widgets, collision-aware placement, procedural rule systems, and runtime generation.</p>
+          </article>
+          <article>
+            <h2>What I Learned</h2>
+            <p>This project strengthened my understanding of Blueprint tool design, modular environment systems, data-driven workflows, and the relationship between technical constraints and artist usability.</p>
+          </article>
+        </div>
+      </section>
+
+      <nav class="project-pagination" aria-label="Project pagination">
+        <a href="ai-npc.html">Previous: AI NPC Interaction Prototype</a>
+        <a href="asset-weathering.html">Next: AI-Assisted Asset Weathering Pipeline</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">Kaixin Kang</p>
+        <p class="footer-role">Technical Artist · Chongqing, China</p>
+      </div>
+      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>© 2026 Kaixin Kang</p>
+    </div>
+  </footer>
+</body>
+</html>

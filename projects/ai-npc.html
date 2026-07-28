@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI NPC Interaction Prototype — Kaixin Kang</title>
+  <meta name="description" content="An Unreal Engine interaction prototype by Kaixin Kang integrating proximity detection, dialogue UI, conversation history, and a third-party AI API.">
+  <meta property="og:title" content="AI NPC Interaction Prototype">
+  <meta property="og:description" content="A Technical Art interaction prototype connecting Unreal Engine UI, Blueprint logic, and an AI API.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/projects/ai-npc/screens/dialogue-hero.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Kaixin Kang home">KAIXIN KANG</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="../index.html#work" aria-current="page">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf" download>Resume</a>
+        <a href="mailto:122880509@qq.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-main" id="main">
+    <article class="container">
+      <header class="case-hero">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a class="text-link" href="../index.html#work">Back to Work</a>
+          <a class="text-link" href="json-generator.html">Next Project</a>
+        </nav>
+
+        <div class="case-title-wrap" data-reveal>
+          <h1>AI NPC Interaction Prototype</h1>
+          <p class="case-subtitle">An Unreal Engine interaction prototype connecting proximity-based player interaction, dialogue UI, continuous conversation history, and a third-party AI API.</p>
+        </div>
+
+        <figure class="case-hero-media" data-reveal data-optional-media>
+          <img src="../assets/projects/ai-npc/screens/dialogue-hero.png" alt="Archive Terminal 07 dialogue interface open in a forest scene in Unreal Engine" width="1681" height="936" fetchpriority="high" data-hide-on-error>
+        </figure>
+
+        <ul class="tags" aria-label="Project tools" data-reveal>
+          <li>Unreal Engine 5</li>
+          <li>Blueprint</li>
+          <li>UI</li>
+          <li>API Integration</li>
+          <li>Interactive Prototype</li>
+        </ul>
+      </header>
+
+      <section class="case-section" aria-labelledby="overview-title" data-reveal>
+        <h2 id="overview-title">Overview</h2>
+        <p class="case-lede">This project is an Unreal Engine interaction prototype that connects proximity-based player interaction, dialogue UI, continuous conversation history, and a third-party AI API.</p>
+      </section>
+
+      <section class="case-section" aria-labelledby="features-title" data-reveal>
+        <h2 id="features-title">Core Features</h2>
+        <ul class="feature-list">
+          <li>Proximity detection</li>
+          <li>Press E interaction prompt</li>
+          <li>Dialogue interface</li>
+          <li>Text input and message submission</li>
+          <li>Continuous conversation history</li>
+          <li>Third-party AI API integration</li>
+          <li>Player input control during dialogue</li>
+          <li>Gameplay control restoration after closing the interface</li>
+        </ul>
+      </section>
+
+      <section class="case-section" aria-labelledby="state-flow-title" data-reveal>
+        <div class="section-title">
+          <h2 id="state-flow-title">Interaction State Flow</h2>
+          <p>The prototype explicitly hands control between gameplay, the dialogue interface, API messaging, and the restored player state.</p>
+        </div>
+        <ol class="technical-flow flow-nine" aria-label="AI NPC interaction state flow">
+          <li><span class="flow-number">01</span><h3>Player Enters Range</h3><p>Proximity detection confirms that the NPC can be used.</p></li>
+          <li><span class="flow-number">02</span><h3>Interaction Prompt Appears</h3><p>The interface presents a contextual Press E prompt.</p></li>
+          <li><span class="flow-number">03</span><h3>Player Presses E</h3><p>The interaction input starts the dialogue state.</p></li>
+          <li><span class="flow-number">04</span><h3>Dialogue UI Opens</h3><p>The conversation interface becomes visible over the scene.</p></li>
+          <li><span class="flow-number">05</span><h3>Gameplay Input Is Disabled</h3><p>Movement input pauses while the player uses the dialogue controls.</p></li>
+          <li><span class="flow-number">06</span><h3>Message Is Submitted</h3><p>The current player text is sent through the conversation system.</p></li>
+          <li><span class="flow-number">07</span><h3>AI Response Is Displayed</h3><p>The returned response is added to the visible conversation history.</p></li>
+          <li><span class="flow-number">08</span><h3>UI Closes</h3><p>The dialogue interface is dismissed by the player.</p></li>
+          <li><span class="flow-number">09</span><h3>Gameplay Input Is Restored</h3><p>Movement and camera control return to the gameplay state.</p></li>
+        </ol>
+      </section>
+
+      <section class="case-section" aria-labelledby="components-title" data-reveal>
+        <div class="section-title">
+          <h2 id="components-title">System Components</h2>
+          <p>Each component has a focused responsibility within the interaction loop.</p>
+        </div>
+        <div class="component-grid">
+          <article><h3>Proximity Detection</h3><p>Tracks whether the player is inside the NPC's usable interaction range.</p></article>
+          <article><h3>Interaction Prompt</h3><p>Communicates when the player can begin a conversation.</p></article>
+          <article><h3>Dialogue Interface</h3><p>Provides the visual container for messages, controls, and conversation context.</p></article>
+          <article><h3>Text Input and Submission</h3><p>Collects the player's message and passes it into the conversation request.</p></article>
+          <article><h3>Conversation History</h3><p>Keeps previous player and NPC messages visible across the active exchange.</p></article>
+          <article><h3>Third-Party AI API</h3><p>Receives submitted text and returns the NPC response used by the interface.</p></article>
+          <article><h3>Player Input Control</h3><p>Disables gameplay movement while the dialogue interface is active.</p></article>
+          <article><h3>Interface Closing and State Restoration</h3><p>Closes the conversation view and returns control to the player.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="gallery-title">
+        <div class="section-title" data-reveal>
+          <h2 id="gallery-title">Prototype Gallery</h2>
+          <p>The existing captures document the complete interaction loop, from proximity feedback to Blueprint logic and the conversation interface.</p>
+        </div>
+
+        <aside class="interface-legend" aria-labelledby="legend-title" data-reveal>
+          <div>
+            <h3 id="legend-title">English Interface Legend</h3>
+            <p>The prototype screenshots preserve the original Chinese UI. These labels identify the corresponding interaction functions without covering the captured interface.</p>
+          </div>
+          <ul>
+            <li>Interaction Prompt</li>
+            <li>NPC Response</li>
+            <li>Player Input</li>
+            <li>Send</li>
+            <li>Clear</li>
+            <li>Close</li>
+            <li>Conversation History</li>
+          </ul>
+        </aside>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge dialogue interface screenshot">
+                <img src="../assets/projects/ai-npc/screens/dialogue-interface.png" alt="Archive Terminal 07 dialogue interface layered over a forest gameplay scene" width="1681" height="936" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">01 / DIALOGUE INTERFACE</p>
+              <h3>In-World Conversation</h3>
+              <p>The dialogue interface preserves the scene context while exposing input, submission, clearing, and conversation history controls.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge proximity interaction screenshot">
+                <img src="../assets/projects/ai-npc/screens/proximity-state.png" alt="Player approaching the Archive Terminal 07 NPC in a forest environment" width="1680" height="936" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">02 / PROXIMITY STATE</p>
+              <h3>Proximity Detection</h3>
+              <p>The prototype exposes an interaction prompt only when the player enters the NPC's usable range.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge interaction prompt test screenshot">
+                <img src="../assets/projects/ai-npc/screens/prompt-validation.png" alt="Graybox gameplay test showing the Press E interaction prompt beside an NPC" width="1181" height="821" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">03 / PROMPT VALIDATION</p>
+              <h3>Interaction Prompt Test</h3>
+              <p>Graybox testing isolates trigger distance, prompt visibility, and the handoff from gameplay to the dialogue state.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge dialogue history screenshot">
+                <img src="../assets/projects/ai-npc/screens/conversation-history.png" alt="Dialogue UI showing multiple player and NPC messages in conversation history" width="1221" height="672" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">04 / CONVERSATION HISTORY</p>
+              <h3>Continuous History</h3>
+              <p>The interface keeps previous turns visible so the player can follow the active conversation context.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Blueprint interaction graph">
+                <img src="../assets/projects/ai-npc/screens/blueprint-interaction-logic.png" alt="Unreal Engine Blueprint graph controlling NPC interaction and dialogue behavior" width="1203" height="599" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">05 / BLUEPRINT LOGIC</p>
+              <h3>Interaction Logic</h3>
+              <p>Blueprint logic coordinates interaction state, interface visibility, player input, and message submission.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-reveal data-optional-media>
+            <div class="gallery-media">
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge NPC character reference">
+                <img src="../assets/projects/ai-npc/screens/npc-subject.png" alt="Compact weathered robot character used as the AI NPC prototype subject" width="1402" height="1122" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </div>
+            <figcaption>
+              <p class="gallery-index">06 / NPC SUBJECT</p>
+              <h3>NPC Subject</h3>
+              <p>The compact robot character provides a clear focal point for testing contextual prompts and dialogue presentation.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <nav class="project-pagination" aria-label="Project pagination">
+        <a href="ai-asset-pipeline.html">Previous: AI-Assisted 3D Asset Pipeline</a>
+        <a href="json-generator.html">Next: JSON Generator</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">Kaixin Kang</p>
+        <p class="footer-role">Technical Artist · Chongqing, China</p>
+      </div>
+      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>© 2026 Kaixin Kang</p>
+    </div>
+  </footer>
+</body>
+</html>

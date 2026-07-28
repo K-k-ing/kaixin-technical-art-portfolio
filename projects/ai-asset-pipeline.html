@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Assisted 3D Asset Production Pipeline &mdash; Kaixin Kang</title>
+  <meta name="description" content="An AI-assisted game asset workflow spanning concept development, modular 3D generation, Blender inspection, asset assembly, material refinement, and Unreal Engine 5 validation.">
+  <meta property="og:title" content="AI-Assisted 3D Asset Production Pipeline">
+  <meta property="og:description" content="From AI concept development and modular asset generation to Blender refinement and Unreal Engine 5 scene validation.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/projects/ai-asset-pipeline/hero/hero-concept-family.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="ai-asset-case">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Kaixin Kang home">KAIXIN KANG</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="../index.html#work" aria-current="page">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf" download>Resume</a>
+        <a href="mailto:122880509@qq.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-main" id="main">
+    <article class="container">
+      <header class="case-hero asset-production-hero">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a class="text-link" href="../index.html#work">Back to Work</a>
+          <a class="text-link" href="ai-npc.html">Next Project</a>
+        </nav>
+
+        <div class="case-title-wrap" data-reveal>
+          <p class="asset-project-label">03 / AI ASSET PIPELINE</p>
+          <h1>AI-Assisted 3D Asset Production Pipeline</h1>
+          <p class="case-subtitle">From AI concept development and modular asset generation to Blender refinement and Unreal Engine 5 scene validation.</p>
+        </div>
+
+        <div class="asset-hero-grid" data-reveal>
+          <figure class="asset-hero-panel asset-hero-panel-main" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge concept asset family">
+              <img src="../assets/projects/ai-asset-pipeline/hero/hero-concept-family.png" alt="Sacred science-fiction character and spacecraft concept family" width="1916" height="821" fetchpriority="high" data-hide-on-error>
+            </button>
+            <figcaption>Concept direction</figcaption>
+          </figure>
+          <figure class="asset-hero-panel" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge selected spacecraft asset">
+              <img src="../assets/projects/ai-asset-pipeline/hero/hero-spacecraft-asset.png" alt="Selected white and gold modular spacecraft asset" width="978" height="501" data-hide-on-error>
+            </button>
+            <figcaption>Generated asset</figcaption>
+          </figure>
+          <figure class="asset-hero-panel" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Blender modular breakdown">
+              <img src="../assets/projects/ai-asset-pipeline/hero/hero-blender-breakdown.png" alt="Blender inspection view showing separated spacecraft components" width="1305" height="771" data-hide-on-error>
+            </button>
+            <figcaption>Blender inspection</figcaption>
+          </figure>
+          <figure class="asset-hero-panel" data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Unreal Engine environment integration">
+              <img src="../assets/projects/ai-asset-pipeline/hero/hero-ue5-integration.png" alt="Spacecraft and architectural assets integrated into an Unreal Engine environment" width="1746" height="1098" data-hide-on-error>
+            </button>
+            <figcaption>UE5 validation</figcaption>
+          </figure>
+        </div>
+
+        <div class="asset-hero-summary" data-reveal>
+          <p>This project explores an AI-assisted workflow for developing game prototype assets across concept design, character and vehicle exploration, modular 3D generation, Blender inspection, asset assembly, material refinement, and Unreal Engine 5 validation.</p>
+          <p>The goal was not to treat AI-generated models as finished production assets, but to evaluate how AI tools could support early asset development, modular iteration, visual exploration, and real-time scene prototyping.</p>
+        </div>
+
+        <dl class="case-metadata" data-reveal>
+          <div>
+            <dt>Role</dt>
+            <dd>Independent Technical Artist</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>ComfyUI / Stable Diffusion / Tripo / Blender / UE5</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>Characters / Mechanical Assets / Environments</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Modular Generation / Inspection / Validation</dd>
+          </div>
+        </dl>
+
+        <ul class="tags" aria-label="Project tools" data-reveal>
+          <li>Concept Design</li>
+          <li>AI 3D Generation</li>
+          <li>Modular Assets</li>
+          <li>Blender</li>
+          <li>Unreal Engine 5</li>
+        </ul>
+      </header>
+
+      <section class="case-section asset-case-section" aria-labelledby="overview-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">01</span>
+          <div>
+            <h2 id="overview-title">Project Overview</h2>
+            <p>This project investigates how AI-assisted tools can support the early development of game assets within a structured production workflow.</p>
+          </div>
+        </div>
+        <div class="asset-overview-copy" data-reveal>
+          <p>Built around a sacred science-fiction civilization, the project covers character concepts, mechanical props, vehicles, drones, architectural ruins, and environmental assets.</p>
+          <p>The workflow combines concept generation, visual analysis, AI-based 3D generation, modular asset breakdown, Blender inspection and assembly, material refinement, and Unreal Engine 5 scene validation.</p>
+          <p>The objective was to evaluate which stages could benefit from AI assistance, which outputs required manual intervention, and how generated assets could be transformed into usable prototypes for real-time environments.</p>
+        </div>
+        <div class="overview-media-grid">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge character prototype">
+              <img src="../assets/projects/ai-asset-pipeline/asset-categories/overview-character-silhouette.png" alt="White mechanical character prototype with an exposed transparent head shell" width="1024" height="1536" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Character development</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge mechanical breakdown">
+              <img src="../assets/projects/ai-asset-pipeline/asset-categories/overview-mechanical-breakdown.png" alt="Color-coded mechanical spacecraft component breakdown" width="963" height="756" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Mechanical decomposition</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge environment asset">
+              <img src="../assets/projects/ai-asset-pipeline/asset-categories/overview-environment-asset.png" alt="Materialized modular architectural ruin on a neutral background" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Environment asset</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge real-time spacecraft validation">
+              <img src="../assets/projects/ai-asset-pipeline/ue5-validation/overview-spacecraft-validation.png" alt="Spacecraft prototype presented in a real-time space scene" width="1821" height="1017" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Real-time validation</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="visual-direction-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">02</span>
+          <div>
+            <h2 id="visual-direction-title">Visual Direction</h2>
+            <p>A restrained visual system connects sacred silhouettes, damaged white surfaces, exposed mechanics, and controlled industrial lighting.</p>
+          </div>
+        </div>
+        <div class="visual-direction-layout">
+          <figure class="visual-direction-main" data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge hooded character visual direction">
+              <img src="../assets/projects/ai-asset-pipeline/visual-direction/hooded-character-language.png" alt="Hooded mechanical figure establishing the dark sacred science-fiction language" width="1672" height="941" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+          </figure>
+          <div class="visual-direction-copy" data-reveal>
+            <dl class="direction-list">
+              <div>
+                <dt>Style</dt>
+                <dd>Dark science fiction combined with Gothic religious symbolism, balancing sacred visual language with exposed mechanical structures.</dd>
+              </div>
+              <div>
+                <dt>Color Palette</dt>
+                <dd>Matte cool white forms the primary base, supported by charcoal black and aged gold accents.</dd>
+              </div>
+              <div>
+                <dt>Form Language</dt>
+                <dd>Religious symbols are reinterpreted through science-fiction machinery, damaged exterior panels, exposed joints, mechanical frames, and ceremonial silhouettes.</dd>
+              </div>
+              <div>
+                <dt>Atmosphere</dt>
+                <dd>Industrial and oppressive environments use controlled lighting and restrained contrast to reinforce the cold, sacred quality of the characters and machines.</dd>
+              </div>
+            </dl>
+            <div class="direction-support-grid">
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge spacecraft environment concept">
+                  <img src="../assets/projects/ai-asset-pipeline/visual-direction/spacecraft-environment-concept.png" alt="White spacecraft concept placed in a dark industrial environment" width="1672" height="941" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>Vehicle language</figcaption>
+              </figure>
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge ceremonial silhouette">
+                  <img src="../assets/projects/ai-asset-pipeline/visual-direction/ceremonial-silhouette.png" alt="Ceremonial mechanical figure with a circular religious motif" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>Silhouette language</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="concept-development-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">03</span>
+          <div>
+            <h2 id="concept-development-title">Concept Development</h2>
+            <p>AI image-generation workflows were used to explore the overall visual language, environmental scale, character silhouettes, mechanical structures, and asset families before beginning 3D generation.</p>
+          </div>
+        </div>
+        <ul class="criteria-grid asset-criteria-grid" aria-label="Concept evaluation criteria" data-reveal>
+          <li>Silhouette clarity</li>
+          <li>Modular potential</li>
+          <li>Structural readability</li>
+          <li>Material direction</li>
+          <li>Environment compatibility</li>
+          <li>Suitability for downstream 3D generation</li>
+        </ul>
+        <div class="concept-family-grid">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge character concept">
+              <img src="../assets/projects/ai-asset-pipeline/concept-development/character-concept.png" alt="Mechanical pilgrim character concept with a white shell and exposed internal structure" width="1024" height="1536" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><b>Character Concept</b><span>Ceremonial silhouette and layered mechanical anatomy.</span></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge vehicle concept">
+              <img src="../assets/projects/ai-asset-pipeline/concept-development/vehicle-concept.png" alt="White spacecraft vehicle concept with landing supports and a circular rear structure" width="1672" height="941" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><b>Vehicle Concept</b><span>Readable main body, wings, supports, and ring structure.</span></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge drone concept">
+              <img src="../assets/projects/ai-asset-pipeline/concept-development/drone-concept.png" alt="White manta-shaped drone concept with mechanical landing legs" width="978" height="519" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><b>Drone Concept</b><span>Compact silhouette with isolated support and sensor regions.</span></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge environment concept">
+              <img src="../assets/projects/ai-asset-pipeline/concept-development/environment-atmosphere.png" alt="Single pilgrim figure standing beneath a monumental shaft of light" width="1672" height="941" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><b>Environment Concept</b><span>Scale, controlled light, and oppressive spatial atmosphere.</span></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge architectural ruin concept">
+              <img src="../assets/projects/ai-asset-pipeline/concept-development/architectural-ruin-concept.jpg" alt="Monumental sacred ruin concept embedded in a forest landscape" width="1199" height="1496" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><b>Architectural Ruin Concept</b><span>Large modular forms with stone and overgrowth cues.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="asset-categories-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">04</span>
+          <div>
+            <h2 id="asset-categories-title">Asset Categories</h2>
+            <p>Three asset families were evaluated through related but distinct production paths.</p>
+          </div>
+        </div>
+        <div class="asset-category-grid">
+          <article data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge character asset category">
+                <img src="../assets/projects/ai-asset-pipeline/asset-categories/character-asset.png" alt="Full mechanical pilgrim character asset with cape and halo structure" width="1086" height="1448" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <p class="asset-stage-label">Concept → Generation → Modular Review</p>
+            <h3>Characters</h3>
+            <p>AI Pilgrim character concepts, exploration robots, and mechanical humanoid forms.</p>
+          </article>
+          <article data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge mechanical asset family">
+                <img src="../assets/projects/ai-asset-pipeline/asset-categories/mechanical-asset-family.png" alt="Spacecraft asset sheet showing multiple views, components, and surface details" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <p class="asset-stage-label">Generation → Breakdown → Assembly</p>
+            <h3>Mechanical Assets</h3>
+            <p>Spacecraft, drones, robotic arms, mechanical joints, rings, wings, supports, and connectors.</p>
+          </article>
+          <article data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge environment asset category">
+                <img src="../assets/projects/ai-asset-pipeline/asset-categories/environment-asset.png" alt="Materialized modular stone fragment with carved sacred details" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <p class="asset-stage-label">White Model → Materials → Scene Placement</p>
+            <h3>Environment Assets</h3>
+            <p>Ruin gates, Buddha-head structures, stone bridges, architectural fragments, and modular environment props.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="generation-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">05</span>
+          <div>
+            <h2 id="generation-title">AI 3D Generation Iteration</h2>
+            <p>Multiple AI-generated 3D versions were compared to identify outputs with stronger proportions, silhouettes, mechanical readability, and potential usability as real-time prototype assets.</p>
+          </div>
+        </div>
+        <ul class="criteria-grid asset-criteria-grid" aria-label="Generation comparison criteria" data-reveal>
+          <li>Overall proportion</li>
+          <li>Silhouette stability</li>
+          <li>Mechanical detail</li>
+          <li>Structural coherence</li>
+          <li>Surface deformation</li>
+          <li>Modular potential</li>
+          <li>Import usability</li>
+        </ul>
+        <div class="iteration-grid">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge generation version 01">
+              <img src="../assets/projects/ai-asset-pipeline/generation-iteration/version-01.png" alt="Generation version 01 with a broad manta-like silhouette" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><span>Version 01</span><p>Broad silhouette with a clean outer shell but limited modular separation.</p></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge generation version 02">
+              <img src="../assets/projects/ai-asset-pipeline/generation-iteration/version-02.png" alt="Generation version 02 with a tripod vehicle silhouette and rear ring" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><span>Version 02</span><p>Clear supports and ring structure, with a different balance of body and wing mass.</p></figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge generation version 03">
+              <img src="../assets/projects/ai-asset-pipeline/generation-iteration/version-03.png" alt="Generation version 03 with a compact drone body and articulated legs" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><span>Version 03</span><p>Compact drone direction with readable sensor clusters and articulated supports.</p></figcaption>
+          </figure>
+          <figure class="iteration-selected" data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge selected generation direction">
+              <img src="../assets/projects/ai-asset-pipeline/generation-iteration/selected-direction.png" alt="Selected spacecraft direction with separated body, wings, ring, supports, and mechanical details" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption><span>Selected Direction</span><p>The strongest modular relationships and mechanical readability for downstream assembly.</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="breakdown-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">06</span>
+          <div>
+            <h2 id="breakdown-title">Modular Asset Breakdown</h2>
+            <p>Complex assets were divided into smaller components to improve generation accuracy, simplify inspection, and support independent replacement and optimization.</p>
+          </div>
+        </div>
+        <div class="breakdown-overview" data-reveal>
+          <figure data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge spacecraft exploded overview">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/spacecraft-exploded-overview.png" alt="Color-coded exploded view of the spacecraft modular structure" width="1383" height="855" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+          </figure>
+          <div>
+            <h3>Why break the asset apart?</h3>
+            <p>The spacecraft was separated into a main body, ring structure, wings, landing supports, mechanical joints, connectors, and secondary details. Character and robot assets followed the same logic across the head, torso, arms, mechanical frame, armor sections, and functional attachments.</p>
+          </div>
+        </div>
+        <div class="module-grid">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge main body module">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/main-body.png" alt="Isolated white spacecraft main body module" width="1448" height="1086" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Main Body</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge ring structure module">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/ring-structure.png" alt="Isolated white and gold spacecraft ring structure" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Ring Structure</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge wing module">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/wing-module.png" alt="Isolated spacecraft wing module with black internal mechanics" width="1448" height="1086" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Wing Module</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge landing support module">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/landing-support.png" alt="Isolated articulated landing support module" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Landing Support</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge mechanical joint">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/mechanical-joint.png" alt="Compact white mechanical joint and connection module" width="732" height="753" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Mechanical Joint</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge connector assembly">
+              <img src="../assets/projects/ai-asset-pipeline/modular-breakdown/connector-assembly.png" alt="White articulated connector assembly for modular replacement" width="638" height="645" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Connector Assembly</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="refinement-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">07</span>
+          <div>
+            <h2 id="refinement-title">Local Detail Refinement</h2>
+            <p>Parts that became blurred, unstable, or structurally inconsistent during full-model generation were isolated and regenerated separately.</p>
+          </div>
+        </div>
+        <p class="case-note" data-reveal>This approach improved local silhouette accuracy, mechanical joint readability, component replacement, detail control, and assembly flexibility.</p>
+        <ol class="refinement-flow" aria-label="Local refinement sequence">
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge full generation review">
+                <img src="../assets/projects/ai-asset-pipeline/local-refinement/full-generation-review.png" alt="Blender review of a full generated spacecraft and its component relationships" width="1035" height="588" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>01</span>
+            <h3>Full Generation Review</h3>
+            <p>Inspect the assembled output and identify unstable regions.</p>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge isolated wing component">
+                <img src="../assets/projects/ai-asset-pipeline/local-refinement/isolated-wing.png" alt="Isolated gray wing component before refinement" width="1080" height="828" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>02</span>
+            <h3>Isolated Component</h3>
+            <p>Separate the problematic region from the full generation.</p>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge refined wing component">
+                <img src="../assets/projects/ai-asset-pipeline/local-refinement/refined-wing.png" alt="Refined white wing component with clearer mechanical structure" width="1143" height="675" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>03</span>
+            <h3>Refined Component</h3>
+            <p>Regenerate or replace the part with a more readable version.</p>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge final Blender assembly">
+                <img src="../assets/projects/ai-asset-pipeline/local-refinement/final-blender-assembly.png" alt="Final modular spacecraft assembly inspected in Blender" width="1826" height="1131" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>04</span>
+            <h3>Final Assembly</h3>
+            <p>Reintegrate the refined component and recheck the complete asset.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="blender-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">08</span>
+          <div>
+            <h2 id="blender-title">Blender Inspection and Assembly</h2>
+            <p>Generated assets were inspected in Blender for proportion, component relationships, structural integrity, material display, thickness, and import usability.</p>
+          </div>
+        </div>
+        <p class="case-lede" data-reveal>Low-quality or unstable parts were replaced with separately generated components. Modular pieces were then reorganized, scaled, and assembled into more complete assets for Unreal Engine validation.</p>
+        <ul class="criteria-grid asset-criteria-grid" aria-label="Blender inspection criteria" data-reveal>
+          <li>Scale and proportion</li>
+          <li>Part alignment</li>
+          <li>Geometry integrity</li>
+          <li>Thickness</li>
+          <li>Surface quality</li>
+          <li>Material slots</li>
+          <li>Component hierarchy</li>
+          <li>Import readiness</li>
+        </ul>
+        <div class="blender-media-grid">
+          <figure class="blender-media-main" data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge spacecraft inspection view">
+              <img src="../assets/projects/ai-asset-pipeline/blender-inspection/spacecraft-inspection.png" alt="Blender viewport showing the full spacecraft during proportion and structure inspection" width="806" height="498" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Full-asset inspection for proportion, hierarchy, and structural continuity.</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge rear modular assembly">
+              <img src="../assets/projects/ai-asset-pipeline/blender-inspection/modular-assembly-rear.png" alt="Rear Blender view of modular spacecraft parts aligned around a central mechanical body" width="1278" height="789" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Rear alignment review</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge front modular assembly">
+              <img src="../assets/projects/ai-asset-pipeline/blender-inspection/modular-assembly-front.png" alt="Front Blender view of the spacecraft modules and articulated supports" width="1035" height="708" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Front alignment review</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="environment-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">09</span>
+          <div>
+            <h2 id="environment-title">Environment Asset Workflow</h2>
+            <p>Environment assets followed a slightly different workflow from characters and vehicles. Large architectural forms were first evaluated through clean white models before material and surface detail were introduced.</p>
+          </div>
+        </div>
+        <p class="case-note" data-reveal>Assets included ruin gates, Buddha-head structures, stone bridges, architectural fragments, and modular stone components.</p>
+        <ol class="environment-flow-grid" aria-label="Environment asset workflow">
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge environment concept reference">
+                <img src="../assets/projects/ai-asset-pipeline/environment-assets/concept-reference.jpg" alt="Forest environment concept reference with monumental trees and a distant figure" width="1200" height="675" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>01</span>
+            <h3>Concept Reference</h3>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge architectural white model">
+                <img src="../assets/projects/ai-asset-pipeline/white-model/architectural-white-model.png" alt="Clean white model of a large modular ruin structure" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>02</span>
+            <h3>White Model</h3>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge structure review model">
+                <img src="../assets/projects/ai-asset-pipeline/white-model/structure-review.png" alt="Clean white architectural fragment used for structure review" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>03</span>
+            <h3>Structure Review</h3>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge environment material pass">
+                <img src="../assets/projects/ai-asset-pipeline/material-refinement/environment-material-pass.png" alt="Materialized carved stone pillar with moss and aged surface detail" width="1122" height="1402" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>04</span>
+            <h3>Material Pass</h3>
+          </li>
+          <li data-reveal>
+            <figure data-optional-media>
+              <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge Unreal Engine scene placement">
+                <img src="../assets/projects/ai-asset-pipeline/ue5-validation/environment-placement.jpeg" alt="Elevated Unreal Engine view of modular ruin assets placed in a forest environment" width="928" height="521" loading="lazy" decoding="async" data-hide-on-error>
+              </button>
+            </figure>
+            <span>05</span>
+            <h3>UE5 Scene Placement</h3>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="white-material-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">10</span>
+          <div>
+            <h2 id="white-material-title">White Model and Material Refinement</h2>
+            <p>Structure was validated before surface complexity was introduced.</p>
+          </div>
+        </div>
+        <div class="asset-subsection" data-reveal>
+          <div>
+            <p class="asset-subsection-label">Subsection A</p>
+            <h3>White Model Validation</h3>
+          </div>
+          <p>For complex architectural assets, clean white models were generated first to confirm silhouette, proportion, and structural readability before introducing materials and surface detail.</p>
+        </div>
+        <div class="asset-subsection" data-reveal>
+          <div>
+            <p class="asset-subsection-label">Subsection B</p>
+            <h3>Material Refinement</h3>
+          </div>
+          <p>Materials were not treated as a one-click AI output. Once the structure was considered usable, stone, metal, wear, roughness, and emissive details were adjusted in Blender and Unreal Engine.</p>
+        </div>
+        <div class="material-comparison-grid">
+          <article data-reveal>
+            <div class="comparison-pair">
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge white pillar model">
+                  <img src="../assets/projects/ai-asset-pipeline/white-model/pillar-white.png" alt="Clean white model of a carved architectural pillar" width="1024" height="1536" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>White Model</figcaption>
+              </figure>
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge materialized pillar">
+                  <img src="../assets/projects/ai-asset-pipeline/material-refinement/pillar-material.png" alt="Materialized carved pillar with moss and weathered stone" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>Material Pass</figcaption>
+              </figure>
+            </div>
+            <h3>Pillar Module</h3>
+          </article>
+          <article data-reveal>
+            <div class="comparison-pair">
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge white ruin gate">
+                  <img src="../assets/projects/ai-asset-pipeline/white-model/gate-white.png" alt="Clean white model of an architectural ruin gate" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>White Model</figcaption>
+              </figure>
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge materialized ruin gate">
+                  <img src="../assets/projects/ai-asset-pipeline/material-refinement/gate-material.png" alt="Materialized ruin gate with stone wear and hanging vegetation" width="1254" height="1254" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>Material Pass</figcaption>
+              </figure>
+            </div>
+            <h3>Gate Module</h3>
+          </article>
+          <article data-reveal>
+            <div class="comparison-pair">
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge white robot model">
+                  <img src="../assets/projects/ai-asset-pipeline/white-model/robot-white.png" alt="Clean white robot model before material refinement" width="870" height="717" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>White Model</figcaption>
+              </figure>
+              <figure data-optional-media>
+                <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge materialized robot">
+                  <img src="../assets/projects/ai-asset-pipeline/material-refinement/robot-material.png" alt="Robot model after metal, roughness, and wear refinement" width="866" height="738" loading="lazy" decoding="async" data-hide-on-error>
+                </button>
+                <figcaption>Material Pass</figcaption>
+              </figure>
+            </div>
+            <h3>Robot Asset</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="ue5-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">11</span>
+          <div>
+            <h2 id="ue5-title">Unreal Engine 5 Scene Validation</h2>
+            <p>Selected assets were imported into Unreal Engine 5 and evaluated within real-time scenes.</p>
+          </div>
+        </div>
+        <ul class="criteria-grid asset-criteria-grid" aria-label="Unreal Engine validation criteria" data-reveal>
+          <li>Asset scale</li>
+          <li>Silhouette readability</li>
+          <li>Material response</li>
+          <li>Lighting behavior</li>
+          <li>Modular compatibility</li>
+          <li>Camera presentation</li>
+          <li>Environment integration</li>
+          <li>World-building prototype suitability</li>
+        </ul>
+        <figure class="ue-validation-main" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge final Unreal Engine environment scene">
+            <img src="../assets/projects/ai-asset-pipeline/ue5-validation/final-environment-scene.png" alt="Final Unreal Engine forest scene featuring modular sacred ruins" width="1932" height="1083" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>Environment integration was reviewed through asset scale, lighting, material response, and camera composition.</figcaption>
+        </figure>
+        <div class="ue-validation-grid">
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge spacecraft angle study">
+              <img src="../assets/projects/ai-asset-pipeline/ue5-validation/spacecraft-angle-study.png" alt="Multiple real-time spacecraft views used to evaluate silhouette and surface response" width="1766" height="681" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Vehicle scale and angle study</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge character scale scene">
+              <img src="../assets/projects/ai-asset-pipeline/ue5-validation/character-scale-scene.png" alt="Mechanical pilgrim character standing among architectural ruins in Unreal Engine" width="1818" height="1101" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Character scale comparison</figcaption>
+          </figure>
+          <figure data-reveal data-optional-media>
+            <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge robot environment scene">
+              <img src="../assets/projects/ai-asset-pipeline/ue5-validation/robot-environment-scene.png" alt="Robot prototype integrated into a modular forest ruin scene" width="1875" height="1089" loading="lazy" decoding="async" data-hide-on-error>
+            </button>
+            <figcaption>Mechanical asset integration</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="architecture-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">12</span>
+          <div>
+            <h2 id="architecture-title">Pipeline Architecture</h2>
+            <p>The workflow separates visual exploration, generated output, manual intervention, and real-time validation into explicit review stages.</p>
+          </div>
+        </div>
+        <ol class="asset-pipeline-flow" aria-label="Complete AI-assisted asset production workflow" data-reveal>
+          <li><span>01</span><h3>Visual Direction</h3><p>Define style, palette, form language, and atmosphere.</p></li>
+          <li><span>02</span><h3>Concept Generation</h3><p>Explore characters, vehicles, drones, and environments.</p></li>
+          <li><span>03</span><h3>Visual Analysis</h3><p>Review silhouette, structure, materials, and scale.</p></li>
+          <li><span>04</span><h3>Asset Categorization</h3><p>Choose the workflow appropriate to each asset family.</p></li>
+          <li><span>05</span><h3>AI 3D Generation</h3><p>Produce and compare initial three-dimensional versions.</p></li>
+          <li><span>06</span><h3>Modular Breakdown</h3><p>Separate complex assets into replaceable components.</p></li>
+          <li><span>07</span><h3>Local Detail Refinement</h3><p>Regenerate unstable or unreadable local structures.</p></li>
+          <li><span>08</span><h3>Blender Inspection</h3><p>Review scale, integrity, hierarchy, and material slots.</p></li>
+          <li><span>09</span><h3>Asset Assembly</h3><p>Align, scale, and combine the refined modules.</p></li>
+          <li><span>10</span><h3>White Model Validation</h3><p>Confirm architectural silhouette and structure.</p></li>
+          <li><span>11</span><h3>Material Refinement</h3><p>Adjust stone, metal, roughness, wear, and emissive detail.</p></li>
+          <li><span>12</span><h3>UE5 Validation</h3><p>Evaluate the assets inside real-time scenes.</p></li>
+        </ol>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="evaluation-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">13</span>
+          <div>
+            <h2 id="evaluation-title">Quality Evaluation</h2>
+            <p>No synthetic score was assigned. Each output was reviewed against practical visual and technical criteria.</p>
+          </div>
+        </div>
+        <div class="evaluation-layout">
+          <article data-reveal>
+            <h3>What Was Evaluated</h3>
+            <ul class="feature-list">
+              <li>Silhouette clarity</li>
+              <li>Proportion</li>
+              <li>Structural coherence</li>
+              <li>Topology quality</li>
+              <li>Geometry thickness</li>
+              <li>Modular compatibility</li>
+              <li>Material behavior</li>
+              <li>Real-time usability</li>
+              <li>Manual cleanup requirements</li>
+            </ul>
+          </article>
+          <article data-reveal>
+            <h3>Evaluation Context</h3>
+            <ul class="feature-list">
+              <li>Character assets</li>
+              <li>Mechanical assets</li>
+              <li>Architectural assets</li>
+              <li>Environment scenes</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="limitations-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">14</span>
+          <div>
+            <h2 id="limitations-title">Observed Limitations</h2>
+            <p>The workflow remained useful for prototyping, but generated outputs still required close technical and artistic review.</p>
+          </div>
+        </div>
+        <div class="asset-limitations-grid">
+          <article data-reveal><span>01</span><h3>Thin Geometry</h3><p>Thin wings, panels, and mechanical structures may collapse or lose readability during generation.</p></article>
+          <article data-reveal><span>02</span><h3>High-Detail Deformation</h3><p>Increasing model complexity can produce unstable proportions, noisy surfaces, and distorted components.</p></article>
+          <article data-reveal><span>03</span><h3>Topology Quality</h3><p>Generated meshes frequently require manual inspection, cleanup, or replacement before assembly.</p></article>
+          <article data-reveal><span>04</span><h3>Component Consistency</h3><p>Separately generated parts may not share consistent scale, connection points, or visual language.</p></article>
+          <article data-reveal><span>05</span><h3>Material Translation</h3><p>Roughness, reflective surfaces, transparency, and layered wear are not always transferred reliably.</p></article>
+          <article data-reveal><span>06</span><h3>Reference Preparation</h3><p>Clean, isolated, and purpose-built references often perform better than direct crops from complex concept images.</p></article>
+          <article data-reveal><span>07</span><h3>Cross-Asset Consistency</h3><p>Maintaining a unified visual language across characters, vehicles, props, and environments remains difficult.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section asset-case-section" aria-labelledby="outcome-title">
+        <div class="asset-section-heading" data-reveal>
+          <span class="asset-section-number">15</span>
+          <div>
+            <h2 id="outcome-title">Final Outcome and Reflection</h2>
+            <p>The final result is a documented prototype workflow, not a claim of fully automated production readiness.</p>
+          </div>
+        </div>
+        <div class="asset-closing-grid">
+          <article data-reveal>
+            <h3>Final Outcome</h3>
+            <p>The project produced a set of character, vehicle, mechanical, and environment prototypes that were assembled and evaluated within Unreal Engine 5.</p>
+            <p>Rather than demonstrating a fully automated production pipeline, the project identifies where AI-assisted tools can accelerate concept exploration, modular generation, and early prototyping, while also revealing the continued importance of manual inspection, assembly, material refinement, and real-time validation.</p>
+          </article>
+          <article data-reveal>
+            <h3>What I Learned</h3>
+            <p>This project strengthened my understanding of modular asset planning, reference preparation, AI-generation limitations, Blender-based inspection, environment assembly, and Unreal Engine validation.</p>
+            <p>It also demonstrated that the most reliable workflow was not full automation, but a controlled process in which AI generation, artist judgment, modular design, and real-time testing supported one another.</p>
+          </article>
+        </div>
+        <figure class="asset-final-media" data-reveal data-optional-media>
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge final ruin presentation">
+            <img src="../assets/projects/ai-asset-pipeline/ue5-validation/final-ruin-presentation.png" alt="Final presentation of a materialized architectural ruin in a forest scene" width="1536" height="1024" loading="lazy" decoding="async" data-hide-on-error>
+          </button>
+          <figcaption>Final environment presentation after structural review, material refinement, and real-time placement.</figcaption>
+        </figure>
+      </section>
+
+      <nav class="project-pagination" aria-label="Project pagination">
+        <a href="asset-weathering.html">Previous: AI-Assisted Asset Weathering Pipeline</a>
+        <a href="ai-npc.html">Next: AI NPC Interaction Prototype</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">Kaixin Kang</p>
+        <p class="footer-role">Technical Artist · Chongqing, China</p>
+      </div>
+      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>© 2026 Kaixin Kang</p>
+    </div>
+  </footer>
+</body>
+</html>
