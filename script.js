@@ -46,7 +46,6 @@ document.querySelectorAll("video[data-hide-on-error]").forEach((video) => {
     target.hidden = true;
   };
   video.addEventListener("error", hideVideo);
-  video.querySelectorAll("source").forEach((source) => source.addEventListener("error", hideVideo));
 });
 
 const revealItems = document.querySelectorAll("[data-reveal]");
