@@ -1,0 +1,270 @@
+:root {
+  --ink: #111;
+  --muted: #4d4d4d;
+  --line: #b8b8b8;
+  --paper: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ededed;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.4pt;
+  line-height: 1.34;
+}
+
+a {
+  color: inherit;
+}
+
+.resume-actions {
+  max-width: 210mm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem auto;
+}
+
+.resume-actions a,
+.resume-actions button {
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  background: #111;
+  border: 1px solid #111;
+  border-radius: 2px;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.resume-actions a:focus-visible,
+.resume-actions button:focus-visible {
+  outline: 3px solid #1456d9;
+  outline-offset: 3px;
+}
+
+.resume-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 2rem;
+  padding: 13mm 15mm 12mm;
+  background: var(--paper);
+  box-shadow: 0 8px 30px rgb(0 0 0 / 12%);
+}
+
+.resume-header {
+  padding-bottom: 0.35rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.08rem;
+  font-size: 27pt;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.resume-role {
+  margin-bottom: 0.28rem;
+  font-size: 11.2pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0;
+  margin: 0 0 0.45rem;
+  padding: 0;
+  color: var(--muted);
+  font-size: 9.4pt;
+  list-style: none;
+}
+
+.resume-contact li:not(:last-child)::after {
+  content: "|";
+  margin-inline: 0.48rem;
+  color: #888;
+}
+
+.placeholder {
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+
+.resume-summary {
+  margin-bottom: 0;
+}
+
+section {
+  padding-top: 0.48rem;
+  border-top: 1px solid var(--line);
+}
+
+section + section {
+  margin-top: 0.45rem;
+}
+
+h2 {
+  margin-bottom: 0.32rem;
+  font-size: 11.7pt;
+  letter-spacing: 0.11em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 0.05rem;
+  font-size: 10.5pt;
+  line-height: 1.2;
+}
+
+.resume-entry + .resume-entry {
+  margin-top: 0.42rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid #dedede;
+}
+
+.entry-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.entry-heading > p,
+.entry-heading div > p {
+  margin-bottom: 0.05rem;
+  color: var(--muted);
+  font-size: 9.2pt;
+}
+
+.entry-heading > p {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+ul {
+  margin: 0.18rem 0 0;
+  padding-left: 1.15rem;
+}
+
+li {
+  margin-bottom: 0.08rem;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.8rem;
+}
+
+.resume-columns > div + div {
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--line);
+}
+
+.skills-list {
+  display: grid;
+  gap: 0.17rem;
+  margin: 0;
+}
+
+.skills-list div {
+  display: grid;
+  grid-template-columns: 7.6rem 1fr;
+  gap: 0.3rem;
+}
+
+.skills-list dt {
+  font-weight: 700;
+}
+
+.skills-list dd {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  html {
+    background: #fff;
+  }
+
+  .resume-actions,
+  .resume-page {
+    width: 100%;
+  }
+
+  .resume-actions {
+    padding-inline: 1rem;
+  }
+
+  .resume-page {
+    min-height: 0;
+    padding: 1.25rem;
+    box-shadow: none;
+  }
+
+  .entry-heading,
+  .resume-columns {
+    display: block;
+  }
+
+  .entry-heading > p {
+    text-align: left;
+  }
+
+  .resume-columns > div + div {
+    margin-top: 0.8rem;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .skills-list div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+
+  .resume-actions {
+    display: none;
+  }
+
+  .resume-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

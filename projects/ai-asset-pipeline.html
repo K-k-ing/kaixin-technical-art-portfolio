@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/projects/ai-asset-pipeline.html">
   <title>AI-Assisted 3D Asset Production Pipeline &mdash; Kaixin Kang</title>
-  <meta name="description" content="An AI-assisted game asset workflow spanning concept development, modular 3D generation, Blender inspection, asset assembly, material refinement, and Unreal Engine 5 validation.">
+  <meta name="description" content="An experimental pipeline evaluating AI-generated 3D assets through modular decomposition, Blender cleanup, material repair, and Unreal Engine 5 validation.">
   <meta property="og:title" content="AI-Assisted 3D Asset Production Pipeline">
-  <meta property="og:description" content="From AI concept development and modular asset generation to Blender refinement and Unreal Engine 5 scene validation.">
+  <meta property="og:description" content="Modular decomposition, Blender cleanup, production-usability review, and Unreal Engine 5 validation of AI-generated assets.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../assets/projects/ai-asset-pipeline/hero/hero-concept-family.png">
+  <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/projects/ai-asset-pipeline.html">
+  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/ai-asset-pipeline/hero/hero-concept-family.png">
+  <meta property="og:image:alt" content="AI-assisted concept family and modular spacecraft production study">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../styles.css">
   <script src="../script.js" defer></script>
 </head>
@@ -26,7 +30,9 @@
       <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
         <a href="../index.html#work" aria-current="page">Work</a>
         <a href="../index.html#about">About</a>
-        <a href="../assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf" download>Resume</a>
+        <a href="../resume-source.html">Resume</a>
+        <a href="https://github.com/K-k-ing" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="../index.html#linkedin">LinkedIn</a>
         <a href="mailto:122880509@qq.com">Contact</a>
       </nav>
     </div>
@@ -78,22 +84,30 @@
           <p>The goal was not to treat AI-generated models as finished production assets, but to evaluate how AI tools could support early asset development, modular iteration, visual exploration, and real-time scene prototyping.</p>
         </div>
 
-        <dl class="case-metadata" data-reveal>
+        <dl class="case-metadata project-snapshot" aria-label="Project snapshot" data-reveal>
           <div>
             <dt>Role</dt>
             <dd>Independent Technical Artist</dd>
           </div>
           <div>
+            <dt>Duration</dt>
+            <dd>Independent study, 2026</dd>
+          </div>
+          <div>
             <dt>Tools</dt>
-            <dd>ComfyUI / Stable Diffusion / Tripo / Blender / UE5</dd>
+            <dd>ComfyUI, Stable Diffusion, Tripo, Blender, Unreal Engine 5</dd>
           </div>
           <div>
-            <dt>Scope</dt>
-            <dd>Characters / Mechanical Assets / Environments</dd>
+            <dt>Core Challenge</dt>
+            <dd>Turn inconsistent generated output into reviewable real-time prototypes</dd>
           </div>
           <div>
-            <dt>Focus</dt>
-            <dd>Modular Generation / Inspection / Validation</dd>
+            <dt>Key Contribution</dt>
+            <dd>Pipeline design, asset decomposition, Blender repair, and UE5 validation</dd>
+          </div>
+          <div>
+            <dt>Current Status</dt>
+            <dd>Experimental workflow with documented production limitations</dd>
           </div>
         </dl>
 
@@ -104,14 +118,48 @@
           <li>Blender</li>
           <li>Unreal Engine 5</li>
         </ul>
+
+        <section class="contribution-panel" aria-labelledby="asset-contribution-title" data-reveal>
+          <div>
+            <p class="eyebrow">My Technical Contribution</p>
+            <h2 id="asset-contribution-title">Workflow design, repair strategy, and production review</h2>
+          </div>
+          <ul class="feature-list compact-list">
+            <li>Designed the end-to-end AI-assisted asset workflow</li>
+            <li>Evaluated generated assets for production usability</li>
+            <li>Split complex concepts into modular components</li>
+            <li>Repaired hierarchy, thickness, geometry, and material issues in Blender</li>
+            <li>Validated assembled assets inside Unreal Engine 5</li>
+            <li>Documented recurring limitations of AI-generated 3D assets</li>
+          </ul>
+        </section>
+
+        <section class="case-section compact-case-section" aria-labelledby="asset-video-title" data-reveal>
+          <div class="section-title">
+            <h2 id="asset-video-title">Video Demonstrations</h2>
+            <p>No verified project video is currently available; these placeholders are ready for future H.264 media.</p>
+          </div>
+          <div class="media-placeholder-grid">
+            <article>
+              <p class="eyebrow">Quick Demo</p>
+              <h3>Quick Demo &mdash; Coming Soon</h3>
+              <p>Planned coverage: source concept, generated output, Blender repair, and UE5 validation.</p>
+            </article>
+            <article>
+              <p class="eyebrow">Full Technical Walkthrough</p>
+              <h3>Walkthrough Not Yet Recorded</h3>
+              <p>The documented case study below provides the current verified technical evidence.</p>
+            </article>
+          </div>
+        </section>
       </header>
 
       <section class="case-section asset-case-section" aria-labelledby="overview-title">
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">01</span>
           <div>
-            <h2 id="overview-title">Project Overview</h2>
-            <p>This project investigates how AI-assisted tools can support the early development of game assets within a structured production workflow.</p>
+            <h2 id="overview-title">Pipeline Overview</h2>
+            <p>The workflow separates AI-assisted exploration from manual asset repair and real-time production validation.</p>
           </div>
         </div>
         <div class="asset-overview-copy" data-reveal>
@@ -147,7 +195,17 @@
         </div>
       </section>
 
-      <section class="case-section asset-case-section" aria-labelledby="visual-direction-title">
+      <nav class="case-toc" aria-label="AI asset pipeline case study sections" data-reveal>
+        <a href="#generation-title">Selected Case Study</a>
+        <a href="#breakdown-title">Asset Decomposition</a>
+        <a href="#refinement-title">Blender Cleanup</a>
+        <a href="#ue5-title">UE5 Validation</a>
+        <a href="#limitations-title">Findings</a>
+        <a href="#additional-experiments">Additional Experiments</a>
+      </nav>
+
+      <details class="case-section asset-case-section additional-experiment" id="additional-experiments">
+        <summary>Additional Experiment: Visual Direction</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">02</span>
           <div>
@@ -196,9 +254,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </details>
 
-      <section class="case-section asset-case-section" aria-labelledby="concept-development-title">
+      <details class="case-section asset-case-section additional-experiment">
+        <summary>Additional Experiment: Concept Development</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">03</span>
           <div>
@@ -246,9 +305,10 @@
             <figcaption><b>Architectural Ruin Concept</b><span>Large modular forms with stone and overgrowth cues.</span></figcaption>
           </figure>
         </div>
-      </section>
+      </details>
 
-      <section class="case-section asset-case-section" aria-labelledby="asset-categories-title">
+      <details class="case-section asset-case-section additional-experiment">
+        <summary>Additional Experiment: Asset Families</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">04</span>
           <div>
@@ -288,14 +348,15 @@
             <p>Ruin gates, Buddha-head structures, stone bridges, architectural fragments, and modular environment props.</p>
           </article>
         </div>
-      </section>
+      </details>
 
       <section class="case-section asset-case-section" aria-labelledby="generation-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">05</span>
+          <span class="asset-section-number">02</span>
           <div>
-            <h2 id="generation-title">AI 3D Generation Iteration</h2>
-            <p>Multiple AI-generated 3D versions were compared to identify outputs with stronger proportions, silhouettes, mechanical readability, and potential usability as real-time prototype assets.</p>
+            <p class="eyebrow">Selected Case Study</p>
+            <h2 id="generation-title">Modular Spacecraft Production Study</h2>
+            <p>Multiple generated versions were compared to select a spacecraft with readable modular relationships, then reviewed for repair and real-time usability.</p>
           </div>
         </div>
         <ul class="criteria-grid asset-criteria-grid" aria-label="Generation comparison criteria" data-reveal>
@@ -337,9 +398,9 @@
 
       <section class="case-section asset-case-section" aria-labelledby="breakdown-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">06</span>
+          <span class="asset-section-number">03</span>
           <div>
-            <h2 id="breakdown-title">Modular Asset Breakdown</h2>
+            <h2 id="breakdown-title">Asset Decomposition</h2>
             <p>Complex assets were divided into smaller components to improve generation accuracy, simplify inspection, and support independent replacement and optimization.</p>
           </div>
         </div>
@@ -396,9 +457,9 @@
 
       <section class="case-section asset-case-section" aria-labelledby="refinement-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">07</span>
+          <span class="asset-section-number">04</span>
           <div>
-            <h2 id="refinement-title">Local Detail Refinement</h2>
+            <h2 id="refinement-title">Blender Cleanup and Optimization</h2>
             <p>Parts that became blurred, unstable, or structurally inconsistent during full-model generation were isolated and regenerated separately.</p>
           </div>
         </div>
@@ -488,7 +549,8 @@
         </div>
       </section>
 
-      <section class="case-section asset-case-section" aria-labelledby="environment-title">
+      <details class="case-section asset-case-section additional-experiment">
+        <summary>Additional Experiment: Environment Asset Workflow</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">09</span>
           <div>
@@ -544,9 +606,10 @@
             <h3>UE5 Scene Placement</h3>
           </li>
         </ol>
-      </section>
+      </details>
 
-      <section class="case-section asset-case-section" aria-labelledby="white-material-title">
+      <details class="case-section asset-case-section additional-experiment">
+        <summary>Additional Experiment: White Models and Materials</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">10</span>
           <div>
@@ -621,13 +684,13 @@
             <h3>Robot Asset</h3>
           </article>
         </div>
-      </section>
+      </details>
 
       <section class="case-section asset-case-section" aria-labelledby="ue5-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">11</span>
+          <span class="asset-section-number">05</span>
           <div>
-            <h2 id="ue5-title">Unreal Engine 5 Scene Validation</h2>
+            <h2 id="ue5-title">Unreal Engine Validation</h2>
             <p>Selected assets were imported into Unreal Engine 5 and evaluated within real-time scenes.</p>
           </div>
         </div>
@@ -669,7 +732,8 @@
         </div>
       </section>
 
-      <section class="case-section asset-case-section" aria-labelledby="architecture-title">
+      <details class="case-section asset-case-section additional-experiment">
+        <summary>Pipeline Reference: Full Workflow Architecture</summary>
         <div class="asset-section-heading" data-reveal>
           <span class="asset-section-number">12</span>
           <div>
@@ -691,11 +755,11 @@
           <li><span>11</span><h3>Material Refinement</h3><p>Adjust stone, metal, roughness, wear, and emissive detail.</p></li>
           <li><span>12</span><h3>UE5 Validation</h3><p>Evaluate the assets inside real-time scenes.</p></li>
         </ol>
-      </section>
+      </details>
 
       <section class="case-section asset-case-section" aria-labelledby="evaluation-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">13</span>
+          <span class="asset-section-number">06</span>
           <div>
             <h2 id="evaluation-title">Quality Evaluation</h2>
             <p>No synthetic score was assigned. Each output was reviewed against practical visual and technical criteria.</p>
@@ -730,9 +794,9 @@
 
       <section class="case-section asset-case-section" aria-labelledby="limitations-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">14</span>
+          <span class="asset-section-number">06</span>
           <div>
-            <h2 id="limitations-title">Observed Limitations</h2>
+            <h2 id="limitations-title">Findings and Limitations</h2>
             <p>The workflow remained useful for prototyping, but generated outputs still required close technical and artistic review.</p>
           </div>
         </div>
@@ -749,9 +813,9 @@
 
       <section class="case-section asset-case-section" aria-labelledby="outcome-title">
         <div class="asset-section-heading" data-reveal>
-          <span class="asset-section-number">15</span>
+          <span class="asset-section-number">07</span>
           <div>
-            <h2 id="outcome-title">Final Outcome and Reflection</h2>
+            <h2 id="outcome-title">Additional Experiments and Reflection</h2>
             <p>The final result is a documented prototype workflow, not a claim of fully automated production readiness.</p>
           </div>
         </div>
@@ -776,7 +840,7 @@
       </section>
 
       <nav class="project-pagination" aria-label="Project pagination">
-        <a href="asset-weathering.html">Previous: AI-Assisted Asset Weathering Pipeline</a>
+        <a href="json-generator.html">Previous: JSON-Driven Environment Generator</a>
         <a href="ai-npc.html">Next: AI NPC Interaction Prototype</a>
       </nav>
     </article>
@@ -786,9 +850,9 @@
     <div class="container footer-inner">
       <div>
         <p class="footer-name">Kaixin Kang</p>
-        <p class="footer-role">Technical Artist · Chongqing, China</p>
+        <p class="footer-role">Technical Artist &middot; Chongqing, China</p>
       </div>
-      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>© 2026 Kaixin Kang</p>
+      <p class="footer-meta"><a class="text-link" href="mailto:122880509@qq.com">122880509@qq.com</a><br>&copy; 2026 Kaixin Kang</p>
     </div>
   </footer>
 </body>
