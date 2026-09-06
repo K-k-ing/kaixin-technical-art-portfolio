@@ -7,16 +7,17 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/">
   <title>Kaixin Kang — 技术美术作品集</title>
-  <meta name="description" content="专注程序化工具、Unreal Engine 5 工作流、Blender Python 自动化与 AI 辅助三维资产生产管线的技术美术作品集。">
+  <meta name="description" content="Kaixin Kang 的技术美术作品集：MATE 材质工具、参考驱动的赛道重建、面子果实几何预算规划、AI 辅助三维资产管线与交互原型。">
   <meta property="og:title" content="Kaixin Kang — 技术美术作品集">
-  <meta property="og:description" content="程序化工具、Unreal Engine 5 工作流、Blender Python 自动化与 AI 辅助三维资产生产管线。">
+  <meta property="og:description" content="MATE AI 材质工具、Unreal Engine 5 程序化场景、AI 辅助资产制作与实时交互。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kaixin Kang 技术美术作品集">
   <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/">
-  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png">
-  <meta property="og:image:alt" content="Unreal Engine 5 中机械资产的洁净状态与程序化风化效果对比">
+  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/mate/screens/material-profile.webp">
+  <meta property="og:image:alt" content="MATE 桌面材质工具的真实界面与飞行器材质预览">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="geometry.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -50,7 +51,7 @@
             <p>我是一名技术美术，专注于程序化工具、AI 辅助资产管线与实时制作工作流。</p>
             <p>公共艺术与空间设计的学习背景，让我更关注 Unreal Engine 5 工具开发、Blender Python 自动化、美术可用的参数控制，以及面向实际制作的技术文档。</p>
           </div>
-          <p class="hero-status">网易游戏技术美术实习生 · 2026 年 8 月至今</p>
+          <p class="hero-status">网易互娱 ArtSpark 实习生 · 技术美术 / AI 管线 · 2026 年 8 月至今</p>
           <div class="button-row">
             <a class="button button-primary" href="#work">浏览作品</a>
             <a class="button" href="resume-source.html">查看简历</a>
@@ -59,8 +60,8 @@
           </div>
         </div>
 
-        <figure class="hero-media" data-reveal data-optional-media>
-          <img src="assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png" alt="在 Unreal Engine 5 中渲染的机械资产洁净版与程序化风化版" width="1640" height="987" fetchpriority="high" data-hide-on-error>
+        <figure class="hero-media hero-media-mate" data-reveal data-optional-media>
+          <a href="projects/mate.html" aria-label="了解 MATE 材质工具"><img src="assets/projects/mate/screens/material-profile.webp" alt="MATE 真实软件界面：飞行器材质预览与可编辑 PBR 参数" width="2559" height="1335" fetchpriority="high" data-hide-on-error></a>
         </figure>
       </div>
     </section>
@@ -71,26 +72,26 @@
           <h2 id="work-title">精选作品</h2>
           <div class="section-heading-copy">
             <p>通过工具、场景与交互原型，将美术创意转化为可重复使用的实时制作流程。</p>
-            <p class="project-ecosystem">项目涵盖程序化材质处理、JSON 驱动的场景生成、AI 辅助资产制作与实时交互系统。</p>
+            <p class="project-ecosystem">项目涵盖 MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。</p>
           </div>
         </div>
 
         <div class="project-list">
           <article data-reveal>
-            <a class="project-link project-link-featured" href="projects/asset-weathering.html" aria-label="查看程序化资产风化管线">
-              <div class="project-media project-media-weathering" data-optional-media>
-                <img src="assets/projects/asset-weathering/hero/weathering-hero-clean-vs-aged.png" alt="同一机械资产在 Unreal Engine 5 中的洁净状态与程序化风化状态" width="1640" height="987" loading="lazy" decoding="async" data-hide-on-error>
+            <a class="project-link project-link-featured" href="projects/mate.html" aria-label="查看 MATE 材质工具项目">
+              <div class="project-media project-media-mate" data-optional-media>
+                <img src="assets/projects/mate/screens/material-profile.webp" alt="MATE 中的模型表面处理预览与材质参数 Inspector" width="2559" height="1335" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">01 / 核心项目 · 资产处理</p>
-                <h3>程序化资产风化管线</h3>
-                <p>基于网格几何特征生成磨损、锈蚀与污垢遮罩，并映射到 UV 空间。通过 Unreal Engine 5 材质实例，可实时、无损地调整最终风化效果。</p>
+                <p class="project-index">01 / 核心项目 · 个人工具原型</p>
+                <h3>MATE — AI 材质分析与程序化做旧</h3>
+                <p>我开发的桌面材质工具，将多视角 AI 分析、人工审核、区域绑定与可编辑效果栈连接起来，让已有 3D 资产的表面变化可以继续检查、调整和比较。</p>
                 <ul class="tags" aria-label="项目工具">
-                  <li>Blender Python</li>
-                  <li>Unreal Engine 5</li>
-                  <li>几何分析</li>
-                  <li>UV 遮罩</li>
-                  <li>程序化材质</li>
+                  <li>Electron</li>
+                  <li>TypeScript</li>
+                  <li>Three.js</li>
+                  <li>AI 辅助工作流</li>
+                  <li>材质工具</li>
                 </ul>
                 <span class="text-link">查看项目</span>
               </div>
@@ -98,20 +99,20 @@
           </article>
 
           <article data-reveal>
-            <a class="project-link" href="projects/json-generator.html" aria-label="查看 JSON 驱动的程序化场景生成器">
+            <a class="project-link" href="projects/track-assembly.html" aria-label="查看赛道重建工具项目">
               <div class="project-media" data-optional-media>
-                <img src="assets/projects/json-generator/screens/final-laboratory.png" alt="使用模块化场景资产搭建的 Unreal Engine 5 实验室" width="2118" height="1031" loading="lazy" decoding="async" data-hide-on-error>
+                <img src="assets/projects/track-assembly/screens/track-overview.webp" alt="Unreal Engine 中重建的赛道、护栏与路侧装饰" width="864" height="575" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
                 <p class="project-index">02 / 工具开发</p>
-                <h3>JSON 驱动的程序化场景生成器</h3>
-                <p>将结构化 JSON 参数转化为模块化房间布局的 Unreal Engine 5 工具。美术人员可通过编辑器中开放的参数，调整尺寸、资产数量与场景构成。</p>
+                <h3>赛道重建工具 — Track Assembly Tool</h3>
+                <p>从参考缩略图出发，利用 AI 分析生成布局数据，再通过 Unreal Editor Python、Spline 分析与 HISM 搭建赛道资产。用可调规则与区域手动覆盖，保留美术对布局和排列的控制。</p>
                 <ul class="tags" aria-label="项目工具">
                   <li>Unreal Engine 5</li>
-                  <li>蓝图</li>
-                  <li>JSON</li>
-                  <li>构造脚本</li>
-                  <li>程序化生成</li>
+                  <li>Editor Python</li>
+                  <li>Spline 分析</li>
+                  <li>HISM</li>
+                  <li>参考驱动重建</li>
                 </ul>
                 <span class="text-link">查看项目</span>
               </div>
@@ -119,22 +120,22 @@
           </article>
 
           <article data-reveal>
-            <a class="project-link" href="projects/ai-asset-pipeline.html" aria-label="查看 AI 辅助三维资产生产管线">
-              <div class="project-media" data-optional-media>
-                <img src="assets/projects/ai-asset-pipeline/hero/hero-concept-family.png" alt="融合宗教意象与科幻风格的角色及飞船概念系列" width="1916" height="821" loading="lazy" decoding="async" data-hide-on-error>
+            <a class="project-link" href="projects/ai-asset-pipeline.html" aria-label="查看 AI 辅助建模：面子果实与三维资产生产管线">
+              <div class="project-media project-media-geometry" data-optional-media>
+                <img src="assets/projects/geometry-planner/screens/planner-analysis-result.png" alt="面子果实的真实分析界面，展示鞋子参考图、三档三角面预算与几何贴图分工" width="1519" height="935" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">03 / AI 资产管线</p>
-                <h3>AI 辅助三维资产生产管线</h3>
-                <p>串联 AI 概念生成、资产拆分、三维生成、Blender 优化与 Unreal Engine 验证的实验性流程。重点研究资产的制作可用性、模块化重建，以及 AI 生成几何的常见局限。</p>
+                <p class="project-index">03 / AI 辅助建模 · 两个案例</p>
+                <h3>面子果实与 AI 资产生产管线</h3>
+                <p>生成前，用“面子果实”分析参考图结构，规划可解释的三角面预算；生成后，通过原有资产管线进行模块化拆分、Blender 修复与 Unreal Engine 验证。两个案例共同探索 AI 建模的制作可用性。</p>
                 <ul class="tags" aria-label="项目工具">
-                  <li>概念设计</li>
-                  <li>AI 三维生成</li>
-                  <li>模块化资产</li>
+                  <li>几何预算规划</li>
+                  <li>AI 结构分析</li>
+                  <li>资产生产管线</li>
                   <li>Blender</li>
                   <li>Unreal Engine 5</li>
                 </ul>
-                <span class="text-link">查看项目</span>
+                <span class="text-link">查看两个案例</span>
               </div>
             </a>
           </article>
@@ -167,53 +168,55 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <h2 id="skills-title">技术能力</h2>
-          <p>通过场景生成、资产制作、材质处理与交互系统项目展示的实际技能。</p>
+          <p>围绕 AI 图像工作流、工具开发与三维资产落地，在个人项目和实习中持续积累制作经验。</p>
         </div>
 
         <div class="capability-grid">
           <article class="capability-group" data-reveal>
             <span class="capability-number">01</span>
-            <h3>程序化工具</h3>
+            <h3>AI 图像与工作流</h3>
             <ul class="plain-list">
-              <li>程序化工具开发</li>
-              <li>JSON 驱动的场景生成</li>
-              <li>Blender Python 自动化</li>
-              <li>可复用的资产处理流程</li>
+              <li>Stable Diffusion · 2023 年起</li>
+              <li>ComfyUI 工作流搭建与调试</li>
+              <li>Krea2 + LoRA 图生图</li>
+              <li>Prompt 设计与风格控制</li>
+              <li>参考图保持、条件控制与采样</li>
             </ul>
           </article>
 
           <article class="capability-group" data-reveal>
             <span class="capability-number">02</span>
-            <h3>实时引擎</h3>
+            <h3>工具与管线开发</h3>
             <ul class="plain-list">
-              <li>Unreal Engine 5</li>
-              <li>蓝图系统</li>
-              <li>材质编辑器</li>
-              <li>材质实例</li>
-              <li>面向美术的工具工作流</li>
+              <li>UE Editor Python 工具开发</li>
+              <li>Spline 分析与 HISM 批量布置</li>
+              <li>JSON 结构化数据与 API 集成</li>
+              <li>Electron / React / Three.js</li>
+              <li>AI 辅助开发与参数化工具设计</li>
             </ul>
           </article>
 
           <article class="capability-group" data-reveal>
             <span class="capability-number">03</span>
-            <h3>AI 辅助制作</h3>
+            <h3>三维资产与实时引擎</h3>
             <ul class="plain-list">
-              <li>AI 辅助资产创作</li>
-              <li>提示词与图像工作流设计</li>
-              <li>外部 AI API 集成</li>
-              <li>制作可用性评估</li>
+              <li>Tripo 建模与资产拆分</li>
+              <li>Blender 资产优化</li>
+              <li>UE5 场景搭建与资产验证</li>
+              <li>基础蓝图交互与 NPC 原型</li>
+              <li>Photoshop 与 AI 图像创作</li>
             </ul>
           </article>
 
           <article class="capability-group" data-reveal>
             <span class="capability-number">04</span>
-            <h3>技术美术</h3>
+            <h3>验证与制作协作</h3>
             <ul class="plain-list">
-              <li>基于几何特征的遮罩生成</li>
-              <li>UV 空间纹理处理</li>
-              <li>参数化材质工作流</li>
-              <li>技术文档</li>
-              <li>面向美术的工具设计</li>
+              <li>资产健康检查与 UV 预检</li>
+              <li>服务状态、日志与回归验证</li>
+              <li>环绕采集与 3DGS 流程验证</li>
+              <li>技术文档、测试记录与资源管理</li>
+              <li>英文技术资料阅读</li>
             </ul>
           </article>
         </div>
@@ -229,21 +232,68 @@
         <div class="about-copy" data-reveal>
           <h2 id="about-title">关于我</h2>
           <div class="about-body">
-            <p>我专注于程序化工具、AI 辅助资产管线与实时制作工作流，目前就读于四川美术学院公共艺术专业，研究方向为城市空间艺术与设计。</p>
-            <p>自 2026 年 8 月起担任网易游戏技术美术实习生。目前围绕 Unreal Engine 5、Blender Python、蓝图、JSON、材质与外部 API 集成，持续构建可用于实际制作的工作流。</p>
+            <p>我是康凯鑫，四川美术学院公共艺术专业本科在读，专注于 AI 辅助资产生产与技术美术工具开发。我希望把美术制作中的具体需求，转化为可以操作、检查和反复调整的工具。</p>
+            <p>自 2023 年起，我使用 Stable Diffusion 开展小说插画、角色设计与定制插画实践，积累 Prompt 设计和风格控制经验。现在，我将这些探索延伸到三维资产，从 AI 概念生成、Tripo 建模、Blender 拆分优化，一直推进到 UE5 场景验证。</p>
+            <p>2026 年 8 月起，我在网易互娱 ArtSpark 实习，方向为技术美术与 AI 管线，参与多模态 AI 工作流画布制作与调试、ComfyUI 图生图流程优化，以及卡通赛道和 AI 资产落地实践；同时开发 UE Editor Python 环绕采集工具，用于 3DGS 流程验证。个人项目中，我通过 MATE、赛道重建工具与面子果实，继续探索材质控制、程序化搭建和几何预算规划。</p>
           </div>
           <div class="education">
             <h3>教育背景</h3>
             <p><strong>四川美术学院</strong></p>
-            <p>公共艺术专业 · 艺术学学士</p>
-            <p>方向：城市空间艺术与设计</p>
-            <p>预计毕业时间：2027 年</p>
+            <p>公共艺术专业 · 本科在读 · 2023–2027</p>
+            <p>主修方向：公共艺术设计、空间艺术设计、数字艺术表达</p>
+            <p>预计 2027 年毕业</p>
           </div>
           <aside class="availability" aria-labelledby="availability-title">
             <h3 id="availability-title">求职意向</h3>
-            <p>寻求自 2027 年起的技术美术、管线与工具开发、实时制作及制作技术相关机会。</p>
-            <p>对于符合条件的美国实习机会，可在获得接收公司录用后，通过授权的第三方机构办理 J-1 项目担保。</p>
+            <p>寻求自 2027 年起的技术美术（AI 管线方向）相关岗位，关注 AI 辅助资产生产、工具与工作流开发。</p>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border interests-section" id="interests" aria-labelledby="interests-title">
+      <div class="container interests-heading" data-reveal>
+          <h2 id="interests-title">工作之外</h2>
+          <p>健身、网球、旅行，还有极限运动。</p>
+      </div>
+
+      <div class="interests-gallery" id="interests-gallery" aria-label="生活照片，点击可查看原图">
+        <div class="interests-ribbon">
+          <figure class="interest-card">
+            <button class="interest-photo interest-photo-fitness" type="button" data-lightbox aria-label="查看健身照片大图">
+              <img src="assets/interests/fitness.jpg" alt="在健身房拍下的训练日常" width="1080" height="1920" loading="lazy" decoding="async">
+            </button>
+            <figcaption>健身</figcaption>
+          </figure>
+
+          <figure class="interest-card">
+            <button class="interest-photo interest-photo-tennis" type="button" data-lightbox aria-label="查看网球照片大图">
+              <img src="assets/interests/tennis.jpg" alt="在室内网球场打球" width="1128" height="855" loading="lazy" decoding="async">
+            </button>
+            <figcaption>网球</figcaption>
+          </figure>
+
+          <figure class="interest-card">
+            <button class="interest-photo interest-photo-travel" type="button" data-lightbox aria-label="查看旅行照片大图">
+              <img src="assets/interests/travel.jpg" alt="旅行途中眺望夕阳下的山景" width="1672" height="941" loading="lazy" decoding="async">
+            </button>
+            <figcaption>旅行</figcaption>
+          </figure>
+
+          <figure class="interest-card">
+            <button class="interest-photo" type="button" data-lightbox aria-label="查看跳伞照片大图">
+              <img src="assets/interests/skydiving.jpg" alt="双人跳伞时的合影" width="1913" height="1080" loading="lazy" decoding="async">
+            </button>
+            <figcaption>极限运动</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="container interests-note" data-reveal>
+        <p>从打网球，到创办并运营大学网球社。<br>让热爱成为生活的一部分。</p>
+        <div class="interests-controls">
+          <span>点击照片查看原图</span>
+          <button type="button" data-interests-motion aria-controls="interests-gallery" hidden>暂停滚动</button>
         </div>
       </div>
     </section>

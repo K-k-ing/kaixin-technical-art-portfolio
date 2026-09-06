@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kaixin Kang 的赛道重建工具：AI 分析参考图生成布局数据，结合 Unreal Editor Python、Spline 分析、HISM 与人工区域覆盖，搭建可迭代的赛道场景。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="赛道重建工具 — Track Assembly Tool">
+  <meta property="og:description" content="从参考缩略图到可编辑赛道：AI 布局数据、道路分类、程序化资产布置与美术手动覆盖。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/projects/track-assembly.html">
+  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/track-assembly/screens/track-overview.webp">
+  <meta property="og:image:alt" content="Unreal Engine 中搭建的赛道与两侧护栏、广告牌和装饰资产">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/projects/track-assembly.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../track.css">
+  <script src="../script.js" defer></script>
+  <script src="../track.js" defer></script>
+  <title>赛道重建工具 — Track Assembly Tool | Kaixin Kang</title>
+</head>
+<body class="track-case">
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="wordmark" href="../index.html" aria-label="Kaixin Kang 首页">KAIXIN KANG</a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" id="site-navigation" aria-label="主导航" data-site-nav>
+      <a href="../index.html#work" aria-current="page">作品</a><a href="../index.html#about">关于我</a><a href="../resume-source.html">简历</a><a href="https://github.com/K-k-ing" target="_blank" rel="noreferrer">GitHub</a><a href="../index.html#linkedin">LinkedIn</a><a href="mailto:122880509@qq.com">联系</a>
+    </nav>
+  </div></header>
+  <main class="case-main track-main" id="main"><article class="container">
+    <header class="track-hero">
+      <nav class="case-nav" aria-label="项目导航"><a class="text-link" href="../index.html#work">返回作品列表</a><a class="text-link" href="ai-asset-pipeline.html">下一个项目</a></nav>
+      <p class="eyebrow">02 / 技术美术 · 编辑器工具</p>
+      <div class="track-intro">
+        <div><h1>赛道重建工具</h1><p class="track-name" lang="en">Track Assembly Tool</p><p class="track-stack-line">Unreal Editor Python / Spline / HISM</p></div>
+        <div class="track-intro-copy"><h2>从一张缩略图，<br>走到可编辑的赛道布局。</h2><p>我先用 AI 分析参考缩略图，生成布局数据，再将数据带入赛道重建工具。后续围绕赛道 Spline 分析直道、弯道与坡道，按规则批量布置资产，并保留美术对局部结果的控制。</p><a class="text-link" href="#demo">观看完整操作演示 ↓</a></div>
+      </div>
+      <dl class="track-facts" aria-label="项目速览">
+        <div><dt>我的角色</dt><dd>技术美术 / 工具开发<br>工作流、空间规则、界面与验证</dd></div>
+        <div><dt>使用环境</dt><dd>Unreal Engine 编辑器<br>Python + Tkinter + Slate Bridge</dd></div>
+        <div><dt>当前状态</dt><dd>可操作的 Editor-only 工具<br>已用于卡通赛车场景搭建验证</dd></div>
+      </dl>
+    </header>
+
+    <section class="track-demo" id="demo" aria-labelledby="demo-title">
+      <div class="track-demo-heading"><div><p class="eyebrow">真实录屏 / 中文字幕</p><h2 id="demo-title">配置资产、执行生成，再检查结果。</h2></div><span>01:43 · 完整流程</span></div>
+      <div class="track-player">
+        <video id="track-demo-video" controls playsinline preload="none" poster="../assets/projects/track-assembly/screens/track-layout.webp" aria-label="赛道重建工具完整带字幕演示">
+          <source src="../assets/projects/track-assembly/video/track-assembly-demo.mp4" type="video/mp4">
+          <p><a href="../assets/projects/track-assembly/video/track-assembly-demo.mp4">打开完整录屏 MP4</a></p>
+        </video>
+        <button class="track-play-cover" type="button" data-track-play aria-label="播放赛道重建完整演示"><img src="../assets/projects/track-assembly/screens/track-layout.webp" alt="" width="2079" height="1089" decoding="async"><span><b aria-hidden="true">▶</b> 播放完整演示 <small>1:43 · 中文字幕</small></span></button>
+      </div>
+      <nav class="track-chapters" aria-label="赛道演示章节"><button type="button" data-track-seek="0"><span>00:00</span>打开工具与选资产</button><button type="button" data-track-seek="18"><span>00:18</span>排列与参数配置</button><button type="button" data-track-seek="42"><span>00:42</span>生成与布局检查</button><button type="button" data-track-seek="70"><span>01:10</span>路面材质与结果</button></nav>
+      <p class="track-video-feedback" data-track-feedback role="status" aria-live="polite"></p>
+      <p class="track-demo-note">保留原录屏的完整时序、字幕和操作速度，点击后加载。<a href="../assets/projects/track-assembly/video/track-assembly-demo.mp4" download>下载完整录屏</a>。录屏重点展示编辑器配置与搭建，不包含前段 AI 分析参考图的过程。</p>
+    </section>
+    <nav class="track-contents" aria-label="赛道项目目录"><a href="#reference">参考到布局</a><a href="#problem">制作问题</a><a href="#workflow">工具工作流</a><a href="#controls">美术控制</a><a href="#technical">技术拆解</a><a href="#challenges">开发挑战</a><a href="#contribution">我的工作</a><a href="#next">验证与迭代</a></nav>
+
+    <section class="track-section" id="reference" aria-labelledby="reference-title">
+      <div class="track-section-heading"><p class="eyebrow">01 / 输入参考与重建结果</p><h2 id="reference-title">保留参考的布局意图，<br>把它变成可以继续制作的结构。</h2><p>这张低分辨率缩略图是布局输入参考。AI 先分析图像并给出布局数据，数据再进入工具；编辑器阶段以 Spline 作为道路分析与资产布置的空间依据。</p></div>
+      <div class="track-reference-flow">
+        <figure class="track-figure track-reference-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大赛道输入参考缩略图"><img src="../assets/projects/track-assembly/screens/reference-thumbnail.webp" alt="输入参考：绿色场地上的细长闭合赛道缩略图" width="317" height="318" loading="lazy" decoding="async"></button><figcaption><b>01 · 输入参考</b><br>原始缩略图，保留其真实清晰度。</figcaption></figure>
+        <div class="track-reference-data"><span aria-hidden="true">→</span><p class="eyebrow">02 / AI 辅助布局</p><h3>参考分析<br>↓<br>布局数据</h3><p>在进入编辑器工具前，先将图像中的布局信息转化为数据。</p><small>AI 位于上游流程，<br>不是工具直接读取图片。</small><span aria-hidden="true">→</span></div>
+        <figure class="track-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大参考驱动的赛道布局"><img src="../assets/projects/track-assembly/screens/track-layout.webp" alt="Unreal Engine 中细长闭合赛道的俯视布局，显示路面和两侧边带" width="2079" height="1089" loading="lazy" decoding="async"></button><figcaption><b>03 · 编辑器中的布局</b><br>检查整体形态、道路宽度与转弯过渡，再继续调整资产和材质。</figcaption></figure>
+      </div>
+      <p class="track-boundary">这里展示的是参考驱动的赛道原型重建，不是从单张缩略图恢复真实尺寸或一比一还原完整场景。布局判断和视觉结果仍需要人工检查。</p>
+      <div class="track-result-grid">
+        <figure class="track-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大赛道整体搭建结果"><img src="../assets/projects/track-assembly/screens/track-overview.webp" alt="赛道搭建结果：长直道、回转弯及沿道路布置的护栏与装饰" width="864" height="575" loading="lazy" decoding="async"></button><figcaption><b>整体结构</b> · 先确认道路走向，再检查边界连续性。</figcaption></figure>
+        <figure class="track-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大路侧资产排列结果"><img src="../assets/projects/track-assembly/screens/trackside-variation.webp" alt="直道两侧的广告牌、护栏与花箱混合排列" width="767" height="455" loading="lazy" decoding="async"></button><figcaption><b>局部排列</b> · 广告牌、护栏与花箱组成可调整的路侧节奏。</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="track-section" id="problem" aria-labelledby="problem-title">
+      <div class="track-section-heading"><p class="eyebrow">02 / 制作问题</p><h2 id="problem-title">赛道改一处，<br>不应该让所有护栏重新摆一遍。</h2></div>
+      <div class="track-two-col"><p class="track-large-copy">在赛道搭建中，我反复遇到的不是“放不下一个模型”，而是大量资产都需要复制、旋转、对齐。道路形状一改，左右偏移、弯道资产和坡道朝向又要重新处理。</p><div><p>所以我把目标分成两层：先把重复的空间计算交给程序，再把资产选择与局部修正留给美术。</p><p>工具的价值是让路径、规则和资产之间保持可调整的关系，支持围绕 Spline 重新生成，而不是一次生成后就无法修改。</p></div></div>
+      <div class="track-principles"><article><span>自动化</span><h3>减少重复操作</h3><p>沿线采样、方向计算、左右偏移与批量实例布置。</p></article><article><span>控制权</span><h3>让美术能够覆盖</h3><p>独立配置直道、弯道与坡道，必要时手动指定区域类型。</p></article><article><span>迭代</span><h3>规则跟随路径修改</h3><p>调整参数与 Spline 后重新生成，检查新的边界与排列结果。</p></article></div>
+    </section>
+
+    <section class="track-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="track-section-heading"><p class="eyebrow">03 / 编辑器工作流</p><h2 id="workflow-title">从路径，到可以检查的实例结果。</h2><p>参考布局进入编辑器后，我将资产搭建拆为五步。每一步只承担明确的职责，方便调参和排查问题。</p></div>
+      <ol class="track-workflow"><li><span>01</span><h3>选择路径</h3><p>使用目标 Spline，设置道路宽度、生成侧和基础偏移。</p></li><li><span>02</span><h3>采样与分类</h3><p>读取位置与切线，分析直道、弯道、坡道及弯道内外侧。</p></li><li><span>03</span><h3>配置规则</h3><p>分区域选择资产、间距、偏移、模型前向轴与校准旋转。</p></li><li><span>04</span><h3>人工覆盖</h3><p>为特殊距离区间指定类型，修正不符合视觉需求的分类。</p></li><li><span>05</span><h3>生成与迭代</h3><p>通过 HISM 组织重复实例，在视口中检查并重新生成。</p></li></ol>
+    </section>
+
+    <section class="track-section" id="controls" aria-labelledby="controls-title">
+      <div class="track-section-heading"><p class="eyebrow">04 / 面向美术的控制</p><h2 id="controls-title">同一条路径，不必只有一种重复方式。</h2><p>我把常用调整集中到中文操作面板，让使用者能够从内容浏览器选择资产，再配置规则，不必为了换一个模型进入代码。</p></div>
+      <div class="track-control-feature"><div><h3>路径与排列，先给出整体约束。</h3><p>Track Width、左右侧和基础 Offset 决定布置范围。自动间距、最小间距、间距倍率与连续边界排列，用来调整资产之间的衔接。</p><p>不同模型自身的前向轴、比例和原点并不一致，因此面板保留前向轴、Pitch / Yaw / Roll、高度与缩放校准。</p><p class="track-boundary">这些设置服务于原型搭建。紧弯、接缝和穿插仍需要在视口中检查，不能只看参数是否有效。</p></div><figure class="track-figure track-ui-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大赛道工具主参数面板"><img src="../assets/projects/track-assembly/screens/ui-main.webp" alt="中文主面板：Spline 输入、赛道宽度、连续边界排列与直道资产校准" width="748" height="986" loading="lazy" decoding="async"></button><figcaption>主面板：路径输入与直道规则。点击查看原尺寸截图。</figcaption></figure></div>
+      <div class="track-control-feature track-control-feature-reverse"><div><h3>直道、弯道内侧、弯道外侧，分别配置。</h3><p>不同道路区域可以使用不同 Mesh 列表、间距与 Offset；弯道内外侧不再被简化成固定的左边或右边。</p><p>现有面板已经包含单一、分段和随机展示，以及按长度／数量分段、随机种子等选项。我用这些规则控制资产的组合节奏，再通过真实场景检查效果。</p></div><figure class="track-figure track-ui-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大直道展示模式与弯道配置"><img src="../assets/projects/track-assembly/screens/ui-asset-modes.webp" alt="直道展示方式下拉菜单：单一、分段和随机，下方分别配置通用弯道与内侧模型" width="767" height="992" loading="lazy" decoding="async"></button><figcaption>展示方式与分区域模型列表：让不同路段使用不同的排列规则。</figcaption></figure></div>
+      <div class="track-control-feature"><div><h3>自动分类给出建议，特殊区域由我决定。</h3><p>方向与高度变化提供道路类型的初步判断，但“数学上像弯道”不一定意味着美术希望换用弯道资产。</p><p>通过 Zone Override，我可以按起止距离指定区域类型，并单独启用或停用覆盖区间，让视觉意图有明确的入口。</p><p class="track-boundary">阈值可调、结果可观察、局部可覆盖，是我对这套自动化流程的基本要求。</p></div><figure class="track-figure track-ui-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大区域识别与手动覆盖面板"><img src="../assets/projects/track-assembly/screens/ui-zone-override.webp" alt="坡道参数、弯道及坡道检测阈值、随机种子与区域手动覆盖表格" width="763" height="1011" loading="lazy" decoding="async"></button><figcaption>检测与手动覆盖入口：把自动规则无法表达的意图留给使用者。</figcaption></figure></div>
+      <details class="track-extra-ui"><summary>查看完整弯道参数与生成状态</summary><div class="track-extra-ui-grid"><figure class="track-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大弯道内外侧参数"><img src="../assets/projects/track-assembly/screens/ui-corner-rules.webp" alt="弯道内外侧资产、独立间距与校准控制" width="864" height="1130" loading="lazy" decoding="async"></button><figcaption>弯道内外侧分别维护排列参数。</figcaption></figure><figure class="track-figure track-status-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大生成操作与状态记录"><img src="../assets/projects/track-assembly/screens/ui-generation-status.webp" alt="生成、重新生成、清除按钮及生成状态记录" width="335" height="439" loading="lazy" decoding="async"></button><figcaption>生成、重新生成与清除入口。原截图分辨率较低，不把日志中的数字作为性能指标。</figcaption></figure></div></details>
+    </section>
+
+    <section class="track-section" id="technical" aria-labelledby="technical-title">
+      <div class="track-section-heading"><p class="eyebrow">05 / 技术拆解</p><h2 id="technical-title">把道路的空间关系，<br>转化为资产可以执行的规则。</h2></div>
+      <div class="track-system" aria-label="赛道分析与资产生成关系图"><div><small>空间输入</small><h3>Spline 采样</h3><p>Position / Tangent<br>Distance / Local Frame</p></div><span aria-hidden="true">→</span><div><small>道路语义</small><h3>分类 + 手动覆盖</h3><p>Straight / Corner / Ramp<br>Inside / Outside / Zone</p></div><span aria-hidden="true">→</span><div><small>生成规则</small><h3>资产与 Transform</h3><p>Mesh / Spacing / Offset<br>朝向 / 高度 / 缩放</p></div><span aria-hidden="true">→</span><div><small>编辑器输出</small><h3>HISM 实例</h3><p>相同资产组织为实例数据<br>视口检查 → 重新生成</p></div></div>
+      <div class="track-tech-grid"><article><span>01 / 局部坐标</span><h3>位置正确，还需要方向正确。</h3><p>将 Spline Tangent 作为局部前向方向，再计算横向与 Up。左右偏移和 Mesh 旋转依赖同一个局部坐标系，避免只在世界坐标中摆放。</p></article><article><span>02 / 区域分类</span><h3>水平变化看弯道，垂直变化看坡道。</h3><p>相邻采样切线的变化用于近似道路弯曲，高度和竖直方向补充坡道判断。检测距离与阈值面向美术调节，不追求所有输入下的绝对分类。</p></article><article><span>03 / 弯道语义</span><h3>左 / 右，不等于内 / 外。</h3><p>道路左右侧由行进方向定义；弯道内外侧还取决于转向。将 Turning Direction 与 Placement Side 组合，才能选择正确的资产规则。</p></article><article><span>04 / 实例组织</span><h3>批量生成实例数据，而非大量独立 Actor。</h3><p>相同 Mesh 通过 HISM Component 管理，每个位置由实例 Transform 描述。目标是降低重复资产的场景组织成本；实际帧率与内存收益仍需要专项测量。</p></article></div>
+      <div class="track-editor-note"><h3>为什么这一版使用 Python 界面？</h3><p>我用 Python + Tkinter + Unreal Slate Bridge 连接参数面板与编辑器逻辑，尝试在不制作正式插件的前提下快速验证工具工作流。这是 Editor-only Python 工具，不是 Blueprint Editor Utility Widget，也不是游戏运行时系统。</p></div>
+    </section>
+
+    <section class="track-section" id="challenges" aria-labelledby="challenges-title">
+      <div class="track-section-heading"><p class="eyebrow">06 / 开发挑战与解决方案</p><h2 id="challenges-title">让脚本走出固定的演示条件。</h2><p>我把问题分别放在空间计算、美术控制和工程结构中处理。下面记录关键判断，而不是仅罗列功能。</p></div>
+      <div class="track-challenges">
+        <details open><summary><span>01</span><h3>沿线位置对了，资产朝向却不对。</h3></summary><div><p><b>问题</b>仅使用位置或世界旋转，在急弯和控制点附近难以持续跟随道路。</p><p><b>我的决策</b>用切线建立局部前向，再统一计算横向偏移和旋转；模型自身差异通过前向轴与校准参数处理。</p><p><b>检查重点</b>在弯道、控制点附近检查朝向、接缝与穿插。</p></div></details>
+        <details><summary><span>02</span><h3>固定间距无法表达直道和弯道的差别。</h3></summary><div><p><b>问题</b>只做沿线采样，同一种资产会一直铺进不同道路区域。</p><p><b>我的决策</b>比较相邻切线的方向变化，将曲率近似转化为可调检测阈值，再选择不同规则。</p><p><b>检查重点</b>缓弯与急弯需要分别观察，避免把“分类通过”等同于“视觉正确”。</p></div></details>
+        <details><summary><span>03</span><h3>坡道在俯视图里，可能仍是一条直线。</h3></summary><div><p><b>问题</b>仅分析 XY 方向会遗漏道路的竖直变化。</p><p><b>我的决策</b>补充高度与竖直方向分析，并为坡道保留独立的模型、间距和偏移配置。</p><p><b>检查重点</b>本页主要演示平面闭合赛道；坡道能力有文档和界面依据，但不是这段录屏的重点验证对象。</p></div></details>
+        <details><summary><span>04</span><h3>固定左侧不能一直代表弯道内侧。</h3></summary><div><p><b>问题</b>左转和右转会改变某一侧对应的内外语义。</p><p><b>我的决策</b>将道路转向与布置侧组合判断，为弯道内外侧分别设置资产规则。</p><p><b>检查重点</b>在不同转向下复核外侧护栏、内侧装饰的位置关系。</p></div></details>
+        <details><summary><span>05</span><h3>程序分类正确，也可能不符合美术意图。</h3></summary><div><p><b>问题</b>某段缓弯可能需要继续使用直道资产，以保持边界节奏。</p><p><b>我的决策</b>加入按距离区间的 Zone 手动覆盖，允许自动建议被明确修正。</p><p><b>收获</b>自动化应该承担重复劳动，而不是剥夺美术对特殊区域的决定权。</p></div></details>
+        <details><summary><span>06</span><h3>重复资产越来越多，场景管理越来越重。</h3></summary><div><p><b>问题</b>大量独立 Static Mesh Actor 会增加场景组织、选择与重新生成的管理成本。</p><p><b>我的决策</b>使用 HISM 组织相同 Mesh 的实例，把生成结果转化为批量实例数据。</p><p><b>验证边界</b>这是结构上的选择，不用未经测量的帧率或效率提升比例包装结果。</p></div></details>
+        <details><summary><span>07</span><h3>功能增加后，各类规则开始互相影响。</h3></summary><div><p><b>问题</b>分析、分类、布置与 UI 混在同一执行函数中，会让修改难以定位。</p><p><b>我的决策</b>逐步拆分 Analysis、Classification、Placement、Generation 与 UI 的职责。</p><p><b>收获</b>工具的可维护性需要随功能一起设计，而不是等到完成后再整理。</p></div></details>
+        <details><summary><span>08</span><h3>核心函数正常，界面操作仍可能出错。</h3></summary><div><p><b>问题</b>默认值、按钮绑定或参数映射错误，也会造成最终生成异常。</p><p><b>我的决策</b>分别使用核心逻辑回归与 UI Bridge 回归，检查规则本身和参数传递链路。</p><p><b>验证边界</b>开发记录包含这两类测试；网页展示不等于对任意 UE 版本、任意资产的兼容性保证。</p></div></details>
+      </div>
+    </section>
+
+    <section class="track-section" id="contribution" aria-labelledby="contribution-title">
+      <div class="track-section-heading"><p class="eyebrow">07 / 我的工作</p><h2 id="contribution-title">把制作经验，变成可执行的工具规则。</h2></div>
+      <div class="track-two-col"><div><p>我负责梳理参考到布局、再到资产搭建的制作流程，将赛道中的重复工作拆解为可调整的空间规则。技术实现围绕 Unreal Editor Python、Spline 几何分析、道路分类、程序化布置和 HISM 生成展开。</p><p>同时，我设计面向美术的参数控制和中文操作面板，围绕核心逻辑与 UI 传参进行回归验证，并用实际赛道场景检查排列效果。</p></div><ul class="track-role-list"><li>参考分析与工具工作流设计</li><li>Spline 采样与局部坐标计算</li><li>道路分类、内外侧与手动覆盖</li><li>资产规则、HISM 与重新生成</li><li>Editor UI、桥接与回归测试</li></ul></div>
+    </section>
+
+    <section class="track-section" id="next" aria-labelledby="next-title">
+      <div class="track-section-heading"><p class="eyebrow">08 / 当前结果与下一步</p><h2 id="next-title">先把搭建流程做实，再扩展复杂场景。</h2></div>
+      <div class="track-roadmap"><article><span>当前展示</span><h3>参考驱动的赛道原型</h3><p>AI 布局数据进入工具，编辑器中配置资产、生成道路边界、检查排列与整体布局，并调整路面材质。多资产与随机展示已有界面和录屏依据。</p></article><article><span>继续验证</span><h3>几何复杂度与实际成本</h3><p>缓弯／急弯边界、坡道与弯道组合、接缝穿插、重新生成一致性，以及高实例量下的耗时、帧率和内存表现。</p></article><article><span>后续方向</span><h3>更完整的赛道语义</h3><p>在现有资产列表和随机种子基础上完善规则组合；进一步探索起终点、隧道、跳台、危险区与路侧环境的布置规则。</p></article></div>
+      <p class="track-closing">这次开发让我从“让程序沿线摆模型”，转向“把美术的判断转换成规则，同时保留修改规则的入口”。我希望自动化负责重复劳动，而布局判断与视觉控制始终留在使用者手里。</p>
+    </section>
+    <nav class="project-pagination" aria-label="更多项目"><a href="mate.html">上一个：MATE 材质工具</a><a href="ai-asset-pipeline.html">下一个：AI 辅助三维资产管线</a></nav>
+  </article></main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Kaixin Kang</p><a href="../index.html#work">返回作品列表</a></div></footer>
+</body>
+</html>

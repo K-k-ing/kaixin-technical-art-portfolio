@@ -90,11 +90,119 @@ if (sections.length && "IntersectionObserver" in window) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
+// Keep the photo ribbon on one continuous loop while its perspective follows
+// each photo's position on screen, rather than travelling with the photo.
+const interestGallery = document.querySelector(".interests-gallery");
+const interestMotion = document.querySelector("[data-interests-motion]");
+if (interestGallery && interestMotion) {
+  const ribbon = interestGallery.querySelector(".interests-ribbon");
+  const originals = [...ribbon.children];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const makeCopy = () => originals.map((card) => {
+    const copy = card.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    copy.querySelector("button").tabIndex = -1;
+    return copy;
+  });
+  ribbon.prepend(...makeCopy());
+  ribbon.append(...makeCopy());
+  const cards = [...ribbon.children];
+  let metrics = [];
+  let cycleWidth = 0;
+  let position = 0;
+  let lastWritten = 0;
+  let viewportWidth = 0;
+  let userPaused = reducedMotion.matches;
+  let hovered = false;
+  let touching = false;
+  let visible = false;
+  let lastTime = 0;
+  let frame = 0;
+
+  const showMotionState = () => {
+    interestMotion.textContent = userPaused ? "继续滚动" : "暂停滚动";
+  };
+  const paintCurve = () => {
+    metrics.forEach(({ card, left, width }) => {
+      const center = left + width / 2 - interestGallery.scrollLeft;
+      if (center < -width || center > viewportWidth + width) return;
+      const distance = Math.max(-1.25, Math.min(1.25, (center - viewportWidth / 2) / (viewportWidth / 2)));
+      const angle = -distance * (viewportWidth <= 600 ? 12 : 32);
+      card.style.setProperty("--photo-turn", `${angle.toFixed(2)}deg`);
+      card.style.setProperty("--photo-scale", (1 + 0.08 * distance * distance).toFixed(4));
+    });
+  };
+  const measure = () => {
+    const progress = cycleWidth ? (position % cycleWidth) / cycleWidth : 0.045;
+    metrics = cards.map((card) => ({ card, left: card.offsetLeft, width: card.offsetWidth }));
+    cycleWidth = metrics[originals.length].left - metrics[0].left;
+    viewportWidth = interestGallery.clientWidth;
+    position = cycleWidth * (1 + progress);
+    interestGallery.scrollLeft = position;
+    lastWritten = interestGallery.scrollLeft;
+    paintCurve();
+  };
+  const tick = (time) => {
+    frame = 0;
+    const elapsed = lastTime ? Math.min(time - lastTime, 80) : 0;
+    lastTime = time;
+    // Respect touchpad/swipe scrolling without discarding sub-pixel movement.
+    if (Math.abs(interestGallery.scrollLeft - lastWritten) > 1) {
+      position = interestGallery.scrollLeft;
+    }
+    const focused = interestGallery.contains(document.activeElement);
+    if (!userPaused && !hovered && !touching && !focused && !body.classList.contains("lightbox-open")) {
+      position += elapsed * 0.018; // 18 px / second: approximately one minute per desktop loop.
+      if (position >= cycleWidth * 2) position -= cycleWidth;
+      if (position < cycleWidth) position += cycleWidth;
+      interestGallery.scrollLeft = position;
+      lastWritten = interestGallery.scrollLeft;
+    }
+    paintCurve();
+    if (visible && !document.hidden) frame = requestAnimationFrame(tick);
+  };
+  const start = () => {
+    if (!frame && visible && !document.hidden) {
+      lastTime = 0;
+      frame = requestAnimationFrame(tick);
+    }
+  };
+  interestMotion.hidden = false;
+  showMotionState();
+  measure();
+  new ResizeObserver(measure).observe(interestGallery);
+  new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    start();
+  }).observe(interestGallery);
+  document.addEventListener("visibilitychange", start);
+  interestGallery.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") hovered = true; });
+  interestGallery.addEventListener("pointerleave", () => { hovered = false; });
+  interestGallery.addEventListener("pointerdown", () => { touching = true; });
+  window.addEventListener("pointerup", () => { touching = false; });
+  window.addEventListener("pointercancel", () => { touching = false; });
+  interestGallery.addEventListener("scroll", () => {
+    paintCurve();
+    if (touching || hovered || userPaused || interestGallery.contains(document.activeElement)) {
+      position = interestGallery.scrollLeft;
+      lastWritten = position;
+    }
+  }, { passive: true });
+  interestMotion.addEventListener("click", () => {
+    userPaused = !userPaused;
+    showMotionState();
+  });
+  reducedMotion.addEventListener("change", () => {
+    userPaused = reducedMotion.matches;
+    showMotionState();
+  });
+}
+
 const lightboxButtons = document.querySelectorAll("[data-lightbox]");
 if (lightboxButtons.length) {
   const dialog = document.createElement("dialog");
   dialog.className = "lightbox";
-  dialog.setAttribute("aria-label", "项目图片大图");
+  dialog.setAttribute("aria-label", "图片大图");
   dialog.innerHTML = `
     <div class="lightbox-inner">
       <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
