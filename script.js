@@ -8,14 +8,14 @@ function closeMenu() {
   if (!navToggle) return;
   body.classList.remove("nav-open");
   navToggle.setAttribute("aria-expanded", "false");
-  navToggle.setAttribute("aria-label", "Open navigation");
+  navToggle.setAttribute("aria-label", "展开导航");
 }
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = body.classList.toggle("nav-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    navToggle.setAttribute("aria-label", isOpen ? "收起导航" : "展开导航");
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
@@ -94,10 +94,10 @@ const lightboxButtons = document.querySelectorAll("[data-lightbox]");
 if (lightboxButtons.length) {
   const dialog = document.createElement("dialog");
   dialog.className = "lightbox";
-  dialog.setAttribute("aria-label", "Expanded project image");
+  dialog.setAttribute("aria-label", "项目图片大图");
   dialog.innerHTML = `
     <div class="lightbox-inner">
-      <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
+      <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
       <div class="lightbox-image-slot"></div>
     </div>`;
   document.body.append(dialog);
@@ -123,7 +123,7 @@ if (lightboxButtons.length) {
         lightboxImageSlot.append(lightboxImage);
       }
       lightboxImage.src = button.dataset.full || sourceImage.currentSrc || sourceImage.src;
-      lightboxImage.alt = `Expanded view: ${sourceImage.alt}`;
+      lightboxImage.alt = `放大视图：${sourceImage.alt}`;
       dialog.showModal();
       body.classList.add("lightbox-open");
       closeButton.focus();
