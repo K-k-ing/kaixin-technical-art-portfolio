@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MATE is Kian (Kaixin) Kang's personal technical art tool prototype, connecting reviewable AI material analysis, real model targets, and an editable effect stack for controlled material workflows.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="MATE — AI-Assisted Material Analysis &amp; Procedural Weathering">
+  <meta property="og:description" content="Material control after generation: review, region binding, an editable effect stack, and interactive previews. A personal project in active development.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/projects/mate.html">
+  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/en/mate/screens/effect-stack.webp">
+  <meta property="og:image:alt" content="MATE's English interface showing an aircraft material preview and editable weathering controls">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/projects/mate.html">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../mate.css">
+  <script src="../script.js" defer></script>
+  <script src="../mate.js" defer></script>
+  <title>MATE — Material Analysis &amp; Procedural Weathering | Kian (Kaixin) Kang</title>
+</head>
+<body class="mate-case">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Kian Kang home">KIAN KANG</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation" data-site-nav>
+        <a href="../index.html#work" aria-current="page">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../resume-source.html">Resume</a>
+        <a href="https://github.com/K-k-ing" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="../../projects/mate.html" hreflang="zh-CN">Chinese</a>
+        <a href="mailto:122880509@qq.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="mate-main">
+    <article class="container">
+      <header class="mate-hero">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a class="text-link" href="../index.html#work">Back to work</a>
+          <a class="text-link" href="track-assembly.html">Next project</a>
+        </nav>
+        <p class="eyebrow">01 / Personal project · Technical art tool</p>
+        <div class="mate-intro-grid">
+          <div>
+            <h1>MATE<span>AI-Assisted Material Analysis &amp; Procedural Weathering</span></h1>
+            <p class="mate-full-name">Material Analysis &amp; Texture Editor</p>
+          </div>
+          <div class="mate-intro-copy">
+            <p class="mate-lead">Keep materials editable after generation.</p>
+            <p>When working with AI-generated models, I found that materials and textures often felt unpredictable. Adjusting a particular surface or region to match an artistic intention was difficult. I built MATE to explore a more controllable post-generation workflow.</p>
+            <p>MATE connects multi-view analysis, human review, real model targets, and an editable effect stack. It turns AI's interpretation of a model into operations an artist can inspect, adjust, and compare.</p>
+            <a class="text-link" href="#demo">Watch the recorded workflow ↓</a>
+          </div>
+        </div>
+        <dl class="mate-facts" aria-label="Project at a glance">
+          <div><dt>My role</dt><dd>Product and workflow design, system planning, AI-assisted development, UI, and visual validation</dd></div>
+          <div><dt>Context</dt><dd>Personal student project<br>Separate from internship and commercial studio work</dd></div>
+          <div><dt>Status</dt><dd>Functional prototype / first demo<br>Material preview working; texture output in development</dd></div>
+        </dl>
+      </header>
+
+      <section class="mate-demo" id="demo" aria-labelledby="demo-title">
+        <div class="mate-demo-top">
+          <img src="../../assets/projects/mate/brand/mate-logo.png" alt="MATE logo" width="180" height="60">
+          <div><h2 id="demo-title">From model import to controlled material preview</h2><p>Recorded software workflow · English subtitles · 4:50</p></div>
+          <span class="mate-status">Functional prototype</span>
+        </div>
+        <div class="mate-player">
+          <video id="mate-overview" controls playsinline preload="none" poster="../../assets/en/mate/screens/effect-stack.webp" aria-label="MATE full workflow demonstration with English subtitles, 4 minutes 50 seconds">
+            <source src="../../assets/en/mate/video/mate-demo-en.mp4" type="video/mp4">
+            <p>Your browser cannot play this video. <a href="../../assets/en/mate/video/mate-demo-en.mp4">Open the demonstration MP4</a>.</p>
+          </video>
+          <button class="mate-play-cover" type="button" data-mate-play aria-label="Play the MATE workflow demonstration">
+            <img src="../../assets/en/mate/screens/effect-stack.webp" alt="" width="2559" height="1377" decoding="async">
+            <span class="mate-play-label"><span aria-hidden="true">▶</span> Play the workflow <small>4:50 · English subtitles</small></span>
+          </button>
+        </div>
+        <p class="mate-video-feedback" data-mate-video-feedback role="status" aria-live="polite"></p>
+        <p class="mate-demo-note">Full workflow recording with English subtitles. The demonstration shows interactive material previews, not baked output assets. <a href="../../assets/en/mate/video/mate-demo-en.mp4" download>Download the recording</a>.</p>
+      </section>
+
+      <nav class="mate-contents" aria-label="MATE case study contents">
+        <a href="#problem">Starting point</a><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href="#material-control">Material control</a><a href="#architecture">Architecture</a><a href="#challenges">Challenges</a><a href="#interface">Interface</a><a href="#next">Next steps</a>
+      </nav>
+
+      <section class="mate-section" id="problem" aria-labelledby="problem-title">
+        <div class="mate-section-heading"><p class="eyebrow">01 / Starting point</p><h2 id="problem-title">AI sees different surfaces.<br>The model may have only one material slot.</h2></div>
+        <div class="mate-two-col">
+          <p class="mate-large-copy">An aircraft test asset made the problem concrete: white paint, glass, sensor housings, and decals looked like separate regions, but shared one material slot. Recognizing them did not tell me how to edit them independently.</p>
+          <div class="mate-body-copy"><p>I focused on what happens after analysis. The user needs to confirm three things: the intended material, the actual target it affects, and whether the available data supports the operation.</p><p>MATE is for 3D artists and technical art learners who want to keep editing an existing GLB asset. AI provides a starting proposal; the user retains the final say on intent and appearance.</p></div>
+        </div>
+        <div class="mate-principles">
+          <article><span>01</span><h3>Reviewable proposals</h3><p>Normalize terminology and parameters before asking for confirmation. Natural language is not an execution command.</p></article>
+          <article><span>02</span><h3>Inspectable scope</h3><p>Make the relationship between regions, model targets, UVs, and masks explicit. A visual label alone is not enough.</p></article>
+          <article><span>03</span><h3>Repeatable adjustment</h3><p>Edit parameters, toggle layers, and compare with the original asset within the same editing session.</p></article>
+        </div>
+      </section>
+
+      <section class="mate-section" id="workflow" aria-labelledby="workflow-title">
+        <div class="mate-section-heading"><p class="eyebrow">02 / Workflow</p><h2 id="workflow-title">A clear input and next step at every stage.</h2><p>I follow a familiar art-production sequence, placing review, binding, and preflight checks where they become relevant.</p></div>
+        <ol class="mate-workflow">
+          <li><span>01</span><h3>Import</h3><p>Open a GLB and inspect the model and asset health.</p><small>Understand the input first</small></li>
+          <li><span>02</span><h3>Analyze</h3><p>Capture multiple views and review AI region and material suggestions.</p><small>Proposals do not execute directly</small></li>
+          <li><span>03</span><h3>Configure</h3><p>Review parameters and confirm real targets and local regions.</p><small>Check bindings, UVs, and masks</small></li>
+          <li><span>04</span><h3>Preview</h3><p>Add paint chipping and dust, adjust controls, and compare.</p><small>Keep an editable effect stack</small></li>
+          <li class="mate-step-planned"><span>05</span><h3>Output settings</h3><p>Choose resolution, format, and channels; save a preset.</p><small>Baking and packaging are not complete</small></li>
+        </ol>
+        <figure class="mate-figure mate-workflow-screen">
+          <button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the MATE import interface"><img src="../../assets/en/mate/screens/import.webp" alt="MATE's English GLB import interface, with five workflow stages, a central viewport, asset information, and a status console" width="2559" height="1356" loading="lazy" decoding="async"></button>
+          <figcaption>The actual import interface introduces the asset requirements and next action before exposing a panel of parameters.</figcaption>
+        </figure>
+      </section>
+
+      <section class="mate-section" id="capabilities" aria-labelledby="capabilities-title">
+        <div class="mate-section-heading"><p class="eyebrow">03 / Three core capabilities</p><h2 id="capabilities-title">From understanding a surface to controlling it.</h2></div>
+        <article class="mate-feature" id="ai-understanding">
+          <div class="mate-feature-copy"><span class="mate-feature-number">01</span><h3>AI material analysis,<br>with review built in.</h3><p>Multiple views help Qwen interpret regions and appearance. Rather than executing its output directly, I normalize terminology, validate the structure, and move it into an editable material profile.</p><p>The user can review categories, edit color, roughness, metallic response, and texture intent, then confirm what should happen next.</p><p class="mate-boundary">The AI capability integrates an external model; it is not a proprietary model I trained. Analysis confidence is not recognition accuracy.</p></div>
+          <div class="mate-feature-media">
+            <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge MATE's multi-view analysis inputs"><img src="../../assets/en/mate/screens/multiview.webp" alt="Front, back, left, right, top, and perspective views in the English Analysis Inputs window" width="2559" height="1335" loading="lazy" decoding="async"></button><figcaption>Multi-view inputs make the visual evidence behind the analysis inspectable.</figcaption></figure>
+            <details class="mate-inline-detail"><summary>View the actual proposal review interface</summary><figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the AI proposal review interface"><img src="../../assets/en/mate/screens/review.webp" alt="The English AI Proposal Review interface showing editable asset-region descriptions and accepted fields" width="2559" height="1365" loading="lazy" decoding="async"></button><figcaption>Analysis becomes reviewable region data. Ambiguities are resolved before the profile is confirmed.</figcaption></figure></details>
+          </div>
+        </article>
+        <article class="mate-feature" id="region-control">
+          <div class="mate-feature-copy"><span class="mate-feature-number">02</span><h3>Confirm where to edit,<br>then decide how.</h3><p>I bind semantic regions to real model material slots. When several regions share one slot, surface masks restrict the local scope, with UV checks before local processing.</p><p>Candidate masks must be previewed, checked, and accepted. The interface keeps uncertainty visible so that incorrect assignments can be found.</p><p class="mate-boundary">This test exposes a current failure: the Propeller Hub region receives 92.0% of the surface, while White Composite Body receives 0.0%. The reported 95.4% is assigned coverage, not segmentation accuracy.</p></div>
+          <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the candidate mask and region assignments"><img src="../../assets/en/mate/screens/candidate-mask.webp" alt="Three candidate semantic regions and a UV ownership preview; the Propeller Hub assignment is clearly too large and the result is marked Review Required" width="2559" height="1341" loading="lazy" decoding="async"></button><figcaption>An inspectable candidate result, not proof of accurate automatic segmentation. This run reports 4.6% unassigned surface and 59.3% mean confidence.</figcaption></figure>
+        </article>
+        <article class="mate-feature" id="weathering-controls">
+          <div class="mate-feature-copy"><span class="mate-feature-number">03</span><h3>Iterate with an effect stack,<br>not just a result image.</h3><p>Paint chipping and dust are separate effects that can be added, removed, enabled, and adjusted. Coverage, patch size, breakup, and placement rules control different aspects of the surface.</p><p>Exposed substrate color, roughness, and metallic response are also adjustable. Switching between the original and MATE preview helps reveal what each layer changes.</p><p class="mate-boundary">This case study focuses on the recorded paint-chipping and dust workflows. Other effects remain in development and are not presented as equally mature.</p></div>
+          <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge MATE's procedural effect stack"><img src="../../assets/en/mate/screens/effect-stack.webp" alt="MATE's English effect stack with region selection, paint-chipping toggle, intensity, coverage, patch size, and breakup controls" width="2559" height="1377" loading="lazy" decoding="async"></button><figcaption>Controls map to distinct artistic intentions. Intensity and coverage are not combined into a single slider.</figcaption></figure>
+        </article>
+      </section>
+
+      <section class="mate-section" id="material-control" aria-labelledby="control-title">
+        <div class="mate-section-heading"><p class="eyebrow">04 / Material control after generation</p><h2 id="control-title">Keep shaping the material you already have.</h2><p>My focus is not another generation attempt. It is how to keep adjusting an existing model toward the result I want.</p></div>
+        <div class="mate-control-layout">
+          <div class="mate-comparison" data-mate-comparison>
+            <div class="mate-comparison-images" style="--mate-compare: 50%">
+              <img src="../../assets/projects/mate/screens/compare-original.png" alt="Original asset preview: an aircraft with white coating" width="1620" height="1161" loading="lazy" decoding="async">
+              <img class="mate-comparison-treated" src="../../assets/projects/mate/screens/compare-treated.png" alt="Treated material preview: chipped aircraft coating and exposed substrate" width="1613" height="1164" loading="lazy" decoding="async">
+              <span class="mate-compare-label mate-compare-label-left">Treated preview</span><span class="mate-compare-label mate-compare-label-right">Original preview</span>
+              <span class="mate-comparison-divider" aria-hidden="true"></span>
+            </div>
+            <label class="mate-comparison-control">Drag to compare the screenshots<input type="range" min="0" max="100" value="50" step="1" aria-label="Treated preview visibility"><output>50%</output></label>
+            <p class="mate-caption">Two actual screenshots of the same asset, centered at their original aspect ratios. This is a screenshot comparison, not real-time rendering inside the website.</p>
+          </div>
+          <div class="mate-control-notes">
+            <article><h3>“Less chipping, but keep the large patches.”</h3><p>Adjust coverage separately from scale, so reducing the affected area does not also change the patch shape.</p></article>
+            <article><h3>“Add dust without losing the substrate response.”</h3><p>Adjust the effect layer and exposed material separately, observing color alongside roughness and metallic response.</p></article>
+            <article><h3>“What is this layer actually contributing?”</h3><p>Toggle chipping or dust independently, then compare with the original asset. The current session retains the relationships between effects.</p></article>
+          </div>
+        </div>
+        <p class="mate-boundary mate-wide-note">Adjusting the existing procedural preview does not require a new AI analysis call each time; initial analysis still uses an external model. Full project saving and restoring effect stacks across sessions are not currently verified capabilities.</p>
+      </section>
+
+      <section class="mate-section" id="architecture" aria-labelledby="architecture-title">
+        <div class="mate-section-heading"><p class="eyebrow">05 / Architecture</p><h2 id="architecture-title">Separate what it is, where it acts, and whether it can run.</h2><p>Layered data relationships handle uncertain AI output, instead of asking one description to serve every responsibility.</p></div>
+        <div class="mate-architecture" aria-label="MATE material workflow architecture">
+          <div class="mate-architecture-main">
+            <div class="mate-node"><small>Material intent</small><h3>Multi-view AI proposal</h3><p>Term normalization · Zod validation<br>Human review → material profile</p></div>
+            <span class="mate-flow-arrow" aria-hidden="true">→</span>
+            <div class="mate-node mate-node-accent"><small>Target relationship</small><h3>Region binding</h3><p>Semantic region → real material slot<br>Whole-slot processing / local mask</p></div>
+            <span class="mate-flow-arrow" aria-hidden="true">→</span>
+            <div class="mate-node"><small>Artistic operations</small><h3>Editable effect stack</h3><p>Chipping · dust · substrate response<br>Original / treated preview</p></div>
+          </div>
+          <div class="mate-architecture-support">
+            <article><h3>Manifest · Available targets</h3><p>Describes nodes, mesh instances, and material slots from the glTF source structure, providing stable identities.</p></article>
+            <article><h3>Registry · Current runtime objects</h3><p>Maps stable targets to current Three.js objects and checks references and lifecycle state.</p></article>
+            <article><h3>Execution gates · Can this proceed?</h3><p>UV preflight, mask acceptance, versions, and stale states jointly control subsequent operations.</p></article>
+          </div>
+        </div>
+        <div class="mate-tech-notes">
+          <article><h3>Materials change; targets remain stable.</h3><p>Target identity uses glTF source indices and scene context. The slot ID does not include the current material index, so replacing a material does not change the attachment point.</p><code>slot:s0:n0:m0:p0</code><p class="mate-caption">Illustrative ID: scene / node / mesh / primitive define the material slot.</p></article>
+          <article><h3>Old results must not overwrite a new asset.</h3><p>Worker tasks carry asset and binding versions, task identity, and cancellation signals. After an asset or binding change, late results must revalidate their context; invalid results are explicitly marked stale.</p><p class="mate-caption">“Indeterminate” is a valid state, not an implicit pass.</p></article>
+        </div>
+      </section>
+
+      <section class="mate-section" id="challenges" aria-labelledby="challenges-title">
+        <div class="mate-section-heading"><p class="eyebrow">06 / Challenges &amp; solutions</p><h2 id="challenges-title">Engineering the workflow, checking the image.</h2><p>Development involved data structure, tool interaction, and visual quality. Each challenge below records the problem, my decision, and the current boundary—including what remains unresolved.</p></div>
+        <div class="mate-challenge-list">
+          <details open><summary><span>01</span><h3>How does AI interpretation become executable data?</h3><small>Data boundaries</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Terms such as “painted” or “metal” do not necessarily map to internal categories and parameters.</p><p><b>Decision</b>I added terminology normalization, structured validation, and human review before execution, allowing the user to resolve ambiguity and confirm a material profile.</p><p><b>Result and limit</b>A proposal-to-review workflow is in place. Analysis can still be wrong, so review is part of the design, not a temporary workaround.</p></div></details>
+          <details open><summary><span>02</span><h3>What if several semantic regions share one material slot?</h3><small>Region control</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Editing the shared slot affects surfaces that should be treated independently.</p><p><b>Decision</b>I manage asset structure, runtime mapping, and region binding separately, distinguishing whole-slot edits from local mask processing.</p><p><b>Result and limit</b>The binding and candidate-mask workflow is established. The assignment error in the screenshot shows why a correct binding does not imply accurate pixel segmentation; human review is still required.</p></div></details>
+          <details><summary><span>03</span><h3>How can the same target survive complex structures and material replacement?</h3><small>Stable identity</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Shared meshes, multiple primitives, repeated instances, and duplicate node names make names or runtime UUIDs insufficient as source identities.</p><p><b>Decision</b>Use glTF source indices and scene context, validate source-to-runtime mappings, and leave the material index out of slot identity.</p><p><b>Result and limit</b>Development checks cover references, instances, mappings, and lifecycle behavior. They support this design, not a guarantee of compatibility with every asset.</p></div></details>
+          <details><summary><span>04</span><h3>Why can local processing fail even when UV0 exists?</h3><small>UV preflight</small></summary><div class="mate-challenge-body"><p><b>Problem</b>UVs can exist while overlapping, extending out of range, or containing degenerate triangles. Resolution and compute budgets also affect the conclusion.</p><p><b>Decision</b>Run preflight checks in a Worker, deduplicate shared-slot checks, and report pass, blocked, or indeterminate states with reasons and conditions.</p><p><b>Result and limit</b>Preflight status now gates execution. It detects and blocks problematic input; it does not automatically repair or unwrap UVs.</p></div></details>
+          <details><summary><span>05</span><h3>How can high-polygon assets avoid repeated computation?</h3><small>Shared data</small></summary><div class="mate-challenge-body"><p><b>Problem</b>When instances reference the same geometry, scanning it once per slot multiplies the work.</p><p><b>Decision</b>Reuse geometry checks, cache shared attributes and existing bounds, inspect unique material slots, and use Workers and compute budgets for heavy tasks.</p><p><b>Result and limit</b>Development records include import, multi-view capture, and analysis checks on an asset of approximately 1.9 million triangles. Full real-time weathering frame rate, memory use, and end-to-end timing still need systematic measurement.</p></div></details>
+          <details><summary><span>06</span><h3>How can late asynchronous results avoid affecting the current asset?</h3><small>Lifecycle</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Earlier tasks can return after an asset change, binding edit, or interface closure.</p><p><b>Decision</b>Include versions, task identity, cancellation, and lifecycle checks in the workflow. Clear invalid mappings and do not use stale results as execution evidence.</p><p><b>Result and limit</b>Regression checks cover cancellation, late results, retry, and unmounting. Further validation focuses on state transitions during actual editing.</p></div></details>
+          <details><summary><span>07</span><h3>How can weathering preserve lettering, decals, and panel lines?</h3><small>Source fidelity</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Test assets mix lettering, decorative lines, and some shading into BaseColor. Replacing the base color can weaken all of them.</p><p><b>Decision</b>Add an original-coating detail-preservation control, and test both complete PBR assets and BaseColor-only inputs for quality and compatibility.</p><p><b>Result and limit</b>Preservation controls are still being refined, with fine lines and decals checked case by case. A single BaseColor image cannot establish reliable recovery of real geometry or a complete physical material.</p></div></details>
+          <details><summary><span>08</span><h3>Why does stronger noise not necessarily look more natural?</h3><small>Shape hierarchy</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Early paint chipping produced large, cloudy patches with weak edge hierarchy and insufficient close-up detail.</p><p><b>Decision</b>Treat distribution, scale, edges, and material response separately. Introduce multiple scales, structural influence, and substrate response, then evaluate close-up views.</p><p><b>Result and limit</b>Controls and implementation have progressed. Secondary broken edges, micro-notches, seam dirt, and rust interactions remain next steps; an available control is not proof of final visual quality.</p></div></details>
+          <details><summary><span>09</span><h3>Does a passing build mean the image is ready?</h3><small>Validation</small></summary><div class="mate-challenge-body"><p><b>Problem</b>Type checks, regression tests, and successful builds cannot prove that chipping looks natural or materials look convincing.</p><p><b>Decision</b>Separate engineering checks from visual acceptance. Compare wide, medium, and close views under fixed cameras and lighting, using evidence appropriate to each goal.</p><p><b>Result and limit</b>This first version demonstrates the tool workflow. Material naturalness, final output, and performance each require their own validation and guide the next iterations.</p></div></details>
+        </div>
+      </section>
+
+      <section class="mate-section" id="interface" aria-labelledby="interface-title">
+        <div class="mate-section-heading"><p class="eyebrow">07 / Interface &amp; interaction</p><h2 id="interface-title">Keep the model central and the state readable.</h2><p>The central viewport supports visual judgment. Stage navigation on the left answers “Where am I?”, the Inspector on the right answers “What can I edit?”, and the console below explains “What happened?”.</p></div>
+        <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the MATE UI kit and design system"><img src="../../assets/en/mate/screens/ui-kit.webp" alt="MATE's English UI kit with dark panels, yellow-green accents, buttons, status badges, form controls, navigation, and effect components" width="2559" height="1374" loading="lazy" decoding="async"></button><figcaption>The first UI kit in the English interface. Status labels accompany color for Ready, Blocked, Stale, and Review Required states.</figcaption></figure>
+        <div class="mate-principles mate-interface-notes">
+          <article><span>Navigation</span><h3>A visible workflow path</h3><p>Stages 01–05 provide direction. Review, binding, and preflight appear at the relevant steps.</p></article>
+          <article><span>Feedback</span><h3>State alongside reason</h3><p>Thin borders organize panels; yellow-green highlights the current action. Blocked operations explain their constraints.</p></article>
+          <article><span>Preview</span><h3>Controls beside the result</h3><p>The effect stack sits next to the model for repeated adjustments, original comparisons, and English/Chinese switching.</p></article>
+        </div>
+      </section>
+
+      <section class="mate-section" id="contribution" aria-labelledby="contribution-title">
+        <div class="mate-section-heading"><p class="eyebrow">08 / My contribution</p><h2 id="contribution-title">Start with an art problem.<br>Build a workflow someone can operate.</h2></div>
+        <div class="mate-two-col">
+          <div class="mate-body-copy"><p>As a student, I use this personal project to explore technical art tool development. I lead product direction and workflow design, feature breakdown and system planning, material parameter controls, UI and brand direction, test-asset organization, and iterative acceptance testing.</p><p>Implementation uses AI-assisted development. I define requirements and constraints, check that data and interactions connect coherently, reproduce issues with real assets, and validate each iteration. The central question is whether the tool solves a practical problem—and whether users can understand and control each step.</p></div>
+          <dl class="mate-stack">
+            <div><dt>Desktop &amp; interface</dt><dd>Electron · React · TypeScript · Vite</dd></div>
+            <div><dt>3D preview</dt><dd>Three.js · React Three Fiber · Drei</dd></div>
+            <div><dt>Data &amp; computation</dt><dd>Zod · Web Workers</dd></div>
+            <div><dt>AI interpretation</dt><dd>External Qwen vision model integration</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="mate-section" id="next" aria-labelledby="next-title">
+        <div class="mate-section-heading"><p class="eyebrow">09 / Iteration &amp; next steps</p><h2 id="next-title">The workflow works. Visual quality and output come next.</h2><p>Close-up views make the shortcomings clearer. These actual details are retained as evidence for the next iteration, not presented as final-quality results.</p></div>
+        <div class="mate-detail-grid">
+          <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the current coating and lettering detail"><img src="../../assets/projects/mate/screens/detail-coating.webp" alt="Current aircraft close-up showing a large exposed-substrate area, lettering, and coating transitions with edges still needing refinement" width="735" height="540" loading="lazy" decoding="async"></button><figcaption><b>Original coating and identifying details</b> · Check lettering, decals, and panel lines, testing full PBR and BaseColor inputs separately.</figcaption></figure>
+          <figure class="mate-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the current coating edges and structural detail"><img src="../../assets/projects/mate/screens/detail-edge.webp" alt="A close-up of the wing and housing junction, with large-scale coating changes and edge hierarchy that needs further work" width="540" height="410" loading="lazy" decoding="async"></button><figcaption><b>Edges and structural detail</b> · Refine secondary broken edges, micro-notches, seam dirt, and roughness variation.</figcaption></figure>
+        </div>
+        <div class="mate-roadmap">
+          <article><p class="eyebrow">Demonstrated</p><h3>An operable material prototype</h3><p>GLB import, multi-view analysis, review and configuration, region binding, UV and candidate-mask workflows, paint-chipping and dust previews, and saved output presets.</p></article>
+          <article><p class="eyebrow">Further validation</p><h3>Local quality and applicability</h3><p>Candidate-mask quality, source-coating fidelity, close-up shapes, and rust interaction. Measure preview performance across assets without generalizing efficiency from a single example.</p></article>
+          <article><p class="eyebrow">Not yet complete</p><h3>Actual texture output</h3><p>Texture baking, PBR map output, and asset packaging. Current resolution, format, and channel options are saved settings—not evidence of a finished export.</p></article>
+        </div>
+        <div class="mate-closing"><p>For me, MATE's first milestone is moving from “AI says this is a material” to “I know where it acts, and I can keep adjusting it.” More rigorous visual comparisons and output validation will guide the next version.</p></div>
+      </section>
+      <nav class="project-pagination" aria-label="More projects">
+        <a href="ai-npc.html">Previous: AI NPC Interaction Prototype</a>
+        <a href="track-assembly.html">Next: Track Assembly Tool</a>
+      </nav>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span>2026</span> Kian Kang</p><a href="../index.html#work">Back to work</a></div></footer>
+</body>
+</html>
