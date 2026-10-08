@@ -36,6 +36,10 @@
 .worldir-case .worldir-comparison { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; }
 .worldir-case .worldir-comparison .media-trigger { aspect-ratio: 16/9; }
 .worldir-case .worldir-comparison img { height: 100%; object-fit: contain; }
+.worldir-case .worldir-asset-views .media-trigger { aspect-ratio: 16/10; }
+.worldir-case .worldir-asset-copy { margin-top: 2rem; }
+.worldir-case .worldir-asset-copy h3 { margin: 0; font-size: clamp(1.4rem,2.6vw,2.25rem); line-height: 1.4; }
+.worldir-case .worldir-asset-copy p:first-child { margin-top: 0; }
 .worldir-case .worldir-status-list { margin: 0; border-top: 1px solid var(--line); }
 .worldir-case .worldir-status-list > div { display: grid; grid-template-columns: 8rem minmax(0,1fr); gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .worldir-case .worldir-status-list dt { color: var(--accent); font-weight: 650; }
