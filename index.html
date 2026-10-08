@@ -7,9 +7,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/">
   <title>Kaixin Kang — 技术美术作品集</title>
-  <meta name="description" content="Kaixin Kang 的技术美术作品集：MATE 材质工具、参考驱动的赛道重建、面子果实几何预算规划、AI 辅助三维资产管线与交互原型。">
+  <meta name="description" content="Kaixin Kang 的技术美术作品集：WORLDIR 世界模型辅助场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助三维资产管线与交互原型。">
   <meta property="og:title" content="Kaixin Kang — 技术美术作品集">
-  <meta property="og:description" content="MATE AI 材质工具、Unreal Engine 5 程序化场景、AI 辅助资产制作与实时交互。">
+  <meta property="og:description" content="WORLDIR 世界模型与空间智能实验、MATE AI 材质工具、Unreal Engine 5 程序化场景、AI 辅助资产制作与实时交互。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kaixin Kang 技术美术作品集">
   <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/">
@@ -72,18 +72,35 @@
           <h2 id="work-title">精选作品</h2>
           <div class="section-heading-copy">
             <p>通过工具、场景与交互原型，将美术创意转化为可重复使用的实时制作流程。</p>
-            <p class="project-ecosystem">项目涵盖 MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。</p>
+            <p class="project-ecosystem">项目涵盖 WORLDIR 世界模型场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。</p>
           </div>
         </div>
 
         <div class="project-list">
+          <article data-reveal>
+            <a class="project-link project-link-featured" href="projects/worldir.html" aria-label="查看 WORLDIR 世界模型辅助场景编译项目">
+              <div class="project-media" data-optional-media>
+                <img src="assets/projects/worldir/evidence/evidence-087.webp" alt="WORLDIR 的真实 Blender 走廊实验：空间重建、线框与生成窗体候选资产" width="1581" height="912" loading="lazy" decoding="async" data-hide-on-error>
+              </div>
+              <div class="project-copy">
+                <p class="project-index">01 / 空间智能 · 研究与工程原型</p>
+                <h3>WORLDIR — 世界模型辅助场景编译</h3>
+                <p>探索将世界模型输出转为结构化、可追溯、可编辑的三维场景。围绕空间查询、场景编译与资产拟合开展实验，明确区分观测证据、未知区域与设计推断。部分流程已实现，通用架构持续开发中。</p>
+                <ul class="tags" aria-label="项目工具">
+                  <li>世界模型</li><li>空间重建</li><li>Scene Graph</li><li>Python</li><li>Blender</li><li>Unreal Engine 5</li>
+                </ul>
+                <span class="text-link">查看中文项目详情</span>
+              </div>
+            </a>
+          </article>
+
           <article data-reveal>
             <a class="project-link project-link-featured" href="projects/mate.html" aria-label="查看 MATE 材质工具项目">
               <div class="project-media project-media-mate" data-optional-media>
                 <img src="assets/projects/mate/screens/material-profile.webp" alt="MATE 中的模型表面处理预览与材质参数 Inspector" width="2559" height="1335" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">01 / 核心项目 · 个人工具原型</p>
+                <p class="project-index">02 / 核心项目 · 个人工具原型</p>
                 <h3>MATE — AI 材质分析与程序化做旧</h3>
                 <p>我开发的桌面材质工具，将多视角 AI 分析、人工审核、区域绑定与可编辑效果栈连接起来，让已有 3D 资产的表面变化可以继续检查、调整和比较。</p>
                 <ul class="tags" aria-label="项目工具">
@@ -104,7 +121,7 @@
                 <img src="assets/projects/track-assembly/screens/track-overview.webp" alt="Unreal Engine 中重建的赛道、护栏与路侧装饰" width="864" height="575" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">02 / 工具开发</p>
+                <p class="project-index">03 / 工具开发</p>
                 <h3>赛道重建工具 — Track Assembly Tool</h3>
                 <p>从参考缩略图出发，利用 AI 分析生成布局数据，再通过 Unreal Editor Python、Spline 分析与 HISM 搭建赛道资产。用可调规则与区域手动覆盖，保留美术对布局和排列的控制。</p>
                 <ul class="tags" aria-label="项目工具">
@@ -125,7 +142,7 @@
                 <img src="assets/projects/geometry-planner/screens/planner-analysis-result.png" alt="面子果实的真实分析界面，展示鞋子参考图、三档三角面预算与几何贴图分工" width="1519" height="935" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">03 / AI 辅助建模 · 两个案例</p>
+                <p class="project-index">04 / AI 辅助建模 · 两个案例</p>
                 <h3>面子果实与 AI 资产生产管线</h3>
                 <p>生成前，用“面子果实”分析参考图结构，规划可解释的三角面预算；生成后，通过原有资产管线进行模块化拆分、Blender 修复与 Unreal Engine 验证。两个案例共同探索 AI 建模的制作可用性。</p>
                 <ul class="tags" aria-label="项目工具">
@@ -146,7 +163,7 @@
                 <img src="assets/projects/ai-npc/screens/dialogue-hero.png" alt="在 Unreal Engine 森林场景中运行的 AI NPC 对话界面" width="1681" height="936" loading="lazy" decoding="async" data-hide-on-error>
               </div>
               <div class="project-copy">
-                <p class="project-index">04 / 交互原型</p>
+                <p class="project-index">05 / 交互原型</p>
                 <h3>AI NPC 交互原型</h3>
                 <p>基于 Unreal Engine 5 的交互原型，整合距离检测、玩家输入切换、对话界面、外部 API 通信、响应解析与连续对话记录。</p>
                 <ul class="tags" aria-label="项目工具">

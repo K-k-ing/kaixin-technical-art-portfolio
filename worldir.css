@@ -1,0 +1,56 @@
+/* Page-local additions. Navigation, typography, cards and lightbox reuse styles.css. */
+.worldir-case .worldir-name { margin: 1rem 0 .35rem; font-size: clamp(1.3rem,2.2vw,2rem); font-weight: 620; }
+.worldir-case .worldir-english { margin: 0; color: var(--muted); font-size: .9rem; }
+.worldir-case .worldir-caption { margin: .85rem 0 0; color: var(--muted); font-size: .88rem; line-height: 1.65; }
+.worldir-case .worldir-section-heading { max-width: 65rem; margin-bottom: 2rem; }
+.worldir-case .worldir-section-heading h2 { margin: 0 0 1.25rem; font-size: clamp(2.1rem,4.4vw,4.25rem); letter-spacing: -.045em; line-height: 1.18; }
+.worldir-case .worldir-section-heading p:not(.eyebrow) { color: var(--muted); line-height: 1.75; }
+.worldir-case .worldir-video { display: block; width: 100%; aspect-ratio: 16/9; background: #111; }
+.worldir-case .worldir-two-col, .worldir-case .worldir-evidence-grid { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); gap: clamp(1.75rem,4vw,4rem); align-items: start; }
+.worldir-case .worldir-two-col p, .worldir-case .worldir-evidence-grid p { line-height: 1.75; }
+.worldir-case .worldir-evidence-grid h3, .worldir-case .worldir-subsection h3 { font-size: clamp(1.3rem,2.2vw,2rem); line-height: 1.4; }
+.worldir-case .worldir-diagram-label { margin: 2.5rem 0 1rem; font-size: .85rem; color: var(--muted); }
+.worldir-case .worldir-pipeline { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .8rem; list-style: none; padding: 0; margin: 0; }
+.worldir-case .worldir-pipeline li { min-width: 0; padding: 1.4rem; border: 1px solid var(--line); display: flex; flex-direction: column; gap: .45rem; }
+.worldir-case .worldir-pipeline span { color: var(--muted); font-size: .8rem; }
+.worldir-case .worldir-pipeline strong { font-size: 1.1rem; }
+.worldir-case .worldir-pipeline small { color: var(--muted); line-height: 1.6; }
+.worldir-case .worldir-pipeline .worldir-pipeline-center { border-color: var(--accent); background: #f1f5fc; }
+.worldir-case .worldir-figure { margin: 0; min-width: 0; }
+.worldir-case .worldir-figure .media-trigger { height: auto; overflow: hidden; background: var(--soft); }
+.worldir-case .worldir-figure img { display: block; width: 100%; height: auto; }
+.worldir-case .worldir-figure figcaption { margin-top: .8rem; color: var(--muted); font-size: .9rem; line-height: 1.75; }
+.worldir-case .worldir-figure-wide { max-width: 68rem; margin-inline: auto; }
+.worldir-case .worldir-measurements > div { border-bottom: 1px solid var(--line); padding: 0 0 1.4rem; margin-bottom: 1.4rem; }
+.worldir-case .worldir-measurements span { display: block; color: var(--muted); font-size: .9rem; }
+.worldir-case .worldir-measurements strong { display: block; font-size: clamp(2rem,3.5vw,3.25rem); margin: .6rem 0; letter-spacing: -.04em; }
+.worldir-case .worldir-measurements small { font-size: 1rem; font-weight: 500; letter-spacing: 0; }
+.worldir-case .worldir-measurements p { color: var(--muted); margin-bottom: 0; }
+.worldir-case .worldir-boundary { padding-left: 1rem; border-left: 2px solid var(--accent); }
+.worldir-case .worldir-principles { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2rem; margin-top: 2.5rem; }
+.worldir-case .worldir-principles article { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.worldir-case .worldir-principles span { font-size: .85rem; color: var(--accent); }
+.worldir-case .worldir-principles h3 { margin-top: .7rem; font-size: 1.35rem; }
+.worldir-case .worldir-principles p { line-height: 1.7; color: var(--muted); }
+.worldir-case .worldir-subsection { margin-top: 3rem; }
+.worldir-case .worldir-comparison { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; }
+.worldir-case .worldir-comparison .media-trigger { aspect-ratio: 16/9; }
+.worldir-case .worldir-comparison img { height: 100%; object-fit: contain; }
+.worldir-case .worldir-status-list { margin: 0; border-top: 1px solid var(--line); }
+.worldir-case .worldir-status-list > div { display: grid; grid-template-columns: 8rem minmax(0,1fr); gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.worldir-case .worldir-status-list dt { color: var(--accent); font-weight: 650; }
+.worldir-case .worldir-status-list dd { margin: 0; color: var(--muted); line-height: 1.75; }
+.worldir-case .worldir-connection { margin-top: 3rem; padding: clamp(1.5rem,3vw,3rem); background: var(--soft); border-left: 3px solid var(--accent); }
+.worldir-case .worldir-connection h3 { font-size: clamp(1.4rem,2.6vw,2.25rem); line-height: 1.4; }
+.worldir-case .worldir-connection p:not(.eyebrow) { max-width: 60rem; color: var(--muted); line-height: 1.75; }
+@media (max-width: 800px) {
+  .worldir-case .worldir-two-col, .worldir-case .worldir-evidence-grid, .worldir-case .worldir-principles, .worldir-case .worldir-comparison { grid-template-columns: minmax(0,1fr); }
+  .worldir-case .worldir-pipeline { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .worldir-case .worldir-status-list > div { grid-template-columns: 5rem minmax(0,1fr); gap: 1rem; }
+}
+@media (max-width: 500px) {
+  .worldir-case .worldir-pipeline { grid-template-columns: minmax(0,1fr); }
+  .worldir-case .worldir-pipeline li { padding: 1.1rem; }
+  .worldir-case .worldir-status-list > div { grid-template-columns: minmax(0,1fr); gap: .45rem; }
+  .worldir-case .case-nav { gap: 1.25rem; align-items: start; }
+}

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/projects/ai-asset-pipeline.html">
   <title>AI 辅助建模｜面子果实与三维资产生产管线 — Kaixin Kang</title>
-  <meta name="description" content="项目三包含两个 AI 建模案例：面子果实在生成前规划三角面预算，AI 辅助三维资产生产管线探索生成后的模块化拆分、Blender 修复与 UE5 验证。">
+  <meta name="description" content="项目四包含两个 AI 建模案例：面子果实在生成前规划三角面预算，AI 辅助三维资产生产管线探索生成后的模块化拆分、Blender 修复与 UE5 验证。">
   <meta property="og:title" content="AI 辅助建模｜面子果实与三维资产生产管线">
   <meta property="og:description" content="从参考图结构分析与几何预算，到 AI 生成资产的修复、组装和实时验证。">
   <meta property="og:type" content="article">
@@ -44,16 +44,16 @@
     <div class="container">
       <header class="modeling-group-header">
         <nav class="case-nav" aria-label="项目导航"><a class="text-link" href="../index.html#work">返回作品列表</a><a class="text-link" href="ai-npc.html">下一个项目</a></nav>
-        <p class="eyebrow">03 / AI 辅助建模 · 两个案例</p>
-        <nav class="modeling-case-nav" aria-label="项目三的两个案例">
-          <a href="#geometry-planner"><span>03A · 生成之前</span><strong>面子果实</strong><small>参考图分析与几何预算规划 ↓</small></a>
-          <a href="#asset-production"><span>03B · 生成之后</span><strong>AI 辅助三维资产生产管线</strong><small>模块化制作、Blender 修复与 UE5 验证 ↓</small></a>
+        <p class="eyebrow">04 / AI 辅助建模 · 两个案例</p>
+        <nav class="modeling-case-nav" aria-label="项目四的两个案例">
+          <a href="#geometry-planner"><span>04A · 生成之前</span><strong>面子果实</strong><small>参考图分析与几何预算规划 ↓</small></a>
+          <a href="#asset-production"><span>04B · 生成之后</span><strong>AI 辅助三维资产生产管线</strong><small>模块化制作、Blender 修复与 UE5 验证 ↓</small></a>
         </nav>
       </header>
 
       <article class="geometry-case" id="geometry-planner" aria-labelledby="geometry-title">
         <header class="geo-hero">
-          <p class="eyebrow">03A / AI 辅助 3D 资产工具 · 技术美术工具</p>
+          <p class="eyebrow">04A / AI 辅助 3D 资产工具 · 技术美术工具</p>
           <div class="geo-hero-copy"><div><h1 id="geometry-title">面子果实</h1><p class="geo-english" lang="en">AI Geometry Budget Planner</p></div><div><h2>让 AI 建模，<br>从合适的面数开始。</h2><p>我把 AI 建模中的面数选择前移到生成之前：先根据参考图分析结构，再结合资产用途、观看距离和目标平台，给出可检查、可验证的三角面预算。</p><p>它不是减面软件，也不是自动拓扑工具，而是帮助我决定“先用多少面试一次”的规划工具。</p><a class="text-link" href="#geo-results">查看真实分析与预算 ↓</a></div></div>
           <dl class="geo-facts"><div><dt>我的职责</dt><dd>需求与工作流设计、预算规则<br>AI 辅助开发、测试与效果验证</dd></div><div><dt>技术栈</dt><dd>React · TypeScript · Vite<br>Node.js · 多模态视觉 API</dd></div><div><dt>当前状态</dt><dd>已实现真实视觉分析与面数规划<br>已应用于实际 AI 建模测试</dd></div></dl>
           <figure class="geo-figure geo-hero-image"><button class="media-trigger" type="button" data-lightbox aria-label="放大面子果实真实分析界面"><img src="../assets/projects/geometry-planner/screens/planner-analysis-result.png" alt="面子果实真实界面：鞋子配件参考图、使用条件、2,050 三角面候选预算与三档分析结果" width="1519" height="935" fetchpriority="high" decoding="async"></button><figcaption>真实分析界面 · 当前输入为鞋子配件，预算以 Triangles 为单位。点击图片可放大查看。</figcaption></figure>
@@ -124,12 +124,12 @@
         <section class="geo-section" id="geo-next" aria-labelledby="geo-next-title">
           <div class="geo-section-heading"><span>10 / 项目价值与后续方向</span><h2 id="geo-next-title">让预算成为有依据的起点，<br>而不是一个确定的答案。</h2><p>发现生成结果差异 → 提出预算假设 → 建立分析和规则系统 → 应用于建模 → 检查结果。这条路径把面数选择从单纯试错，转化为有结构依据的起始建议。</p></div>
           <div class="geo-three-col"><article><h3>记录可比较的数据</h3><p>同时记录目标面数与实际三角面数，对相同参考图进行多档、重复生成。</p></article><article><h3>分开验收不同质量</h3><p>统一视角和显示条件，分别检查几何、法线与贴图，不让一个总面数掩盖具体问题。</p></article><article><h3>继续验证泛化</h3><p>使用未参与规则调整的资产验证表现，为不同生成器与版本积累独立的预算经验。</p></article></div>
-          <a class="geo-continue" href="#asset-production"><span>继续阅读 · 项目三 / 第二个案例</span><strong>AI 辅助三维资产生产管线 ↓</strong><small>从生成前的预算规划，进入生成后的资产制作与验证。</small></a>
+          <a class="geo-continue" href="#asset-production"><span>继续阅读 · 项目四 / 第二个案例</span><strong>AI 辅助三维资产生产管线 ↓</strong><small>从生成前的预算规划，进入生成后的资产制作与验证。</small></a>
         </section>
       </article>
 
-      <article id="asset-production" class="modeling-legacy-case" aria-label="项目三第二个案例：AI 辅助三维资产生产管线">
-      <div class="modeling-legacy-label"><p class="eyebrow">03B / AI 辅助建模 · 资产生产与验证</p><a class="text-link" href="#geometry-planner">返回面子果实 ↑</a></div>
+      <article id="asset-production" class="modeling-legacy-case" aria-label="项目四第二个案例：AI 辅助三维资产生产管线">
+      <div class="modeling-legacy-label"><p class="eyebrow">04B / AI 辅助建模 · 资产生产与验证</p><a class="text-link" href="#geometry-planner">返回面子果实 ↑</a></div>
       <header class="case-hero asset-production-hero">
         <nav class="case-nav" aria-label="项目导航">
           <a class="text-link" href="../index.html#work">返回作品列表</a>
