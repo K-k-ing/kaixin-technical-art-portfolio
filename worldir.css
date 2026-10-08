@@ -40,6 +40,29 @@
 .worldir-case .worldir-asset-copy { margin-top: 2rem; }
 .worldir-case .worldir-asset-copy h3 { margin: 0; font-size: clamp(1.4rem,2.6vw,2.25rem); line-height: 1.4; }
 .worldir-case .worldir-asset-copy p:first-child { margin-top: 0; }
+.worldir-case .worldir-process { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--line); scroll-margin-top: 7rem; }
+.worldir-case .worldir-process-heading { max-width: 60rem; }
+.worldir-case .worldir-process-heading h3 { margin: .8rem 0 1.25rem; font-size: clamp(1.9rem,3.5vw,3.2rem); line-height: 1.2; letter-spacing: -.035em; }
+.worldir-case .worldir-process-heading p:not(.eyebrow), .worldir-case .worldir-step-heading p:not(.eyebrow), .worldir-case .worldir-process-commentary p { color: var(--muted); line-height: 1.8; }
+.worldir-case .worldir-process-nav { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1rem; list-style: none; margin: 2rem 0 0; padding: 0; }
+.worldir-case .worldir-process-nav a { display: flex; flex-direction: column; gap: .5rem; padding: 1rem 0; border-top: 1px solid var(--line); font-size: .95rem; font-weight: 600; }
+.worldir-case .worldir-process-nav span { color: var(--accent); font-size: .8rem; }
+.worldir-case .worldir-process-nav a:hover { color: var(--accent); border-color: var(--accent); }
+.worldir-case .worldir-process-step { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); scroll-margin-top: 7rem; }
+.worldir-case .worldir-step-heading { max-width: 65rem; margin-bottom: 1.5rem; }
+.worldir-case .worldir-step-heading h4 { margin: .75rem 0 1rem; font-size: clamp(1.4rem,2.5vw,2rem); line-height: 1.4; letter-spacing: -.025em; }
+.worldir-case .worldir-process-pair, .worldir-case .worldir-process-split { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(1.25rem,3vw,2.5rem); align-items: start; }
+.worldir-case .worldir-process-figure .media-trigger { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #202225; }
+.worldir-case .worldir-process-figure img { width: 100%; height: 100%; object-fit: contain; }
+.worldir-case .worldir-reference-crop img { width: auto; height: auto; max-width: min(100%,302px); max-height: 100%; }
+.worldir-case .worldir-process-diagnostic { max-width: 30rem; width: 100%; margin-inline: auto; }
+.worldir-case .worldir-process-diagnostic .media-trigger { aspect-ratio: 864/1276; }
+.worldir-case .worldir-process-commentary { padding: 1.25rem 0; }
+.worldir-case .worldir-process-commentary p:first-child { margin-top: 0; }
+.worldir-case .worldir-fit-legend { margin: 0 0 1.75rem; border-top: 1px solid var(--line); }
+.worldir-case .worldir-fit-legend > div { display: grid; grid-template-columns: 5rem 1fr; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.worldir-case .worldir-fit-legend dt { font-weight: 650; }
+.worldir-case .worldir-fit-legend dd { margin: 0; color: var(--muted); }
 .worldir-case .worldir-status-list { margin: 0; border-top: 1px solid var(--line); }
 .worldir-case .worldir-status-list > div { display: grid; grid-template-columns: 8rem minmax(0,1fr); gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .worldir-case .worldir-status-list dt { color: var(--accent); font-weight: 650; }
@@ -51,10 +74,14 @@
   .worldir-case .worldir-two-col, .worldir-case .worldir-evidence-grid, .worldir-case .worldir-principles, .worldir-case .worldir-comparison { grid-template-columns: minmax(0,1fr); }
   .worldir-case .worldir-pipeline { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .worldir-case .worldir-status-list > div { grid-template-columns: 5rem minmax(0,1fr); gap: 1rem; }
+  .worldir-case .worldir-process-pair, .worldir-case .worldir-process-split { grid-template-columns: minmax(0,1fr); }
+  .worldir-case .worldir-process-nav { grid-template-columns: repeat(3,minmax(0,1fr)); }
 }
 @media (max-width: 500px) {
   .worldir-case .worldir-pipeline { grid-template-columns: minmax(0,1fr); }
   .worldir-case .worldir-pipeline li { padding: 1.1rem; }
   .worldir-case .worldir-status-list > div { grid-template-columns: minmax(0,1fr); gap: .45rem; }
   .worldir-case .case-nav { gap: 1.25rem; align-items: start; }
+  .worldir-case .worldir-process { margin-top: 3rem; padding-top: 2rem; }
+  .worldir-case .worldir-process-nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }

@@ -40,7 +40,7 @@
         <div><dt>使用工具</dt><dd>Python · Blender · Unreal Engine<br>Astra · Marble · WorldSculpt 实验</dd></div>
         <div><dt>当前状态</dt><dd>持续开发中<br>局部流程已实现，通用系统尚未完成</dd></div>
       </dl>
-      <nav class="case-toc" aria-label="WORLDIR 项目目录"><a href="#demo">项目影片</a><a href="#question">研究问题</a><a href="#spatial">空间证据</a><a href="#floor">场景编译</a><a href="#assets">资产与重建实验</a><a href="#scope">能力边界</a></nav>
+      <nav class="case-toc" aria-label="WORLDIR 项目目录"><a href="#demo">项目影片</a><a href="#question">研究问题</a><a href="#spatial">空间证据</a><a href="#floor">场景编译</a><a href="#assets">资产与重建实验</a><a href="#chair-workflow">椅子替代过程</a><a href="#scope">能力边界</a></nav>
     </header>
 
     <section class="case-section" id="demo" aria-labelledby="demo-title">
@@ -83,6 +83,53 @@
         </div>
         <div class="worldir-two-col worldir-asset-copy"><h3>好看的候选，<br>也可能放不进去。</h3><div><p>我测试将外部生成的椅子放入重建空间，围绕相机投影、位置、尺寸与形态检查拟合结果。资产外观与 Mesh 候选不直接决定世界空间的位置。</p><p>拟合后仍存在深度与靠背等局部误差，需要人工接受阈值。单个椅子的实验不能推广成通用、自动成功的资产替换服务。</p></div></div>
       </div>
+      <section class="worldir-process" id="chair-workflow" aria-labelledby="chair-workflow-title">
+        <header class="worldir-process-heading"><p class="eyebrow">单对象替代实验 / 过程证据</p><h3 id="chair-workflow-title">从参考提取，<br>到候选资产与场景回看。</h3><p>以一把椅子串起参考整理、重建对照、候选检查、拟合诊断与场景回看的主要环节。下面展示的是局部替代实验，不是已经通过生产验收的自动替代闭环。</p></header>
+        <ol class="worldir-process-nav" aria-label="椅子替代实验的五个阶段">
+          <li><a href="#chair-reference"><span>01</span>参考提取</a></li><li><a href="#chair-candidate"><span>02</span>重建与候选</a></li><li><a href="#chair-structure"><span>03</span>结构检查</a></li><li><a href="#chair-fitting"><span>04</span>拟合诊断</a></li><li><a href="#chair-playback"><span>05</span>场景回看</a></li>
+        </ol>
+
+        <section class="worldir-process-step" id="chair-reference" aria-labelledby="chair-reference-title">
+          <header class="worldir-step-heading"><p class="eyebrow">01 / 参考裁切与独立参考</p><h4 id="chair-reference-title">先明确要替代的对象。</h4><p>从场景中的椅子开始，整理可供外形比对的参考。独立参考图补充了对象外观，但不直接提供真实尺寸、背面几何或世界坐标。</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure worldir-reference-crop"><button class="media-trigger" type="button" data-lightbox aria-label="放大场景中的椅子参考裁切"><img src="../assets/projects/worldir/evidence/chair-reference-crop.png" alt="原场景中椅子的参考裁切，可见坐面、靠背、底座与相邻桌面" width="302" height="357" loading="lazy" decoding="async"></button><figcaption>场景参考裁切 · 保留原始图像尺寸，不把图像细节当作完整几何证据。</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大独立的椅子外形参考"><img src="../assets/projects/worldir/evidence/chair-isolated-reference.png" alt="独立的浅色椅子侧向参考图，展示坐垫、金属支架、支柱与脚轮" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>独立外形参考 · 用于候选比对，不是精确空间约束。</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-candidate" aria-labelledby="chair-candidate-title">
+          <header class="worldir-step-heading"><p class="eyebrow">02 / 碎片重建与候选多视图</p><h4 id="chair-candidate-title">重建提供线索，候选提供另一种几何。</h4><p>对照碎片化重建与生成资产，检查它们分别保留了什么、又缺少什么。这不是同一个模型的“修复前后”，也不能只凭外形完整就认定候选适合替代。</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大碎片化的椅子重建"><img src="../assets/projects/worldir/evidence/chair-fragmented-reconstruction.png" alt="由碎片化三角表面组成的椅子重建，坐面、靠背与底座存在明显缺失" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>碎片化重建 · 可见形态线索，也可见缺失与断开的表面。</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大椅子候选的原生轴向多视图"><img src="../assets/projects/worldir/evidence/chair-candidate-native-views.png" alt="生成椅子的原生 +Z、−Z、+X 与斜向视图，图中注明语义正面、背面和侧面尚未验证" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>候选原生轴向视图 · 检查整体形态；语义正、背、侧朝向尚未验证。</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-structure" aria-labelledby="chair-structure-title">
+          <header class="worldir-step-heading"><p class="eyebrow">03 / 分色结构检查</p><h4 id="chair-structure-title">从“像一把椅子”，到检查各部位的关系。</h4></header>
+          <div class="worldir-process-split">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大椅子的分色结构检查"><img src="../assets/projects/worldir/evidence/chair-part-color-inspection.png" alt="椅子多视图的分色结构检查：靠背、座面、支撑与底座使用不同颜色标示，语义朝向仍未验证" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>分色检查靠背、座面、支撑与底座的结构关系。</figcaption></figure>
+            <div class="worldir-process-commentary"><p>分色帮助我查看不同部位的范围与连接关系，避免把整体轮廓相似当作所有局部结构都正确。</p><p>这张检查图不等于自动语义分割已经验证，也不证明部件已经独立可编辑，或拓扑达到了生产标准。</p></div>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-fitting" aria-labelledby="chair-fitting-title">
+          <header class="worldir-step-heading"><p class="eyebrow">04 / 源视图拟合与深度支持</p><h4 id="chair-fitting-title">轮廓重合，还不代表空间吻合。</h4></header>
+          <div class="worldir-process-split">
+            <figure class="worldir-figure worldir-process-figure worldir-process-diagnostic"><button class="media-trigger" type="button" data-lightbox aria-label="放大源视图拟合诊断及未批准替代标记"><img src="../assets/projects/worldir/evidence/chair-source-fit-diagnostic.png" alt="源视图拟合诊断：青色为来源、绿色为深度支持、橙色为候选；阈值 0.05 下源像素深度支持为 47.5%，图中明确标记并非已批准替代" width="864" height="1276" loading="lazy" decoding="async"></button><figcaption>原始诊断图 · 保留“NOT AN APPROVED REPLACEMENT”标记。</figcaption></figure>
+            <div class="worldir-process-commentary"><dl class="worldir-fit-legend"><div><dt>青色</dt><dd>来源</dd></div><div><dt>绿色</dt><dd>深度支持</dd></div><div><dt>橙色</dt><dd>候选资产</dd></div></dl><p>图中的 <strong>47.5%</strong> 指阈值 <strong>0.05</strong> 下源像素获得深度支持的比例，不是替代成功率、模型准确率或验收通过率。</p><p>投影中的轮廓重叠仍需结合深度、尺度与朝向检查。原图明确标记“并非已批准替代”，因此这里保留为诊断步骤，而不是成功结果。</p></div>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-playback" aria-labelledby="chair-playback-title">
+          <header class="worldir-step-heading"><p class="eyebrow">05 / 外观候选与场景回看</p><h4 id="chair-playback-title">最后回到场景，而不是停在单个资产上。</h4><p>先查看候选的材质外观，再回到重建环境观察它与桌面、地板和周围物体的视觉关系。外观看起来完整，仍不代表世界空间中的位置、尺度与遮挡已经通过验收。</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大椅子候选的材质外观预览"><img src="../assets/projects/worldir/evidence/chair-material-candidate.png" alt="椅子候选的外观预览，展示浅色坐垫、靠背和金属支架" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>候选外观预览 · 不据此宣称 UV、拓扑或生产材质已经验收。</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大椅子候选在重建场景中的回看"><img src="../assets/projects/worldir/evidence/chair-scene-playback.png" alt="椅子候选放入重建室内后的场景回看，可见周围桌面、屏幕、地板与重建表面" width="864" height="720" loading="lazy" decoding="async"></button><figcaption>场景回看 · 检查上下文关系，不等同于最终替代验收。</figcaption></figure>
+          </div>
+        </section>
+      </section>
+
       <div class="worldir-section-heading worldir-subsection"><h3>WorldSculpt：从碎片输出，到连续表面的诊断。</h3><p>早期 GLB 虽然能正常读取，却由大量不连通碎片组成。排查权重 key mismatch 与加载检查后，修复实验得到更连续的表面，但仍有薄片、裂缝与残留碎片。</p></div>
       <div class="worldir-comparison"><figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大 WorldSculpt 早期失败输出"><img src="../assets/projects/worldir/evidence/evidence-071.webp" alt="WorldSculpt 的失败输出：Blender 中由大量断开碎片构成的沙发" width="1589" height="913" loading="lazy" decoding="async"></button><figcaption><strong>修复前 / 失败输出</strong><br>约 529k 顶点、939k 面属于这一早期碎片结果，面数多不代表几何可用。</figcaption></figure><figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="放大 WorldSculpt 修复后的连续表面"><img src="../assets/projects/worldir/evidence/evidence-074.webp" alt="权重加载问题修复后，WorldSculpt 沙发呈现更加连续的表面" width="882" height="507" loading="lazy" decoding="async"></button><figcaption><strong>修复后 / 实验结果</strong><br>最大连通分量包含修复后 GLB 中 99.471% 的面；这是连通性统计，不是重建准确率。</figcaption></figure></div>
       <p class="case-note">WorldSculpt 是已封存的专项实验分支，未接入默认主流程。密集重建可以提供几何证据，但计算成本、薄结构、拓扑、UV 与生产材质仍限制其直接用于实时资产生产。</p>
