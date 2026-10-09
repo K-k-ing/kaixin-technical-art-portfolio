@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WORLDIR — World Model Assisted Scene Compiler | Kian (Kaixin) Kang</title>
+  <meta name="description" content="WORLDIR is Kian (Kaixin) Kang's world-model and spatial-intelligence research prototype, exploring how spatial evidence, structured scene decisions, and generated assets can support editable workflows in Blender and Unreal Engine.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="WORLDIR — World Model Assisted Scene Compiler">
+  <meta property="og:description" content="From world understanding to editable 3D scenes: experiments in spatial queries, observation and inference, scene compilation, and asset fitting.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/projects/worldir.html">
+  <meta property="og:image" content="https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/worldir/evidence/evidence-087.webp">
+  <meta property="og:image:alt" content="WORLDIR's actual Blender corridor reconstruction and window-asset experiment">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/projects/worldir.html">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../../worldir.css">
+  <script src="../script.js" defer></script>
+</head>
+<body class="worldir-case">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="wordmark" href="../index.html" aria-label="Kian Kang home">KIAN KANG</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" id="site-navigation" aria-label="Main navigation" data-site-nav>
+      <a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#about">About</a><a href="../resume-source.html">Resume</a><a href="https://github.com/K-k-ing" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:122880509@qq.com">Contact</a><a href="../../projects/worldir.html" hreflang="zh-CN">中文</a>
+    </nav>
+  </div></header>
+  <main class="case-main" id="main"><article class="container">
+    <header class="case-hero">
+      <nav class="case-nav" aria-label="Project navigation"><a class="text-link" href="../index.html#work">Back to work</a><a class="text-link" href="mate.html">Next project: MATE</a></nav>
+      <p class="eyebrow">01 / Spatial intelligence · Research &amp; engineering prototype</p>
+      <div class="case-title-wrap" data-reveal><div><h1>WORLDIR</h1><p class="worldir-name">World-model-assisted scene compilation</p><p class="worldir-english">World Model Assisted Scene Compiler</p></div><p class="case-subtitle">How can a world model's understanding become a structured, traceable, editable 3D scene?</p></div>
+      <figure class="case-hero-media" data-reveal><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge WORLDIR's Blender corridor experiment"><img src="../../assets/projects/worldir/evidence/evidence-087.webp" alt="Actual corridor experiment in Blender: reconstruction wireframes and a selected candidate window asset" width="1581" height="912" fetchpriority="high"></button></figure>
+      <p class="worldir-caption">Actual experiment screenshot · Reconstruction and candidate-asset inspection, not evidence of a completed world-generation system.</p>
+      <dl class="case-metadata project-snapshot" aria-label="Project at a glance">
+        <div><dt>My role</dt><dd>Technical art / Research prototype development<br>Workflow design, experiment diagnosis, and scene compilation</dd></div>
+        <div><dt>Tools</dt><dd>Python · Blender · Unreal Engine<br>Astra · Marble · WorldSculpt experiments</dd></div>
+        <div><dt>Current status</dt><dd>In active development<br>Partial workflows implemented; the general system is not complete</dd></div>
+      </dl>
+      <nav class="case-toc" aria-label="WORLDIR case study contents"><a href="#demo">Project film</a><a href="#question">Research question</a><a href="#spatial">Spatial evidence</a><a href="#floor">Scene compilation</a><a href="#assets">Asset &amp; reconstruction studies</a><a href="#chair-workflow">Chair replacement process</a><a href="#scope">Scope &amp; limits</a></nav>
+    </header>
+
+    <section class="case-section" id="demo" aria-labelledby="demo-title">
+      <div class="worldir-section-heading"><p class="eyebrow">Original film / 01:37</p><h2 id="demo-title">From spatial understanding to scene production.</h2><p>This film presents WORLDIR's prototype experiments and system direction. The implementation scope of each stage is described on this page; the architecture shown in the film does not prove a complete automated production loop.</p></div>
+      <video class="worldir-video" controls playsinline preload="none" poster="../../assets/projects/worldir/evidence/evidence-087.webp" aria-label="WORLDIR prototype project film">
+        <source src="../../assets/projects/worldir/video/worldir-film.mp4" type="video/mp4">
+        <p><a href="../../assets/projects/worldir/video/worldir-film.mp4">Open the WORLDIR prototype film</a></p>
+      </video>
+      <p class="worldir-caption">Original visuals, text, and timing retained. Loads when played. <a class="text-link" href="../../assets/projects/worldir/video/worldir-film.mp4" download>Download the prototype film</a></p>
+    </section>
+
+    <section class="case-section" id="question" aria-labelledby="question-title">
+      <div class="worldir-section-heading"><p class="eyebrow">01 / Research question</p><h2 id="question-title">Visually convincing does not mean spatially reliable.</h2></div>
+      <div class="worldir-two-col"><p class="case-lede">World models can explain what something is, where it is, and what it relates to. A semantically plausible scene does not necessarily have reliable depth, dimensions, cameras, or final production geometry.</p><div><p>I first tested Astra's scene understanding and layout descriptions, then compiled structured results into editable Unreal Actors and used object-level SpatialPatch operations to adjust local layouts.</p><p>Single-view ambiguity and spatial drift led me to separate model suggestions, reconstruction evidence, human-accepted scene decisions, and program execution. The model proposes candidates; it does not make every decision for the final scene.</p></div></div>
+      <p class="worldir-diagram-label">System direction · Includes implemented, in-development, and proposed stages</p>
+      <ol class="worldir-pipeline" aria-label="WORLDIR system direction; not all stages are complete">
+        <li><span>Input</span><strong>Reference / World input</strong></li><li><span>Understanding</span><strong>World models &amp; spatial evidence</strong></li><li class="worldir-pipeline-center"><span>In development</span><strong>Scene Graph</strong><small>Record accepted decisions, sources, and unknowns</small></li><li><span>Proposed</span><strong>Asset resolution / Candidate replacement</strong></li><li><span>Partly implemented</span><strong>Scene compilation</strong></li><li><span>Execution &amp; inspection</span><strong>Blender / Unreal Engine</strong></li>
+      </ol>
+      <p class="case-note"><strong>The model proposes candidates. The Scene Graph records decisions. The Compiler executes.</strong><br>A Scene Graph cannot supply missing evidence, and a compiler should not invent unknown spatial facts.</p>
+    </section>
+
+    <section class="case-section" id="spatial" aria-labelledby="spatial-title">
+      <div class="worldir-section-heading"><p class="eyebrow">02 / Spatial evidence &amp; queries · Experimental</p><h2 id="spatial-title">Know which points have support,<br>and where there is no answer.</h2><p>Marble's Gaussian / PLY reconstructions provide visual and spatial clues. I experiment with camera projection, registration, and queries in source coordinates, without treating the reconstruction as a reliable production asset.</p></div>
+      <div class="worldir-evidence-grid"><figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the pixel-to-3D-coordinate query experiment"><img src="../../assets/projects/worldir/evidence/evidence-027.webp" alt="Actual pixel-to-XYZ query experiment: 17 of 20 query points have spatial support; three fall in unsupported regions" width="2048" height="1294" loading="lazy" decoding="async"></button><figcaption>A local pixel-to-XYZ query test that retains regions where no answer is available.</figcaption></figure><div class="worldir-measurements"><div><span>Early Gaussian dataset</span><strong>500k <small>splats</small></strong><p>The scale of the reconstruction representation, not an accuracy metric.</p></div><div><span>Pixel-to-3D query test</span><strong>17 / 20</strong><p>17 queries received support; three explicitly returned no support. This is not whole-scene accuracy.</p></div><p class="worldir-boundary">Source coordinates have not been calibrated to real-world metric space. Occlusion, depth ambiguity, camera uncertainty, and missing rear geometry still require separate treatment.</p></div></div>
+    </section>
+
+    <section class="case-section" id="floor" aria-labelledby="floor-title">
+      <div class="worldir-section-heading"><p class="eyebrow">03 / Bounded floor instancing case · Implemented</p><h2 id="floor-title">One mesh. Nine placements.<br>Not nine observed facts.</h2><p>In a bounded floor case, I recorded six placements observed in the source data and three placements inferred through design, then compiled them into Blender with all nine sharing the same mesh data.</p></div>
+      <figure class="worldir-figure worldir-figure-wide"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the reconstruction and production layers of the floor-instancing case"><img src="../../assets/projects/worldir/evidence/evidence-134.webp" alt="Actual floor-instancing comparison: the reconstruction layer retains missing areas, while the production layer distinguishes six observed placements from three design-inferred placements" width="2048" height="1423" loading="lazy" decoding="async"></button><figcaption>The reconstruction layer retains gaps. The production layer can add clearly labeled, traceable design inferences without presenting them as facts from the source data.</figcaption></figure>
+      <div class="worldir-principles"><article><span>6 observed placements</span><h3>Retain the evidence source</h3><p>Record placements supported by source data, without allowing later visual additions to overwrite the original facts.</p></article><article><span>3 design-inferred placements</span><h3>Acknowledge the design choice</h3><p>Keep a separate source for each inference and make clear that it does not carry the authority of geometric ground truth.</p></article><article><span>1 shared mesh</span><h3>Execute decisions deterministically</h3><p>Reuse production geometry in this bounded case instead of generating a separate model for every placement.</p></article></div>
+      <p class="case-note">This result demonstrates decision recording and instancing compilation in the floor case. It does not establish a completed general Scene Graph, full Asset Resolver, or automatic generation of arbitrary scenes.</p>
+    </section>
+
+    <section class="case-section" id="assets" aria-labelledby="assets-title">
+      <div class="worldir-section-heading"><p class="eyebrow">04 / Asset fitting &amp; reconstruction diagnosis · Experimental</p><h2 id="assets-title">Reconstruction is not production geometry.</h2></div>
+      <div class="worldir-asset-study">
+        <div class="worldir-comparison worldir-asset-views" aria-label="Two views of the chair-placement experiment">
+          <figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the generated-chair scene-fitting experiment"><img src="../../assets/projects/worldir/evidence/evidence-065.webp" alt="Placement and geometric-fit inspection of an externally generated chair in source space in Blender" width="1347" height="869" loading="lazy" decoding="async"></button><figcaption>An external generated asset in a spatial-placement experiment, still requiring human inspection and acceptance.</figcaption></figure>
+          <figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the additional view of the chair and reconstructed space"><img src="../../assets/projects/worldir/evidence/chair-spatial-context.png" alt="Additional Blender view of the chair, tabletop, and surrounding reconstructed space, showing the asset's spatial relationship to reconstructed surfaces" width="864" height="505" loading="lazy" decoding="async"></button><figcaption>Additional view: the relationship between the chair, tabletop, and surrounding reconstruction.</figcaption></figure>
+        </div>
+        <div class="worldir-two-col worldir-asset-copy"><h3>A good-looking candidate<br>may still not fit.</h3><div><p>I tested placing an externally generated chair in the reconstructed space, inspecting camera projection, position, size, and shape. Asset appearance and a candidate mesh do not directly determine its position in world space.</p><p>Local depth and backrest errors remained after fitting, requiring human acceptance thresholds. One chair experiment cannot establish a general, automatically successful asset-replacement service.</p></div></div>
+      </div>
+      <section class="worldir-process" id="chair-workflow" aria-labelledby="chair-workflow-title">
+        <header class="worldir-process-heading"><p class="eyebrow">Single-object replacement experiment / Process evidence</p><h3 id="chair-workflow-title">From reference extraction<br>to a candidate asset and scene review.</h3><p>One chair connects the main stages of reference preparation, reconstruction comparison, candidate inspection, fitting diagnosis, and review in the scene. This is a local replacement experiment, not an automated replacement loop that has passed production acceptance.</p></header>
+        <ol class="worldir-process-nav" aria-label="Five stages of the chair-replacement experiment">
+          <li><a href="#chair-reference"><span>01</span>Reference extraction</a></li><li><a href="#chair-candidate"><span>02</span>Reconstruction &amp; candidate</a></li><li><a href="#chair-structure"><span>03</span>Structure inspection</a></li><li><a href="#chair-fitting"><span>04</span>Fitting diagnosis</a></li><li><a href="#chair-playback"><span>05</span>Scene review</a></li>
+        </ol>
+
+        <section class="worldir-process-step" id="chair-reference" aria-labelledby="chair-reference-title">
+          <header class="worldir-step-heading"><p class="eyebrow">01 / Scene crop &amp; standalone reference</p><h4 id="chair-reference-title">First, identify the object to replace.</h4><p>Starting with the chair in the scene, I prepared references for comparing shape. The standalone reference adds appearance information, but does not directly supply real dimensions, rear geometry, or world coordinates.</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure worldir-reference-crop"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the chair reference cropped from the scene"><img src="../../assets/projects/worldir/evidence/chair-reference-crop.png" alt="Chair reference cropped from the original scene, showing the seat, backrest, base, and adjacent tabletop" width="302" height="357" loading="lazy" decoding="async"></button><figcaption>Scene reference crop · Original image dimensions retained; image detail is not complete geometric evidence.</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the standalone chair-shape reference"><img src="../../assets/projects/worldir/evidence/chair-isolated-reference.png" alt="Standalone side-view reference of a light-colored chair, showing upholstery, metal supports, a central post, and casters" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>Standalone shape reference · For candidate comparison, not a precise spatial constraint.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-candidate" aria-labelledby="chair-candidate-title">
+          <header class="worldir-step-heading"><p class="eyebrow">02 / Fragmented reconstruction &amp; candidate multi-view</p><h4 id="chair-candidate-title">The reconstruction provides clues.<br>The candidate provides different geometry.</h4><p>I compare the fragmented reconstruction with the generated asset to inspect what each retains and what each lacks. These are not before-and-after repairs of the same mesh, and a complete-looking shape alone does not make the candidate a suitable replacement.</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the fragmented chair reconstruction"><img src="../../assets/projects/worldir/evidence/chair-fragmented-reconstruction.png" alt="Chair reconstruction made of fragmented triangular surfaces, with substantial missing areas in the seat, backrest, and base" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>Fragmented reconstruction · Shape clues remain alongside missing and disconnected surfaces.</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the candidate chair's native-axis views"><img src="../../assets/projects/worldir/evidence/chair-candidate-native-views.png" alt="Generated chair in native +Z, −Z, +X, and oblique views; the image states that semantic front, back, and side orientations are unverified" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>Candidate native-axis views · Inspect overall shape; semantic front, back, and side orientations remain unverified.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-structure" aria-labelledby="chair-structure-title">
+          <header class="worldir-step-heading"><p class="eyebrow">03 / Part-color structure inspection</p><h4 id="chair-structure-title">Beyond looking like a chair:<br>inspect how its parts relate.</h4></header>
+          <div class="worldir-process-split">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the chair's part-color structure inspection"><img src="../../assets/projects/worldir/evidence/chair-part-color-inspection.png" alt="Part-color inspection of multiple chair views: backrest, seat, supports, and base marked in different colors, with semantic orientations still unverified" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>Part colors help inspect the structural relationships of the backrest, seat, supports, and base.</figcaption></figure>
+            <div class="worldir-process-commentary"><p>Colors help me inspect the extent and connections of different parts, without assuming that a similar overall silhouette means every local structure is correct.</p><p>This inspection image does not validate automatic semantic segmentation, prove that parts are separately editable, or establish production-ready topology.</p></div>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-fitting" aria-labelledby="chair-fitting-title">
+          <header class="worldir-step-heading"><p class="eyebrow">04 / Source-view fitting &amp; depth support</p><h4 id="chair-fitting-title">Overlapping silhouettes<br>do not establish a spatial fit.</h4></header>
+          <div class="worldir-process-split">
+            <figure class="worldir-figure worldir-process-figure worldir-process-diagnostic"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the source-view fitting diagnostic and unapproved-replacement label"><img src="../../assets/projects/worldir/evidence/chair-source-fit-diagnostic.png" alt="Source-view fitting diagnostic: cyan is source, green is depth support, and orange is candidate; 47.5% of source pixels have depth support at threshold 0.05, with an explicit NOT AN APPROVED REPLACEMENT label" width="864" height="1276" loading="lazy" decoding="async"></button><figcaption>Original diagnostic image · The “NOT AN APPROVED REPLACEMENT” label is retained.</figcaption></figure>
+            <div class="worldir-process-commentary"><dl class="worldir-fit-legend"><div><dt>Cyan</dt><dd>Source</dd></div><div><dt>Green</dt><dd>Depth support</dd></div><div><dt>Orange</dt><dd>Candidate asset</dd></div></dl><p>The <strong>47.5%</strong> figure is the proportion of source pixels with depth support at threshold <strong>0.05</strong>. It is not replacement success, model accuracy, or an acceptance pass rate.</p><p>Silhouette overlap in projection still needs depth, scale, and orientation checks. The original image explicitly says “NOT AN APPROVED REPLACEMENT,” so it remains a diagnostic step here, not a successful result.</p></div>
+          </div>
+        </section>
+
+        <section class="worldir-process-step" id="chair-playback" aria-labelledby="chair-playback-title">
+          <header class="worldir-step-heading"><p class="eyebrow">05 / Appearance candidate &amp; scene review</p><h4 id="chair-playback-title">Return to the scene,<br>not just the isolated asset.</h4><p>I first inspect the candidate's material appearance, then return to the reconstructed environment to observe its visual relationship to the tabletop, floor, and nearby objects. A complete-looking asset does not mean its world-space position, scale, or occlusion has passed acceptance.</p></header>
+          <div class="worldir-process-pair">
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the candidate chair's material-appearance preview"><img src="../../assets/projects/worldir/evidence/chair-material-candidate.png" alt="Appearance preview of the chair candidate, showing light-colored seat and backrest upholstery with metal supports" width="864" height="864" loading="lazy" decoding="async"></button><figcaption>Candidate appearance preview · Not validation of UVs, topology, or production-ready PBR materials.</figcaption></figure>
+            <figure class="worldir-figure worldir-process-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge the chair candidate's review in the reconstructed scene"><img src="../../assets/projects/worldir/evidence/chair-scene-playback.png" alt="Chair candidate reviewed in a reconstructed interior, with surrounding tabletops, screens, floor, and reconstructed surfaces visible" width="864" height="720" loading="lazy" decoding="async"></button><figcaption>Scene review · Inspect contextual relationships; this is not final replacement acceptance.</figcaption></figure>
+          </div>
+        </section>
+      </section>
+
+      <div class="worldir-section-heading worldir-subsection"><h3>WorldSculpt: diagnosing fragmented output and continuous surfaces.</h3><p>The early GLB loaded normally but consisted of many disconnected fragments. After investigating a weight-key mismatch and loading checks, the repair experiment produced a more continuous surface, with thin sheets, cracks, and residual fragments still present.</p></div>
+      <div class="worldir-comparison"><figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge WorldSculpt's early failed output"><img src="../../assets/projects/worldir/evidence/evidence-071.webp" alt="Failed WorldSculpt output: a sofa made of many disconnected fragments in Blender" width="1589" height="913" loading="lazy" decoding="async"></button><figcaption><strong>Before repair / Failed output</strong><br>Approximately 529k vertices and 939k faces belong to this early fragmented result. A high face count does not establish usable geometry.</figcaption></figure><figure class="worldir-figure"><button class="media-trigger" type="button" data-lightbox aria-label="Enlarge WorldSculpt's more continuous surface after repair"><img src="../../assets/projects/worldir/evidence/evidence-074.webp" alt="WorldSculpt sofa with a more continuous surface after the weight-loading issue was fixed" width="882" height="507" loading="lazy" decoding="async"></button><figcaption><strong>After repair / Experimental result</strong><br>The largest connected component contains 99.471% of the repaired GLB's faces. This is a connectivity statistic, not reconstruction accuracy.</figcaption></figure></div>
+      <p class="case-note">WorldSculpt is an archived, focused experimental branch, not part of the default workflow. Dense reconstruction can provide geometric evidence, but computational cost, thin structures, topology, UVs, and production materials still limit its direct use in real-time asset production.</p>
+    </section>
+
+    <section class="case-section" id="scope" aria-labelledby="scope-title">
+      <div class="worldir-section-heading"><p class="eyebrow">05 / Current results &amp; capability boundaries</p><h2 id="scope-title">Make progress clear.<br>Keep the unknowns visible.</h2></div>
+      <dl class="worldir-status-list"><div><dt>Implemented</dt><dd>Structured Unreal Actor compilation and local SpatialPatch operations; observation / inference records and shared-mesh instancing in the bounded floor case.</dd></div><div><dt>Experimental</dt><dd>Astra semantic and layout baselines, Gaussian / PLY queries, camera registration, external-asset fitting, and the archived WorldSculpt repair experiment.</dd></div><div><dt>In development</dt><dd>A general Scene Graph and integration between the independent experimental stages.</dd></div><div><dt>Proposed</dt><dd>A general Asset Resolver, automated UV / PBR production processing, and a complete Blender-to-Unreal delivery and acceptance loop.</dd></div><div><dt>Future direction</dt><dd>Explore interactive worlds that continue to generate as they are observed, and a continuous workflow from generated observations to structured scenes.</dd></div></dl>
+      <div class="worldir-connection"><p class="eyebrow">WORLDIR × MATE / Future integration direction</p><h3>WORLDIR organizes scene requirements.<br>MATE supports asset and material iteration.</h3><p>WORLDIR studies spatial evidence and structured decisions at scene level. MATE studies review, binding, and editable surface iteration at asset level. They are currently independent prototypes; automatic requirements handoff and return to the scene remain future directions, not a working end-to-end system.</p><a class="text-link" href="mate.html">Explore the MATE material tool →</a></div>
+    </section>
+    <nav class="project-pagination" aria-label="More projects"><a href="ai-npc.html">Previous: AI NPC Interaction Prototype</a><a href="mate.html">Next: MATE Material Tool</a></nav>
+  </article></main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Kian Kang</p><a href="../index.html#work">Back to work</a></div></footer>
+</body>
+</html>
