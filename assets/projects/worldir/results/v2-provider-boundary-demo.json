@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "proposals_preserved": 2,
+  "unadopted_plan_unchanged": true,
+  "explicit_adoption_created_revision": 2,
+  "selected_provider": "synthetic-provider-A",
+  "selected_position": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "unadopted_plan_hash": "sha256:c81050af5fb00f2a31b5f8309202f9dd98f0507ada416c0b76b74c4403b2efa1",
+  "adopted_plan_hash": "sha256:d8afebc08ab297e4c28b96fb886ae95b6a8c34e15545bff58812e076b57695ce",
+  "provider_model_execution": "NOT_RUN",
+  "note": "Self-authored synthetic inputs and actor; not a real user approval or model output"
+}

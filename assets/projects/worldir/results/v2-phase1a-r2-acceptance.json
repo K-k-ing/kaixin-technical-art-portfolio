@@ -1,0 +1,1439 @@
+{
+  "artifact_kind": "phase1a_executed_acceptance_report",
+  "specification": "worldir.phase1a.v2",
+  "specification_revision": 2,
+  "baseline_id": "WORLDIR-P0-20261003-r1",
+  "phase": "Phase1A",
+  "review_status": "REVIEW_PENDING_STOP_BEFORE_PHASE1B",
+  "overall_status": "PASS",
+  "counts": {
+    "test_methods_run": 127,
+    "test_methods_passed": 127,
+    "test_methods_failed": 0,
+    "subtest_checks_reported": 80,
+    "assertion_count": null,
+    "denominator_note": "Counts are unittest test methods; nested assertions are not misreported as counted assertions",
+    "groups_planned": 24,
+    "groups_passed": 24
+  },
+  "compiler": {
+    "record_type": "CompilerVersion",
+    "contract_version": "worldir.phase1a.v2",
+    "version": "0.1.0",
+    "implementation_digest": "sha256:03d30745a2c3ec397ae402f586d9b418c24c2f5a26ea4dafe3ffb2ab7b841c18",
+    "dependency_lock_digest": "sha256:3b51e0fdf916a7dd87cc2cca355eef8aa84a159b935abe53553886f09dce03c6",
+    "numeric_algorithm": "rigid-binary64-fixed-order-v1",
+    "serialization_algorithm": "CJSON-B64-v1",
+    "runtime_profile": {
+      "implementation": "CPython",
+      "python_version": "3.12.14",
+      "python_build": [
+        "main",
+        "Aug 25 2026 14:00:49"
+      ],
+      "platform_system": "Linux",
+      "platform_release": "6.18.44",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "float_mant_dig": 53,
+      "float_max_exp": 1024,
+      "stdlib_digest": "sha256:8b20e731d9baf8650f00bc1713fbb4fddcad5fee89973b584bcbe180b48e9842"
+    },
+    "runtime_profile_digest": "sha256:3b5504ca3a24727a7626dab783f763b76de484ceb59f0e60dea2f4b0a3929f16"
+  },
+  "qa_dependencies": {
+    "jsonschema": "4.26.0",
+    "runtime": "stdlib-only"
+  },
+  "groups": [
+    {
+      "group_id": "A01",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Candidate/accepted separation; unknown null; required fail; unresolved preview",
+      "test_methods_planned": 2,
+      "test_methods_passed": 2,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A01_unknown_candidate_never_becomes_pose",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A01_unadopted_candidate_cannot_contaminate"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A02",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Candidate evidence chain; missing decisions; exact field/value/scope/revision",
+      "test_methods_planned": 4,
+      "test_methods_passed": 4,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A02_candidate_chain_and_mismatch",
+        "test_core.CoreAcceptance.test_A02_missing_decision",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A02_candidate_chain_field_scope_and_basis",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A02_selected_value_and_evidence_blob_tamper_rejected"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A03",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Synthetic human_direct, null candidate, pinned human_instruction, fabricated/missing evidence",
+      "test_methods_planned": 4,
+      "test_methods_passed": 4,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A03_fake_human_instruction",
+        "test_core.CoreAcceptance.test_A03_human_direct_keeps_assumed",
+        "test_core.CoreAcceptance.test_A03_missing_and_forged_evidence",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A03_direct_evidence_is_required_and_pinned"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A04",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Asymmetric truth; rotated parent and three-level rigid hierarchy",
+      "test_methods_planned": 8,
+      "test_methods_passed": 8,
+      "test_ids": [
+        "test_independent_acceptance.IndependentMathAcceptance.test_A04_asymmetric_three_level_hierarchy",
+        "test_mathcore.MathCoreTests.test_A04_local_truth_column_vectors_and_row_storage",
+        "test_mathcore.MathCoreTests.test_A04_parent_child_order_is_noncommutative",
+        "test_mathcore.MathCoreTests.test_A04_permuted_nodes_do_not_change_output_or_mutate_inputs",
+        "test_mathcore.MathCoreTests.test_A04_rigid_inverse_matches_asymmetric_expected_point",
+        "test_mathcore.MathCoreTests.test_A04_rotated_parent_two_child_levels_independent_world_truth",
+        "test_mathcore.MathCoreTests.test_A04_topological_ready_set_uses_minimum_id_not_depth_sort",
+        "test_mathcore.MathCoreTests.test_frozen_measurement_report_meets_math_only_thresholds"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A05",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Offset pivot, centimeter unit scale, uniform fit exactly once: 1.6 / 11.6",
+      "test_methods_planned": 5,
+      "test_methods_passed": 5,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A05_pivot_units_fit_exactly_once",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A05_pivot_units_fit_applied_once",
+        "test_mathcore.MathCoreTests.test_A05_frozen_c05_centimeter_pivot_fit_once",
+        "test_mathcore.MathCoreTests.test_A05_full_asymmetric_anchor_basis_units_fit_parent_chain",
+        "test_mathcore.MathCoreTests.test_frozen_measurement_report_meets_math_only_thresholds"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A06",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Fit approval/positivity/uniformity; dimensions edit does not stretch asset",
+      "test_methods_planned": 7,
+      "test_methods_passed": 7,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A06_dimensions_do_not_scale_asset",
+        "test_core.CoreAcceptance.test_A06_fit_requires_exact_binding_scope",
+        "test_core.CoreAcceptance.test_A06_invalid_fit",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A06_fit_requires_exact_approval_dimensions_not_scale",
+        "test_mathcore.MathCoreTests.test_A06_dimensions_change_envelope_without_asset_scale",
+        "test_mathcore.MathCoreTests.test_A06_uniform_fit_must_be_positive_scalar",
+        "test_mathcore.MathCoreTests.test_A06_world_bounds_are_rigid_design_envelope_not_asset_fit"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A07",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Asymmetric axes, handedness, camera rays, UE and Blender mathematical round trips",
+      "test_methods_planned": 14,
+      "test_methods_passed": 14,
+      "test_ids": [
+        "test_independent_acceptance.IndependentMathAcceptance.test_A07_camera_ray_convention_and_inverse",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A07_explicit_blender_world_camera_mapping",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A07_reflection_basis_and_ue_roundtrip",
+        "test_mathcore.MathCoreTests.test_A07_basis_cannot_hide_scale_shear_or_undocumented_flag",
+        "test_mathcore.MathCoreTests.test_A07_blender_camera_converts_local_axes_after_full_parent_chain",
+        "test_mathcore.MathCoreTests.test_A07_blender_camera_local_axes_ray_and_pose_roundtrip",
+        "test_mathcore.MathCoreTests.test_A07_blender_object_world_mapping_is_explicit_identity_in_meters",
+        "test_mathcore.MathCoreTests.test_A07_camera_full_parent_chain_is_used",
+        "test_mathcore.MathCoreTests.test_A07_camera_rotated_rays_and_projection_have_separate_axes",
+        "test_mathcore.MathCoreTests.test_A07_canonical_to_ue_math_fixture_rotation_conjugation",
+        "test_mathcore.MathCoreTests.test_A07_declared_handedness_reflection_is_not_node_scale",
+        "test_mathcore.MathCoreTests.test_A07_missing_intrinsics_and_unsupported_camera_models_reject",
+        "test_mathcore.MathCoreTests.test_A07_pixel_center_has_no_implicit_second_half_pixel",
+        "test_mathcore.MathCoreTests.test_frozen_measurement_report_meets_math_only_thresholds"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A08",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Assumed/calibrated/source units and unresolved pose/unit without defaults",
+      "test_methods_planned": 5,
+      "test_methods_passed": 5,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A08_calibrated_distinct_from_assumed",
+        "test_core.CoreAcceptance.test_A08_source_unit_not_production_meters",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A08_units_semantics_and_unknown_unit_rejection",
+        "test_mathcore.MathCoreTests.test_A08_unknown_pose_or_unspecified_parent_cannot_default",
+        "test_mathcore.MathCoreTests.test_A08_unknown_unit_scale_cannot_default_to_identity"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A09",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Duplicate/dangling/cyclic IDs; negative/nonuniform scale; shear; invalid quaternion",
+      "test_methods_planned": 11,
+      "test_methods_passed": 11,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A09_duplicate_missing_cycle",
+        "test_core.CoreAcceptance.test_A09_scale_shear_quaternion",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A09_nfc_duplicate_id_shear_and_graph_cycle",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A09_invalid_rigid_inputs_not_repaired",
+        "test_mathcore.MathCoreTests.test_A09_all_numeric_paths_reject_nonfinite_values",
+        "test_mathcore.MathCoreTests.test_A09_any_nonidentity_node_scale_rejects_without_repair",
+        "test_mathcore.MathCoreTests.test_A09_arithmetic_overflow_is_rejected",
+        "test_mathcore.MathCoreTests.test_A09_duplicate_id_missing_parent_and_cycles_reject",
+        "test_mathcore.MathCoreTests.test_A09_invalid_quaternion_is_rejected_and_never_normalized",
+        "test_mathcore.MathCoreTests.test_A09_nonzero_intermediate_scale_underflow_rejects",
+        "test_mathcore.MathCoreTests.test_A09_shear_and_nonrigid_matrices_reject"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A10",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Three fresh processes; collection/key permutations; resolver relocation; ordered vectors preserved",
+      "test_methods_planned": 4,
+      "test_methods_passed": 4,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A10_set_permutation_and_resolver_move",
+        "test_core.CoreAcceptance.test_A10_three_fresh_process_compiles",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A10_collection_order_key_order_directory_independence",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A10_three_fresh_processes_exact_four_inputs"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A11",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Typed real literals, signed zero, quaternion sign; exact float differences; illegal JSON/numbers",
+      "test_methods_planned": 11,
+      "test_methods_passed": 11,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A11_no_tolerance_hash_rounding",
+        "test_core.CoreAcceptance.test_A11_real_spellings_negative_zero_quaternion_sign",
+        "test_core.CoreAcceptance.test_A11_strict_json_rejections",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A11_intermediate_nonzero_scale_underflow_rejected",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A11_quaternion_sign_no_extra_normalization",
+        "test_independent_acceptance.IndependentMathAcceptance.test_A11_valid_near_unit_quaternion_usable_by_inverse",
+        "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_duplicate_keys_invalid_utf8_and_scalars",
+        "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_illegal_numbers_and_integer_counts",
+        "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_nfc_text_control_encoding_and_no_reason_trim",
+        "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_real_literals_negative_zero_exact_arithmetic",
+        "test_mathcore.MathCoreTests.test_A11_quaternion_sign_canonicalization_and_negative_zero"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A12",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Blob tamper/missing/cycles; pinned paths/digests; timestamps; version/runtime/source profile conflicts",
+      "test_methods_planned": 8,
+      "test_methods_passed": 8,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A12_blob_tamper_missing_profile_and_metadata",
+        "test_core.CoreAcceptance.test_A12_dependency_cycle",
+        "test_core.CoreAcceptance.test_A12_unpinned_paths_and_expected_digest",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_asset_version_content_conflict_rejected",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_manifest_cycles_and_all_supplied_input_digests",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_supplied_digests_paths_times_dependencies_profile",
+        "test_independent_acceptance.IndependentResolverAcceptance.test_A12_record_digest_not_trusted",
+        "test_independent_acceptance.IndependentResolverAcceptance.test_A12_same_path_tamper_and_missing_blob"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A13",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Explicit base manifest; stable-ID create/update/noop/delete; unmanaged names and ownership",
+      "test_methods_planned": 6,
+      "test_methods_passed": 6,
+      "test_ids": [
+        "test_independent_acceptance.IndependentDiffAcceptance.test_A13_explicit_base_create_update_idempotency_unmanaged",
+        "test_independent_acceptance.IndependentDiffAcceptance.test_A13_wrong_ownership_and_duplicate_target_rejected",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A13_compiled_plan_reconcile_interoperability",
+        "test_store.ReconcileTests.test_base_digest_is_explicit_and_checked",
+        "test_store.ReconcileTests.test_ownership_conflict_and_foreign_objects",
+        "test_store.ReconcileTests.test_stable_id_create_update_noop_delete_and_unmanaged_name"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A14",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Single-instance binding replacement; independent sibling and layout preservation",
+      "test_methods_planned": 3,
+      "test_methods_passed": 3,
+      "test_ids": [
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A14_single_instance_replace_shared_resource_preserves_layout",
+        "test_store.AdoptionIntegrationTests.test_resolver_backed_asset_replacement_rejects_missing_binding",
+        "test_store.StoreTests.test_single_instance_binding_replacement_preserves_layout_and_neighbors"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A15",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Atomic stage/file/rename failures and abrupt process exits; CAS race; immutable rollback",
+      "test_methods_planned": 13,
+      "test_methods_passed": 13,
+      "test_ids": [
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_abrupt_process_exit_before_head_commit",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_multi_field_failure_and_exception_atomicity",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_stale_and_rollback_new_revision_restore_entity_content",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_typed_digest_consistency_and_forged_history_rejected",
+        "test_store.StoreTests.test_abrupt_process_exit_preserves_old_head_and_allows_retry",
+        "test_store.StoreTests.test_actual_atomic_replace_failure_is_not_partial_commit",
+        "test_store.StoreTests.test_actual_fsync_failure_is_not_partial_commit",
+        "test_store.StoreTests.test_concurrent_compare_and_swap_only_one_writer_commits",
+        "test_store.StoreTests.test_failures_leave_old_head_on_disk_and_on_reopen",
+        "test_store.StoreTests.test_isolation_history_and_stale_revision_and_digest",
+        "test_store.StoreTests.test_rollback_is_new_revision_with_inverse_decision",
+        "test_store.StoreTests.test_rollback_requires_complete_reverse_values",
+        "test_store.StoreTests.test_whole_transaction_rejects_bad_second_decision"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A16",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Inference off/switch-only/no allowlist/missing decision/full approval; unchanged evidence",
+      "test_methods_planned": 2,
+      "test_methods_passed": 2,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A16_inference_full_gate",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A16_design_gate_all_conditions_and_evidence_immutability"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A17",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Local lock; indirect world lock; exact fresh scoped override and stale rejection",
+      "test_methods_planned": 5,
+      "test_methods_passed": 5,
+      "test_ids": [
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A17_local_lock_exact_scope_and_revision",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A17_world_lock_rejects_ancestor_drift",
+        "test_store.StoreTests.test_fresh_exact_per_field_approval_required",
+        "test_store.StoreTests.test_local_lock_actor_name_is_not_override",
+        "test_store.StoreTests.test_world_lock_rejects_indirect_parent_drift"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "A18",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "Preview unresolved; strict required atomic fail; empty assets and unknown rights",
+      "test_methods_planned": 3,
+      "test_methods_passed": 3,
+      "test_ids": [
+        "test_core.CoreAcceptance.test_A18_rights_unknown_empty_manifest",
+        "test_independent_acceptance.IndependentCompilerAcceptance.test_A18_preview_unresolved_strict_atomic_empty_assets_rights",
+        "test_independent_acceptance.IndependentTransactionAcceptance.test_A18_adoption_requires_closure_and_asset_rights"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P01",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "ProposalIsolation: high-score proposal cannot mutate accepted state or replace unknown",
+      "test_methods_planned": 1,
+      "test_methods_passed": 1,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P01_proposals_cannot_mutate_or_authorize_accepted_fields"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P02",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "ProviderDisagreement: conflicting providers retained without automatic winner",
+      "test_methods_planned": 1,
+      "test_methods_passed": 1,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P02_disagreeing_provider_proposals_both_preserved"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P03",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "UnsupportedPreservation: opaque bytes preserved and blocked from known canonical values",
+      "test_methods_planned": 2,
+      "test_methods_passed": 2,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P03_unsupported_opaque_bytes_and_unknown_reason_preserved",
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P03_unsupported_output_cannot_authorize_known_geometry"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P04",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "ProviderSwapInvariance: unrelated provider replacements leave frozen four-input plan identical",
+      "test_methods_planned": 1,
+      "test_methods_passed": 1,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P04_unselected_swap_invariance_selected_provenance_identity"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P05",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "ProvenanceClosure: provider metadata, ancestors and raw outputs pinned; missing/tampered closure rejects",
+      "test_methods_planned": 2,
+      "test_methods_passed": 2,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P05_provider_method_metadata_and_raw_output_are_pinned",
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P05_recursive_provenance_missing_or_mutated_ancestor_rejected"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    },
+    {
+      "group_id": "P06",
+      "status": "PASS",
+      "planned": true,
+      "implemented": true,
+      "passed": true,
+      "failed": false,
+      "blocked": false,
+      "scope": "FrozenCompileIsolation: compilation invokes no provider and reads no latest proposal",
+      "test_methods_planned": 1,
+      "test_methods_passed": 1,
+      "test_ids": [
+        "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P06_compile_never_calls_providers_network_or_subprocess"
+      ],
+      "limitations": [
+        "Only enumerated synthetic variants and this runtime profile; no claim over all possible inputs"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "test_id": "test_core.CoreAcceptance.test_A01_unknown_candidate_never_becomes_pose",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A02_candidate_chain_and_mismatch",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A02_missing_decision",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A03_fake_human_instruction",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A03_human_direct_keeps_assumed",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A03_missing_and_forged_evidence",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A05_pivot_units_fit_exactly_once",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A06_dimensions_do_not_scale_asset",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A06_fit_requires_exact_binding_scope",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A06_invalid_fit",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A08_calibrated_distinct_from_assumed",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A08_source_unit_not_production_meters",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A09_duplicate_missing_cycle",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A09_scale_shear_quaternion",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A10_set_permutation_and_resolver_move",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A10_three_fresh_process_compiles",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A11_no_tolerance_hash_rounding",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A11_real_spellings_negative_zero_quaternion_sign",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A11_strict_json_rejections",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A12_blob_tamper_missing_profile_and_metadata",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A12_dependency_cycle",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A12_unpinned_paths_and_expected_digest",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A16_inference_full_gate",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_A18_rights_unknown_empty_manifest",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_core.CoreAcceptance.test_schema_artifacts_agree_with_runtime",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A01_unadopted_candidate_cannot_contaminate",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A02_candidate_chain_field_scope_and_basis",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A02_selected_value_and_evidence_blob_tamper_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A03_direct_evidence_is_required_and_pinned",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A06_fit_requires_exact_approval_dimensions_not_scale",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A08_units_semantics_and_unknown_unit_rejection",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A09_nfc_duplicate_id_shear_and_graph_cycle",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A10_collection_order_key_order_directory_independence",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A10_three_fresh_processes_exact_four_inputs",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_asset_version_content_conflict_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_manifest_cycles_and_all_supplied_input_digests",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A12_supplied_digests_paths_times_dependencies_profile",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A16_design_gate_all_conditions_and_evidence_immutability",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentCompilerAcceptance.test_A18_preview_unresolved_strict_atomic_empty_assets_rights",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentDiffAcceptance.test_A13_explicit_base_create_update_idempotency_unmanaged",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentDiffAcceptance.test_A13_wrong_ownership_and_duplicate_target_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A04_asymmetric_three_level_hierarchy",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A05_pivot_units_fit_applied_once",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A07_camera_ray_convention_and_inverse",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A07_explicit_blender_world_camera_mapping",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A07_reflection_basis_and_ue_roundtrip",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A09_invalid_rigid_inputs_not_repaired",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A11_intermediate_nonzero_scale_underflow_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A11_quaternion_sign_no_extra_normalization",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentMathAcceptance.test_A11_valid_near_unit_quaternion_usable_by_inverse",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P01_proposals_cannot_mutate_or_authorize_accepted_fields",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P02_disagreeing_provider_proposals_both_preserved",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P03_unsupported_opaque_bytes_and_unknown_reason_preserved",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P03_unsupported_output_cannot_authorize_known_geometry",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P04_unselected_swap_invariance_selected_provenance_identity",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P05_provider_method_metadata_and_raw_output_are_pinned",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P05_recursive_provenance_missing_or_mutated_ancestor_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentProviderBoundaryAcceptance.test_P06_compile_never_calls_providers_network_or_subprocess",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentResolverAcceptance.test_A12_record_digest_not_trusted",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentResolverAcceptance.test_A12_same_path_tamper_and_missing_blob",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_duplicate_keys_invalid_utf8_and_scalars",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_illegal_numbers_and_integer_counts",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_nfc_text_control_encoding_and_no_reason_trim",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentSerializationAcceptance.test_A11_real_literals_negative_zero_exact_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A13_compiled_plan_reconcile_interoperability",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A14_single_instance_replace_shared_resource_preserves_layout",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_abrupt_process_exit_before_head_commit",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_multi_field_failure_and_exception_atomicity",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_stale_and_rollback_new_revision_restore_entity_content",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A15_typed_digest_consistency_and_forged_history_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A17_local_lock_exact_scope_and_revision",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A17_world_lock_rejects_ancestor_drift",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_independent_acceptance.IndependentTransactionAcceptance.test_A18_adoption_requires_closure_and_asset_rights",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_local_truth_column_vectors_and_row_storage",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_parent_child_order_is_noncommutative",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_permuted_nodes_do_not_change_output_or_mutate_inputs",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_rigid_inverse_matches_asymmetric_expected_point",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_rotated_parent_two_child_levels_independent_world_truth",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A04_topological_ready_set_uses_minimum_id_not_depth_sort",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A05_frozen_c05_centimeter_pivot_fit_once",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A05_full_asymmetric_anchor_basis_units_fit_parent_chain",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A06_dimensions_change_envelope_without_asset_scale",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A06_uniform_fit_must_be_positive_scalar",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A06_world_bounds_are_rigid_design_envelope_not_asset_fit",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_basis_cannot_hide_scale_shear_or_undocumented_flag",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_blender_camera_converts_local_axes_after_full_parent_chain",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_blender_camera_local_axes_ray_and_pose_roundtrip",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_blender_object_world_mapping_is_explicit_identity_in_meters",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_camera_full_parent_chain_is_used",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_camera_rotated_rays_and_projection_have_separate_axes",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_canonical_to_ue_math_fixture_rotation_conjugation",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_declared_handedness_reflection_is_not_node_scale",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_missing_intrinsics_and_unsupported_camera_models_reject",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A07_pixel_center_has_no_implicit_second_half_pixel",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A08_unknown_pose_or_unspecified_parent_cannot_default",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A08_unknown_unit_scale_cannot_default_to_identity",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_all_numeric_paths_reject_nonfinite_values",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_any_nonidentity_node_scale_rejects_without_repair",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_arithmetic_overflow_is_rejected",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_duplicate_id_missing_parent_and_cycles_reject",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_invalid_quaternion_is_rejected_and_never_normalized",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_nonzero_intermediate_scale_underflow_rejects",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A09_shear_and_nonrigid_matrices_reject",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_A11_quaternion_sign_canonicalization_and_negative_zero",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_frozen_measurement_report_meets_math_only_thresholds",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_mathcore.MathCoreTests.test_metrics_use_frozen_denominator_and_comparison_only_normalization",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.AdoptionIntegrationTests.test_default_writes_require_external_validation_context",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.AdoptionIntegrationTests.test_resolver_backed_asset_replacement_rejects_missing_binding",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.AdoptionIntegrationTests.test_resolver_backed_commit_rejects_fabricated_evidence_atomically",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.ReconcileTests.test_base_digest_is_explicit_and_checked",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.ReconcileTests.test_ownership_conflict_and_foreign_objects",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.ReconcileTests.test_stable_id_create_update_noop_delete_and_unmanaged_name",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_abrupt_process_exit_preserves_old_head_and_allows_retry",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_actual_atomic_replace_failure_is_not_partial_commit",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_actual_fsync_failure_is_not_partial_commit",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_concurrent_compare_and_swap_only_one_writer_commits",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_failures_leave_old_head_on_disk_and_on_reopen",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_fresh_exact_per_field_approval_required",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_isolation_history_and_stale_revision_and_digest",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_local_lock_actor_name_is_not_override",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_no_array_index_targets_or_reused_decision_ids",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_rollback_is_new_revision_with_inverse_decision",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_rollback_requires_complete_reverse_values",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_single_instance_binding_replacement_preserves_layout_and_neighbors",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_units_only_migration_is_explicitly_unsupported",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_whole_transaction_rejects_bad_second_decision",
+      "status": "PASS"
+    },
+    {
+      "test_id": "test_store.StoreTests.test_world_lock_rejects_indirect_parent_drift",
+      "status": "PASS"
+    }
+  ],
+  "fresh_process_compiles": [
+    {
+      "name": "asymmetric_room",
+      "status": "PASS",
+      "same_four_inputs": true,
+      "exact_bytes_equal": true,
+      "inputs": {
+        "graph": "sha256:b8686e2325340c607e6bcdb5ef2b29291f3ba7620772ce2c352132f924b55c7f",
+        "manifest": "sha256:559320be6656de1185821c0046009905356d76b0f42a73d1f746b71441858217",
+        "policy": "sha256:027a16268ace032241afbd333591eeef4954035904f6c7f5f1ad63b48bf030c0",
+        "compiler": "sha256:be153e2e5bc1180feb8116a8ddb73de4c6880aff0906a2e9420fdff5928bc679",
+        "scene_id": "synthetic-room",
+        "revision": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "returncode": 0,
+          "plan_hash": "sha256:c81050af5fb00f2a31b5f8309202f9dd98f0507ada416c0b76b74c4403b2efa1",
+          "payload_sha256": "sha256:b33f30cb80c81bb1612bdef53a5e1c72c55665ed4bae2882055cf08b11266480",
+          "stderr": ""
+        },
+        {
+          "run": 2,
+          "returncode": 0,
+          "plan_hash": "sha256:c81050af5fb00f2a31b5f8309202f9dd98f0507ada416c0b76b74c4403b2efa1",
+          "payload_sha256": "sha256:b33f30cb80c81bb1612bdef53a5e1c72c55665ed4bae2882055cf08b11266480",
+          "stderr": ""
+        },
+        {
+          "run": 3,
+          "returncode": 0,
+          "plan_hash": "sha256:c81050af5fb00f2a31b5f8309202f9dd98f0507ada416c0b76b74c4403b2efa1",
+          "payload_sha256": "sha256:b33f30cb80c81bb1612bdef53a5e1c72c55665ed4bae2882055cf08b11266480",
+          "stderr": ""
+        }
+      ],
+      "entity_count": 3,
+      "unresolved_count": 0
+    },
+    {
+      "name": "periodic_corridor",
+      "status": "PASS",
+      "same_four_inputs": true,
+      "exact_bytes_equal": true,
+      "inputs": {
+        "graph": "sha256:0ae82d7715e9c714cd900702de323af8a227c96e158b016d0284303b5539a454",
+        "manifest": "sha256:559320be6656de1185821c0046009905356d76b0f42a73d1f746b71441858217",
+        "policy": "sha256:ee1da342da70eed9997d5a1db9f21b244ae0e21900720e8b22df1750d0bbb59c",
+        "compiler": "sha256:be153e2e5bc1180feb8116a8ddb73de4c6880aff0906a2e9420fdff5928bc679",
+        "scene_id": "synthetic-room",
+        "revision": 2
+      },
+      "runs": [
+        {
+          "run": 1,
+          "returncode": 0,
+          "plan_hash": "sha256:519f7525ca6aa1c630d9862de3e51020066e7278fd17d772085eea07f9a96764",
+          "payload_sha256": "sha256:cf80738fdf86193b4b4e81a3347b474408512098a60ede27b035dc8af63cf73e",
+          "stderr": ""
+        },
+        {
+          "run": 2,
+          "returncode": 0,
+          "plan_hash": "sha256:519f7525ca6aa1c630d9862de3e51020066e7278fd17d772085eea07f9a96764",
+          "payload_sha256": "sha256:cf80738fdf86193b4b4e81a3347b474408512098a60ede27b035dc8af63cf73e",
+          "stderr": ""
+        },
+        {
+          "run": 3,
+          "returncode": 0,
+          "plan_hash": "sha256:519f7525ca6aa1c630d9862de3e51020066e7278fd17d772085eea07f9a96764",
+          "payload_sha256": "sha256:cf80738fdf86193b4b4e81a3347b474408512098a60ede27b035dc8af63cf73e",
+          "stderr": ""
+        }
+      ],
+      "entity_count": 2,
+      "unresolved_count": 1
+    },
+    {
+      "name": "concept_design",
+      "status": "PASS",
+      "same_four_inputs": true,
+      "exact_bytes_equal": true,
+      "inputs": {
+        "graph": "sha256:45c5c8cab82df4827e23178e627cbceebcff90ddf079c389ddd30b536d4316d6",
+        "manifest": "sha256:559320be6656de1185821c0046009905356d76b0f42a73d1f746b71441858217",
+        "policy": "sha256:e0d5238928b4b9ea9f737beb535d5be3201163c09aa112b42908b2b48836447a",
+        "compiler": "sha256:be153e2e5bc1180feb8116a8ddb73de4c6880aff0906a2e9420fdff5928bc679",
+        "scene_id": "synthetic-room",
+        "revision": 3
+      },
+      "runs": [
+        {
+          "run": 1,
+          "returncode": 0,
+          "plan_hash": "sha256:35b2f310051c4c0d55220d0a4c9e2f3a769cbb2b3799b549830eb021a562be5a",
+          "payload_sha256": "sha256:68ad08c9804ffde8fe91bb25f5d382d458f32d1d054961349c9f6a6cb9199d58",
+          "stderr": ""
+        },
+        {
+          "run": 2,
+          "returncode": 0,
+          "plan_hash": "sha256:35b2f310051c4c0d55220d0a4c9e2f3a769cbb2b3799b549830eb021a562be5a",
+          "payload_sha256": "sha256:68ad08c9804ffde8fe91bb25f5d382d458f32d1d054961349c9f6a6cb9199d58",
+          "stderr": ""
+        },
+        {
+          "run": 3,
+          "returncode": 0,
+          "plan_hash": "sha256:35b2f310051c4c0d55220d0a4c9e2f3a769cbb2b3799b549830eb021a562be5a",
+          "payload_sha256": "sha256:68ad08c9804ffde8fe91bb25f5d382d458f32d1d054961349c9f6a6cb9199d58",
+          "stderr": ""
+        }
+      ],
+      "entity_count": 3,
+      "unresolved_count": 0
+    }
+  ],
+  "math_metrics": {
+    "status": "PASS",
+    "fixture_kind": "synthetic_math_only",
+    "position_unit": "m",
+    "frozen_reference_length": 10.0,
+    "position_sample_count": 7,
+    "position_sample_coverage": "7/7",
+    "normalized_position_limit": 1e-06,
+    "hierarchy_normalized_position_error": 3.233018248352212e-16,
+    "pivot_normalized_position_error": 0.0,
+    "frame_roundtrip_normalized_position_error": 1.7763568394002506e-16,
+    "rotation_sample_count": 1,
+    "rotation_angular_error_degrees": 0.0,
+    "rotation_limit_degrees": 0.0001,
+    "engine_adapter_status": "NOT_RUN",
+    "real_asset_import_status": "NOT_RUN"
+  },
+  "transaction_demo": {
+    "status": "PASS",
+    "committed_revisions": [
+      1,
+      2,
+      3
+    ],
+    "rollback_target": {
+      "revision": 1,
+      "digest": "sha256:b8686e2325340c607e6bcdb5ef2b29291f3ba7620772ce2c352132f924b55c7f"
+    },
+    "restored_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "diff": {
+      "base_build_manifest_digest": "sha256:4125c952df4ec3a80d7133186d5715341a57a9dc14f65f7e339d8a7918d93993",
+      "target_plan_digest": "sha256:822439955677e2a35babfacd7bb82d20e0edbff22699b3822de9f54183eec5df",
+      "namespace": "synthetic-room",
+      "create": [
+        "chair",
+        "chair-copy",
+        "root"
+      ],
+      "update": [],
+      "delete": [],
+      "unchanged": []
+    },
+    "backend_execution": "NOT_RUN"
+  },
+  "baseline_integrity": {
+    "status": "PASS",
+    "files_checked": 23,
+    "files": [
+      {
+        "path": "BASELINE.json",
+        "status": "PASS",
+        "expected": "b96c7657d2e11b6912ca5254dd1d33d93fc32ba880372d70a0dd3f084432c478",
+        "actual": "b96c7657d2e11b6912ca5254dd1d33d93fc32ba880372d70a0dd3f084432c478"
+      },
+      {
+        "path": "WORLDIR_v2_Phase0_Review_Package.zip",
+        "status": "PASS",
+        "expected": "25c7acc8a36d8e0040dd97c738021ed3f1c85ada2deb1a49ba976cea2dcd7542",
+        "actual": "25c7acc8a36d8e0040dd97c738021ed3f1c85ada2deb1a49ba976cea2dcd7542"
+      },
+      {
+        "path": "schema_draft_reference/worldir_scene.example.json",
+        "status": "PASS",
+        "expected": "1de5a2cd626a5330d9d80973a9d8a5c23dc61b774da0deeb721fad3e54038686",
+        "actual": "1de5a2cd626a5330d9d80973a9d8a5c23dc61b774da0deeb721fad3e54038686"
+      },
+      {
+        "path": "schema_draft_reference/worldir_scene.schema.json",
+        "status": "PASS",
+        "expected": "43b392d55b470852ae038927fcbb4d7d3351384d44feebef070a280a04a950da",
+        "actual": "43b392d55b470852ae038927fcbb4d7d3351384d44feebef070a280a04a950da"
+      },
+      {
+        "path": "worldir_v2_phase0/ACCEPTANCE.md",
+        "status": "PASS",
+        "expected": "cd452cc578bcc18b2a680d11ff99493b074ecdc37037d24c426089d259c70a36",
+        "actual": "cd452cc578bcc18b2a680d11ff99493b074ecdc37037d24c426089d259c70a36"
+      },
+      {
+        "path": "worldir_v2_phase0/README.md",
+        "status": "PASS",
+        "expected": "4a00ced2565c3ef46edfb311671defbd74db51395870c0d8ac3c3948c24ce6cc",
+        "actual": "4a00ced2565c3ef46edfb311671defbd74db51395870c0d8ac3c3948c24ce6cc"
+      },
+      {
+        "path": "worldir_v2_phase0/SHA256SUMS.txt",
+        "status": "PASS",
+        "expected": "72681ad1cbe643bec212ca3afff0a071145cf7d692a5cfad6c15e2d7cd3fe43e",
+        "actual": "72681ad1cbe643bec212ca3afff0a071145cf7d692a5cfad6c15e2d7cd3fe43e"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/README.md",
+        "status": "PASS",
+        "expected": "723b92fd2ffcc59caa39f2eca938ae8995806118bf168d555e3e4b6137caad2e",
+        "actual": "723b92fd2ffcc59caa39f2eca938ae8995806118bf168d555e3e4b6137caad2e"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/asymmetric_room.json",
+        "status": "PASS",
+        "expected": "b93e01fa176bc16087520f20f75023aac6bbef73b9c73da930d86004a0871144",
+        "actual": "b93e01fa176bc16087520f20f75023aac6bbef73b9c73da930d86004a0871144"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/data/concept_design.svg",
+        "status": "PASS",
+        "expected": "a21c487683aae99511afd6b6898af5e0b4e5649f64b5d7b6ac35cd7be2502a7e",
+        "actual": "a21c487683aae99511afd6b6898af5e0b4e5649f64b5d7b6ac35cd7be2502a7e"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/fixtures/layer_separation.json",
+        "status": "PASS",
+        "expected": "843d431e5ba2d4108da3c5d3aad3068527b79cfce97fe2b7ccbf6afbe6421502",
+        "actual": "843d431e5ba2d4108da3c5d3aad3068527b79cfce97fe2b7ccbf6afbe6421502"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/periodic_corridor.json",
+        "status": "PASS",
+        "expected": "0cd840aded3a8946f7f8505556a950ef6b0363900121979b1959e61f549f6ded",
+        "actual": "0cd840aded3a8946f7f8505556a950ef6b0363900121979b1959e61f549f6ded"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/synthetic_concept_design.json",
+        "status": "PASS",
+        "expected": "69988b567df49997ef7d372b6a26b9b466cb36327f2150dac1f4dd3fce8d8ceb",
+        "actual": "69988b567df49997ef7d372b6a26b9b466cb36327f2150dac1f4dd3fce8d8ceb"
+      },
+      {
+        "path": "worldir_v2_phase0/benchmarks/tolerance_levels.json",
+        "status": "PASS",
+        "expected": "2ec377585febe9a9c1cb2cd48a6f36bfed145874e9fb76c80f04889deac42168",
+        "actual": "2ec377585febe9a9c1cb2cd48a6f36bfed145874e9fb76c80f04889deac42168"
+      },
+      {
+        "path": "worldir_v2_phase0/checks/check_phase0_package.py",
+        "status": "PASS",
+        "expected": "7a4f2563fece8479cfe580b197aa759d29aabd8b6ba83a991c1368d1c8077468",
+        "actual": "7a4f2563fece8479cfe580b197aa759d29aabd8b6ba83a991c1368d1c8077468"
+      },
+      {
+        "path": "worldir_v2_phase0/docs/core_contracts.md",
+        "status": "PASS",
+        "expected": "3f3fbca301d30eaca8ee24d6c1c4343ffe77531efdafb04f6dddb77ff9c50349",
+        "actual": "3f3fbca301d30eaca8ee24d6c1c4343ffe77531efdafb04f6dddb77ff9c50349"
+      },
+      {
+        "path": "worldir_v2_phase0/docs/phase0_scope_and_decisions.md",
+        "status": "PASS",
+        "expected": "22b713a947c55ce660f5c85d1fb57782c1a322a2ef49026ecc6800769bf26b25",
+        "actual": "22b713a947c55ce660f5c85d1fb57782c1a322a2ef49026ecc6800769bf26b25"
+      },
+      {
+        "path": "worldir_v2_phase0/docs/phase1a_acceptance_traceability.md",
+        "status": "PASS",
+        "expected": "50dc28521684bfed90c7c41158c2a77b6c50eb6ebc6e68e17440c3659c936412",
+        "actual": "50dc28521684bfed90c7c41158c2a77b6c50eb6ebc6e68e17440c3659c936412"
+      },
+      {
+        "path": "worldir_v2_phase0/results/README.md",
+        "status": "PASS",
+        "expected": "b72116d6bc77a276e84e118b042fac14fa28002da4dc17f0b3cefbc4d548a27c",
+        "actual": "b72116d6bc77a276e84e118b042fac14fa28002da4dc17f0b3cefbc4d548a27c"
+      },
+      {
+        "path": "worldir_v2_phase0/results/independent_review.json",
+        "status": "PASS",
+        "expected": "dabf286d79363ec03542b5b80a0099d6ac501f019bd2b1bfd0921408ed2ce38e",
+        "actual": "dabf286d79363ec03542b5b80a0099d6ac501f019bd2b1bfd0921408ed2ce38e"
+      },
+      {
+        "path": "worldir_v2_phase0/results/phase0_check_run.json",
+        "status": "PASS",
+        "expected": "841a1165ec1b8fcc43fc8df7e49350d2658ce0c9d6f84ecf41600d59676f06e2",
+        "actual": "841a1165ec1b8fcc43fc8df7e49350d2658ce0c9d6f84ecf41600d59676f06e2"
+      },
+      {
+        "path": "worldir_v2_phase0/results/phase0_package_checks.json",
+        "status": "PASS",
+        "expected": "f99e1f5f824b27a5ae7ac915a1b13be1c31ae0cf3630961df9ecbd3b96b0fe33",
+        "actual": "f99e1f5f824b27a5ae7ac915a1b13be1c31ae0cf3630961df9ecbd3b96b0fe33"
+      },
+      {
+        "path": "worldir_v2_phase0/results/phase0_package_checks.stdout.json",
+        "status": "PASS",
+        "expected": "f99e1f5f824b27a5ae7ac915a1b13be1c31ae0cf3630961df9ecbd3b96b0fe33",
+        "actual": "f99e1f5f824b27a5ae7ac915a1b13be1c31ae0cf3630961df9ecbd3b96b0fe33"
+      }
+    ]
+  },
+  "report_categories": {
+    "contract_correctness": "PASS",
+    "source_preservation": "NOT_MEASURABLE",
+    "independent_real_spatial_accuracy": "NOT_MEASURABLE",
+    "synthetic_math_accuracy": "PASS",
+    "visual_quality": "NOT_RUN",
+    "production_usability": "BLOCKED"
+  },
+  "blocked": {
+    "backend_versions": "BLOCKED/TBD",
+    "backend_tolerances": "BLOCKED/TBD",
+    "production_budget": "BLOCKED/TBD"
+  },
+  "not_tested": [
+    "Real asset import and internal GLB transform parsing",
+    "Blender/Unreal application readback, save and reopen",
+    "Real registration, source geometry, occupancy recovery",
+    "Source fidelity, real-world independent accuracy, engine-rendered visual quality",
+    "Triangle collision, support physics, real actor navigation and performance",
+    "Cross-platform/CPU bitwise reproducibility",
+    "Power-loss, distributed/network filesystem durability",
+    "Whole-scene unit migration, indirect world-lock override protocol, hard constraint solving",
+    "External provider model execution, authentication of provenance claims, provider performance or model binary verification"
+  ],
+  "source_sha256": {
+    "worldir/__init__.py": "sha256:511962a3d709dc49f4df8283df95559c493604470cb4f416cdcc054cb780e40f",
+    "worldir/__main__.py": "sha256:64fe2a7c369da1feefa8fa95f9c20dd94778630fa077ff4b63cf8914a39d90cc",
+    "worldir/canonical.py": "sha256:8a4df2cae0f20136519b634e609441c0ac337075b4265b8a96efc76627d7b942",
+    "worldir/compiler.py": "sha256:a9c243c3216de5a610179fa4f2e531d1123a7b1fb1ea08f0591171d62e6cfa0c",
+    "worldir/errors.py": "sha256:50c2c716b3717fe60bf25efaeb8778ed8d754b3adef6214bd5ae74de4c41dee3",
+    "worldir/examples.py": "sha256:e35bfac565fa3713470617e71516d4d3a2ffa0198bee5d614b38a551c87b6ea6",
+    "worldir/mathcore.py": "sha256:114fcfce659fcec79cf44a3627cf7f7bdb36a7894982208571c4aef39d19124f",
+    "worldir/providers.py": "sha256:8ca47294d2b92b8a5d4d48ce58e89c568a6979951167d8b3d0ad4b2ff8f7352f",
+    "worldir/resolver.py": "sha256:bbd2d0fd47fe7d4c8025416932e3dd46e579bc323fa8e746d54d6d6025536d75",
+    "worldir/schema.py": "sha256:8f534ec63e3549009875b6b01fad0df2ca09358cf2679cac89a06e29570e3be1",
+    "worldir/store.py": "sha256:5e6763649da425408944c70c895e76f6fe2211a9c88fdefef6e5a5be3cb7b44a"
+  }
+}
