@@ -1,0 +1,87 @@
+/* Shared project-library theme. Load after legacy page styles and design tokens.
+   Presentation only: case-study layouts, evidence images and behavior stay intact. */
+:root {
+  color-scheme: dark;
+  --bg: var(--kp-bg);
+  --ink: var(--kp-text);
+  --muted: var(--kp-muted);
+  --line: var(--kp-border);
+  --soft: var(--kp-surface);
+  --accent: var(--kp-accent);
+  --accent-dark: #a1e6ee;
+  --inverse: var(--kp-text);
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+.site-header { background: rgb(12 15 18 / 94%); }
+.site-nav a { color: var(--muted); }
+.site-nav a:hover,
+.site-nav a[aria-current="page"],
+.site-nav a.is-active { color: var(--accent); }
+.skip-link,
+.button-primary { color: var(--bg); }
+.button:hover { background: var(--kp-surface-hover); }
+.button-primary:hover { background: var(--accent-dark); color: var(--bg); }
+
+.tags li,
+.plain-list li,
+.case-lede,
+.case-note,
+.problem-solution p,
+.closing-grid p,
+.asset-hero-summary p,
+.visual-direction-copy > p,
+.asset-criteria-grid li { color: var(--muted); }
+
+/* WORLDIR: saved-case controls and the accepted-decision stage. */
+.worldir-case .worldir-pipeline .worldir-pipeline-center,
+.worldir-case .worldir-flow-center { background: #14252b; }
+.worldir-case .worldir-view-controls button {
+  background: var(--soft);
+  color: var(--ink);
+}
+.worldir-case .worldir-view-controls button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.worldir-case .worldir-warning { border-left-color: #d9b96e; }
+
+/* Retain the projects' own subtle accents with dark-background contrast. */
+.mate-case { --accent: #c5dc87; --accent-dark: #deedb7; }
+.mate-intro-copy p,
+.mate-body-copy,
+.mate-feature-copy > p,
+.mate-control-notes p,
+.mate-tech-notes p:not(.mate-caption),
+.mate-challenge-body p,
+.mate-roadmap article > p:last-child,
+.mate-workflow p,
+.mate-workflow small,
+.mate-workflow .mate-step-planned small { color: var(--muted); }
+.mate-figure figcaption b,
+.mate-challenge-body b { color: var(--ink); }
+.mate-workflow li { background: #19211a; }
+.mate-workflow li + li { border-left-color: var(--line); }
+.mate-workflow .mate-step-planned { background: var(--soft); border-top-color: #667168; }
+.mate-boundary { color: #c3cda9 !important; border-left-color: #8d9f64; }
+.mate-tech-notes code { background: #1c251c; color: #d3e5af; }
+
+.track-case { --accent: #dfc27f; --accent-dark: #efdbaf; }
+.track-figure .media-trigger,
+.track-result-grid .media-trigger,
+.track-editor-note { background: var(--soft); }
+.track-boundary { background: #211f18; color: #cdc5b5; }
+.track-two-col .track-large-copy { color: var(--ink); }
+
+.geometry-case { --accent: #80cfc1; --accent-dark: #b1e4da; }
+.modeling-case-nav a:hover,
+.geo-continue:hover { background: var(--kp-surface-hover); }
+.geo-note,
+.geo-takeaway { background: #15221f; color: #b6cdc5; }
+.geo-workflow-stage { background: #15221f; border-color: #41695f; }
+.geo-workflow-external { background: var(--soft); border-color: var(--line); }
+
+@media (max-width: 760px) {
+  .site-nav { box-shadow: 0 18px 30px rgb(0 0 0 / 24%); }
+}

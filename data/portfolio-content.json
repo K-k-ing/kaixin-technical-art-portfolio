@@ -1,0 +1,1117 @@
+{
+  "schemaVersion": 1,
+  "projectManifest": "data/projects.json",
+  "pathConvention": "Internal URLs and media sources are relative to the repository root; external URLs, mailto, tel, and page anchors are preserved.",
+  "locales": {
+    "en": {
+      "language": "en",
+      "title": "Kian (Kaixin) Kang — Technical Artist Portfolio",
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "property": "og:locale",
+          "content": "en_US"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "description",
+          "content": "Technical art by Kian (Kaixin) Kang: WORLDIR world-model scene compilation, MATE material tools, reference-driven track assembly, geometry budget planning, AI-assisted 3D asset pipelines, and real-time interaction."
+        },
+        {
+          "property": "og:title",
+          "content": "Kian (Kaixin) Kang — Technical Artist Portfolio"
+        },
+        {
+          "property": "og:description",
+          "content": "WORLDIR world-model and spatial experiments, artist-facing tools, AI-assisted asset pipelines, and real-time workflows. Explore projects, process, and the decisions behind them."
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:site_name",
+          "content": "Kian Kang Portfolio"
+        },
+        {
+          "property": "og:url",
+          "content": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/"
+        },
+        {
+          "property": "og:image",
+          "content": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/en/mate/screens/effect-stack.webp"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "MATE's English interface showing an aircraft asset and editable surface effects"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        }
+      ],
+      "headLinks": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "assets/favicon.svg"
+        },
+        {
+          "rel": "canonical",
+          "href": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "zh-CN",
+          "href": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/en/"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "en/styles.css"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "en/geometry.css"
+        }
+      ],
+      "navigation": [
+        {
+          "text": "KIAN KANG",
+          "class": "wordmark",
+          "href": "en/index.html",
+          "aria-label": "Kian Kang home"
+        },
+        {
+          "text": "Work",
+          "href": "#work"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Resume",
+          "href": "en/resume-source.html"
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/K-k-ing",
+          "target": "_blank",
+          "rel": "noreferrer"
+        },
+        {
+          "text": "Contact",
+          "href": "#contact"
+        },
+        {
+          "text": "中文",
+          "href": "index.html",
+          "lang": "zh-CN",
+          "hreflang": "zh-CN",
+          "aria-label": "View the Chinese version"
+        }
+      ],
+      "hero": {
+        "title": "Technical\nArtist",
+        "subtitle": "Procedural tools · Asset pipelines · Real-time workflows",
+        "intro": [
+          "I build artist-facing tools and explore AI-assisted asset pipelines for real-time production.",
+          "My background in public art and spatial design shapes how I approach Unreal Engine 5 tools, Blender Python automation, editable controls, and practical technical documentation."
+        ],
+        "status": "NetEase Games · ArtSpark Intern\nTechnical Art / AI Pipelines · Aug–Oct 2026",
+        "actions": [
+          {
+            "text": "Explore work",
+            "class": "button button-primary",
+            "href": "#work"
+          },
+          {
+            "text": "View resume",
+            "class": "button",
+            "href": "en/resume-source.html"
+          },
+          {
+            "text": "GitHub",
+            "class": "button",
+            "href": "https://github.com/K-k-ing",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "Get in touch",
+            "class": "button",
+            "href": "mailto:122880509@qq.com"
+          }
+        ],
+        "media": [
+          {
+            "src": "assets/en/mate/screens/effect-stack.webp",
+            "alt": "MATE's English interface: aircraft surface preview with editable paint-chipping controls",
+            "width": "2559",
+            "height": "1377",
+            "fetchpriority": "high",
+            "data-hide-on-error": ""
+          }
+        ],
+        "mediaLinks": [
+          {
+            "text": "",
+            "href": "en/projects/mate.html",
+            "aria-label": "Explore MATE"
+          }
+        ],
+        "html": "<section class=\"hero\" aria-labelledby=\"hero-title\">\n      <div class=\"container hero-grid\">\n        <div class=\"hero-copy\" data-reveal>\n          <h1 id=\"hero-title\">Technical<br>Artist</h1>\n          <p class=\"hero-subtitle\">Procedural tools · Asset pipelines · Real-time workflows</p>\n          <div class=\"hero-intro\">\n            <p>I build artist-facing tools and explore AI-assisted asset pipelines for real-time production.</p>\n            <p>My background in public art and spatial design shapes how I approach Unreal Engine 5 tools, Blender Python automation, editable controls, and practical technical documentation.</p>\n          </div>\n          <p class=\"hero-status\">NetEase Games · ArtSpark Intern<br>Technical Art / AI Pipelines · Aug 2026–present</p>\n          <div class=\"button-row\">\n            <a class=\"button button-primary\" href=\"#work\">Explore work</a><a class=\"button\" href=\"en/resume-source.html\">View resume</a>\n            <a class=\"button\" href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a><a class=\"button\" href=\"mailto:122880509@qq.com\">Get in touch</a>\n          </div>\n        </div>\n        <figure class=\"hero-media hero-media-mate\" data-reveal data-optional-media>\n          <a href=\"en/projects/mate.html\" aria-label=\"Explore MATE\"><img src=\"assets/en/mate/screens/effect-stack.webp\" alt=\"MATE's English interface: aircraft surface preview with editable paint-chipping controls\" width=\"2559\" height=\"1377\" fetchpriority=\"high\" data-hide-on-error></a>\n        </figure>\n      </div>\n    </section>",
+        "titleHtml": "Technical<br>Artist"
+      },
+      "work": {
+        "heading": "Selected work",
+        "intro": [
+          "Turning art-making needs into repeatable workflows through tools, scenes, and interactive prototypes.",
+          "WORLDIR scene compilation, material authoring, reference-driven track assembly, AI-assisted modeling, and real-time interaction."
+        ],
+        "projectIds": [
+          "worldir",
+          "mate",
+          "track-assembly",
+          "asset-pipeline",
+          "ai-npc"
+        ],
+        "html": "<div class=\"section-heading\" data-reveal>\n          <h2 id=\"work-title\">Selected work</h2>\n          <div class=\"section-heading-copy\"><p>Turning art-making needs into repeatable workflows through tools, scenes, and interactive prototypes.</p><p class=\"project-ecosystem\">WORLDIR scene compilation, material authoring, reference-driven track assembly, AI-assisted modeling, and real-time interaction.</p></div>\n        </div>"
+      },
+      "skills": {
+        "heading": "Technical skills",
+        "intro": [
+          "Hands-on experience from personal projects and my internship, focused on AI image workflows, tools, and 3D asset integration."
+        ],
+        "groups": [
+          {
+            "number": "01",
+            "heading": "AI imagery & workflows",
+            "items": [
+              "Stable Diffusion since 2023",
+              "ComfyUI workflow setup and debugging",
+              "Krea2 + LoRA image-to-image",
+              "Prompt design and style control",
+              "Reference preservation, conditioning, and sampling"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal><span class=\"capability-number\">01</span><h3>AI imagery &amp; workflows</h3><ul class=\"plain-list\"><li>Stable Diffusion since 2023</li><li>ComfyUI workflow setup and debugging</li><li>Krea2 + LoRA image-to-image</li><li>Prompt design and style control</li><li>Reference preservation, conditioning, and sampling</li></ul></article>"
+          },
+          {
+            "number": "02",
+            "heading": "Tools & pipelines",
+            "items": [
+              "Unreal Editor Python tools",
+              "Spline analysis and HISM placement",
+              "Structured JSON and API integration",
+              "Electron / React / Three.js",
+              "AI-assisted development and parameterized tools"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal><span class=\"capability-number\">02</span><h3>Tools &amp; pipelines</h3><ul class=\"plain-list\"><li>Unreal Editor Python tools</li><li>Spline analysis and HISM placement</li><li>Structured JSON and API integration</li><li>Electron / React / Three.js</li><li>AI-assisted development and parameterized tools</li></ul></article>"
+          },
+          {
+            "number": "03",
+            "heading": "3D assets & real-time",
+            "items": [
+              "Tripo modeling and asset breakdown",
+              "Blender asset optimization",
+              "UE5 scene assembly and asset validation",
+              "Basic Blueprint interaction and NPC prototypes",
+              "Photoshop and AI image creation"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal><span class=\"capability-number\">03</span><h3>3D assets &amp; real-time</h3><ul class=\"plain-list\"><li>Tripo modeling and asset breakdown</li><li>Blender asset optimization</li><li>UE5 scene assembly and asset validation</li><li>Basic Blueprint interaction and NPC prototypes</li><li>Photoshop and AI image creation</li></ul></article>"
+          },
+          {
+            "number": "04",
+            "heading": "Validation & collaboration",
+            "items": [
+              "Asset health checks and UV preflight",
+              "Service status, logs, and regression checks",
+              "Orbit capture and 3DGS workflow validation",
+              "Technical documentation and test records",
+              "Reading English technical documentation"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal><span class=\"capability-number\">04</span><h3>Validation &amp; collaboration</h3><ul class=\"plain-list\"><li>Asset health checks and UV preflight</li><li>Service status, logs, and regression checks</li><li>Orbit capture and 3DGS workflow validation</li><li>Technical documentation and test records</li><li>Reading English technical documentation</li></ul></article>"
+          }
+        ],
+        "html": "<section class=\"section section-border\" id=\"skills\" aria-labelledby=\"skills-title\">\n      <div class=\"container\">\n        <div class=\"section-heading\" data-reveal><h2 id=\"skills-title\">Technical skills</h2><p>Hands-on experience from personal projects and my internship, focused on AI image workflows, tools, and 3D asset integration.</p></div>\n        <div class=\"capability-grid\">\n          <article class=\"capability-group\" data-reveal><span class=\"capability-number\">01</span><h3>AI imagery &amp; workflows</h3><ul class=\"plain-list\"><li>Stable Diffusion since 2023</li><li>ComfyUI workflow setup and debugging</li><li>Krea2 + LoRA image-to-image</li><li>Prompt design and style control</li><li>Reference preservation, conditioning, and sampling</li></ul></article>\n          <article class=\"capability-group\" data-reveal><span class=\"capability-number\">02</span><h3>Tools &amp; pipelines</h3><ul class=\"plain-list\"><li>Unreal Editor Python tools</li><li>Spline analysis and HISM placement</li><li>Structured JSON and API integration</li><li>Electron / React / Three.js</li><li>AI-assisted development and parameterized tools</li></ul></article>\n          <article class=\"capability-group\" data-reveal><span class=\"capability-number\">03</span><h3>3D assets &amp; real-time</h3><ul class=\"plain-list\"><li>Tripo modeling and asset breakdown</li><li>Blender asset optimization</li><li>UE5 scene assembly and asset validation</li><li>Basic Blueprint interaction and NPC prototypes</li><li>Photoshop and AI image creation</li></ul></article>\n          <article class=\"capability-group\" data-reveal><span class=\"capability-number\">04</span><h3>Validation &amp; collaboration</h3><ul class=\"plain-list\"><li>Asset health checks and UV preflight</li><li>Service status, logs, and regression checks</li><li>Orbit capture and 3DGS workflow validation</li><li>Technical documentation and test records</li><li>Reading English technical documentation</li></ul></article>\n        </div>\n      </div>\n    </section>"
+      },
+      "about": {
+        "heading": "About me",
+        "paragraphs": [
+          "I'm Kian (Kaixin) Kang, an undergraduate in Public Art at Sichuan Fine Arts Institute, focused on AI-assisted asset production and technical art tools. I enjoy turning specific production needs into tools artists can use, inspect, and refine.",
+          "Since 2023, I've used Stable Diffusion for novel illustrations, character design, and commissioned illustration, building experience in prompt design and style control. That work now extends into 3D: from AI concepts and Tripo modeling to Blender cleanup and validation in UE5 scenes.",
+          "From August to October 2026, I worked as a Technical Art / AI Pipeline intern with NetEase Games' ArtSpark team. I contributed to a multimodal AI workflow canvas, ComfyUI image-to-image workflows, and stylized track and asset integration. I also developed Unreal Editor Python orbit-capture tools for 3DGS workflow validation. In my personal projects—MATE, Track Assembly, and Face Value—I explore material control, procedural assembly, and geometry budget planning."
+        ],
+        "education": {
+          "heading": "Education",
+          "paragraphs": [
+            "Sichuan Fine Arts Institute",
+            "Bachelor's student in Public Art · 2023–2027",
+            "Focus: public art, spatial design, and digital art",
+            "Expected graduation: 2027"
+          ],
+          "html": "<div class=\"education\"><h3>Education</h3><p><strong>Sichuan Fine Arts Institute</strong></p><p>Bachelor's student in Public Art · 2023–2027</p><p>Focus: public art, spatial design, and digital art</p><p>Expected graduation: 2027</p></div>"
+        },
+        "availability": {
+          "heading": "Opportunities",
+          "paragraphs": [
+            "Seeking technical art opportunities from 2027, with a focus on AI-assisted asset production, pipeline tools, and workflow development.",
+            "For eligible U.S. internships, I can explore J-1 sponsorship through a designated third-party sponsor after receiving a host-company offer, subject to sponsor review, an approved training plan, and visa approval."
+          ],
+          "html": "<aside class=\"availability\" aria-labelledby=\"availability-title\">\n            <h3 id=\"availability-title\">Opportunities</h3>\n            <p>Seeking technical art opportunities from 2027, with a focus on AI-assisted asset production, pipeline tools, and workflow development.</p>\n            <p>For eligible U.S. internships, I can explore J-1 sponsorship through a designated third-party sponsor after receiving a host-company offer, subject to sponsor review, an approved training plan, and visa approval.</p>\n          </aside>"
+        },
+        "media": [
+          {
+            "src": "assets/en/profile/kian-kang.png",
+            "alt": "Portrait of Kian Kang",
+            "width": "711",
+            "height": "983",
+            "loading": "lazy",
+            "decoding": "async",
+            "data-hide-on-error": ""
+          }
+        ],
+        "html": "<section class=\"section section-border\" id=\"about\" aria-labelledby=\"about-title\">\n      <div class=\"container about-layout\">\n        <figure class=\"profile-figure\" data-reveal data-optional-media><img src=\"assets/en/profile/kian-kang.png\" alt=\"Portrait of Kian Kang\" width=\"711\" height=\"983\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></figure>\n        <div class=\"about-copy\" data-reveal>\n          <h2 id=\"about-title\">About me</h2>\n          <div class=\"about-body\">\n            <p>I'm Kian (Kaixin) Kang, an undergraduate in Public Art at Sichuan Fine Arts Institute, focused on AI-assisted asset production and technical art tools. I enjoy turning specific production needs into tools artists can use, inspect, and refine.</p>\n            <p>Since 2023, I've used Stable Diffusion for novel illustrations, character design, and commissioned illustration, building experience in prompt design and style control. That work now extends into 3D: from AI concepts and Tripo modeling to Blender cleanup and validation in UE5 scenes.</p>\n            <p>In August 2026, I joined NetEase Games' ArtSpark team as a Technical Art / AI Pipeline intern. I contribute to a multimodal AI workflow canvas, ComfyUI image-to-image workflows, and stylized track and asset integration. I also develop Unreal Editor Python orbit-capture tools for 3DGS workflow validation. In my personal projects—MATE, Track Assembly, and Face Value—I explore material control, procedural assembly, and geometry budget planning.</p>\n          </div>\n          <div class=\"education\"><h3>Education</h3><p><strong>Sichuan Fine Arts Institute</strong></p><p>Bachelor's student in Public Art · 2023–2027</p><p>Focus: public art, spatial design, and digital art</p><p>Expected graduation: 2027</p></div>\n          <aside class=\"availability\" aria-labelledby=\"availability-title\">\n            <h3 id=\"availability-title\">Opportunities</h3>\n            <p>Seeking technical art opportunities from 2027, with a focus on AI-assisted asset production, pipeline tools, and workflow development.</p>\n            <p>For eligible U.S. internships, I can explore J-1 sponsorship through a designated third-party sponsor after receiving a host-company offer, subject to sponsor review, an approved training plan, and visa approval.</p>\n          </aside>\n        </div>\n      </div>\n    </section>",
+        "bodyHtml": "<div class=\"about-body\">\n            <p>I'm Kian (Kaixin) Kang, an undergraduate in Public Art at Sichuan Fine Arts Institute, focused on AI-assisted asset production and technical art tools. I enjoy turning specific production needs into tools artists can use, inspect, and refine.</p>\n            <p>Since 2023, I've used Stable Diffusion for novel illustrations, character design, and commissioned illustration, building experience in prompt design and style control. That work now extends into 3D: from AI concepts and Tripo modeling to Blender cleanup and validation in UE5 scenes.</p>\n            <p>In August 2026, I joined NetEase Games' ArtSpark team as a Technical Art / AI Pipeline intern. I contribute to a multimodal AI workflow canvas, ComfyUI image-to-image workflows, and stylized track and asset integration. I also develop Unreal Editor Python orbit-capture tools for 3DGS workflow validation. In my personal projects—MATE, Track Assembly, and Face Value—I explore material control, procedural assembly, and geometry budget planning.</p>\n          </div>"
+      },
+      "interests": {
+        "heading": "Beyond the work",
+        "description": [
+          "Fitness, tennis, travel, and a little adventure."
+        ],
+        "note": [
+          "From playing tennis to founding and running my university's tennis club.\nMaking room for what I love, on and off the screen."
+        ],
+        "figures": [
+          {
+            "caption": "Fitness",
+            "media": [
+              {
+                "src": "assets/interests/fitness.jpg",
+                "alt": "A snapshot from a day at the gym",
+                "width": "1080",
+                "height": "1920",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-fitness",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "View the fitness photo"
+              }
+            ]
+          },
+          {
+            "caption": "Tennis",
+            "media": [
+              {
+                "src": "assets/interests/tennis.jpg",
+                "alt": "Playing tennis on an indoor court",
+                "width": "1128",
+                "height": "855",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-tennis",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "View the tennis photo"
+              }
+            ]
+          },
+          {
+            "caption": "Travel",
+            "media": [
+              {
+                "src": "assets/interests/travel.jpg",
+                "alt": "Looking toward a mountain at sunset while traveling",
+                "width": "1672",
+                "height": "941",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-travel",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "View the travel photo"
+              }
+            ]
+          },
+          {
+            "caption": "Adventure",
+            "media": [
+              {
+                "src": "assets/interests/skydiving.jpg",
+                "alt": "A photo during a tandem skydive",
+                "width": "1913",
+                "height": "1080",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "View the skydiving photo"
+              }
+            ]
+          }
+        ],
+        "controls": "Select a photo to view it full sizePause scrolling",
+        "html": "<section class=\"section section-border interests-section\" id=\"interests\" aria-labelledby=\"interests-title\">\n      <div class=\"container interests-heading\" data-reveal><h2 id=\"interests-title\">Beyond the work</h2><p>Fitness, tennis, travel, and a little adventure.</p></div>\n      <div class=\"interests-gallery\" id=\"interests-gallery\" aria-label=\"Life in photos; select a photo to view it full size\">\n        <div class=\"interests-ribbon\">\n          <figure class=\"interest-card\"><button class=\"interest-photo interest-photo-fitness\" type=\"button\" data-lightbox aria-label=\"View the fitness photo\"><img src=\"assets/interests/fitness.jpg\" alt=\"A snapshot from a day at the gym\" width=\"1080\" height=\"1920\" loading=\"lazy\" decoding=\"async\"></button><figcaption>Fitness</figcaption></figure>\n          <figure class=\"interest-card\"><button class=\"interest-photo interest-photo-tennis\" type=\"button\" data-lightbox aria-label=\"View the tennis photo\"><img src=\"assets/interests/tennis.jpg\" alt=\"Playing tennis on an indoor court\" width=\"1128\" height=\"855\" loading=\"lazy\" decoding=\"async\"></button><figcaption>Tennis</figcaption></figure>\n          <figure class=\"interest-card\"><button class=\"interest-photo interest-photo-travel\" type=\"button\" data-lightbox aria-label=\"View the travel photo\"><img src=\"assets/interests/travel.jpg\" alt=\"Looking toward a mountain at sunset while traveling\" width=\"1672\" height=\"941\" loading=\"lazy\" decoding=\"async\"></button><figcaption>Travel</figcaption></figure>\n          <figure class=\"interest-card\"><button class=\"interest-photo\" type=\"button\" data-lightbox aria-label=\"View the skydiving photo\"><img src=\"assets/interests/skydiving.jpg\" alt=\"A photo during a tandem skydive\" width=\"1913\" height=\"1080\" loading=\"lazy\" decoding=\"async\"></button><figcaption>Adventure</figcaption></figure>\n        </div>\n      </div>\n      <div class=\"container interests-note\" data-reveal><p>From playing tennis to founding and running my university's tennis club.<br>Making room for what I love, on and off the screen.</p><div class=\"interests-controls\"><span>Select a photo to view it full size</span><button type=\"button\" data-interests-motion aria-controls=\"interests-gallery\" hidden>Pause scrolling</button></div></div>\n    </section>",
+        "controlLabels": {
+          "instruction": "Select a photo to view it full size",
+          "motionButton": "Pause scrolling"
+        }
+      },
+      "contact": {
+        "heading": "Contact",
+        "items": [
+          {
+            "text": "Chongqing, China",
+            "links": [
+              {
+                "text": "Chongqing, China",
+                "href": "https://www.google.com/maps/search/?api=1&query=Chongqing%2C%20China",
+                "target": "_blank",
+                "rel": "noreferrer"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "122880509@qq.com",
+            "links": [
+              {
+                "text": "122880509@qq.com",
+                "href": "mailto:122880509@qq.com"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "GitHub",
+            "links": [
+              {
+                "text": "GitHub",
+                "href": "https://github.com/K-k-ing",
+                "target": "_blank",
+                "rel": "noreferrer"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "Resume",
+            "links": [
+              {
+                "text": "Resume",
+                "href": "en/resume-source.html"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "Chinese version",
+            "links": [
+              {
+                "text": "Chinese version",
+                "href": "index.html",
+                "hreflang": "zh-CN"
+              }
+            ],
+            "attributes": {}
+          }
+        ],
+        "html": "<section class=\"contact-band\" id=\"contact\" aria-labelledby=\"contact-title\">\n      <div class=\"container contact-inner\"><h2 id=\"contact-title\">Contact</h2><ul class=\"contact-list\">\n        <li><a href=\"https://www.google.com/maps/search/?api=1&amp;query=Chongqing%2C%20China\" target=\"_blank\" rel=\"noreferrer\">Chongqing, China</a></li><li><a href=\"mailto:122880509@qq.com\">122880509@qq.com</a></li><li><a href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a></li><li><a href=\"en/resume-source.html\">Resume</a></li><li><a href=\"index.html\" hreflang=\"zh-CN\">Chinese version</a></li>\n      </ul></div>\n    </section>"
+      },
+      "footer": {
+        "paragraphs": [
+          "Kian Kang",
+          "Technical Artist · Chongqing, China",
+          "122880509@qq.com\n© 2026 Kian Kang"
+        ],
+        "links": [
+          {
+            "text": "122880509@qq.com",
+            "class": "text-link",
+            "href": "mailto:122880509@qq.com"
+          }
+        ],
+        "html": "<footer class=\"site-footer\"><div class=\"container footer-inner\"><div><p class=\"footer-name\">Kian Kang</p><p class=\"footer-role\">Technical Artist · Chongqing, China</p></div><p class=\"footer-meta\"><a class=\"text-link\" href=\"mailto:122880509@qq.com\">122880509@qq.com</a><br>&copy; 2026 Kian Kang</p></div></footer>"
+      },
+      "source": {
+        "file": "en/index.html",
+        "sha256": "1fb720d10b652e69878dde849ef4f68532f8f1e85b6be0eb0ad870c7bf99148d",
+        "visibleText": "Skip to main content\nKIAN KANG\n\nWorkAboutResume\nGitHubContact\n中文\nTechnical\nArtist\nProcedural tools · Asset pipelines · Real-time workflows\nI build artist-facing tools and explore AI-assisted asset pipelines for real-time production.\nMy background in public art and spatial design shapes how I approach Unreal Engine 5 tools, Blender Python automation, editable controls, and practical technical documentation.\nNetEase Games · ArtSpark Intern\nTechnical Art / AI Pipelines · Aug 2026–present\nExplore workView resume\nGitHubGet in touch\nSelected work\nTurning art-making needs into repeatable workflows through tools, scenes, and interactive prototypes.WORLDIR scene compilation, material authoring, reference-driven track assembly, AI-assisted modeling, and real-time interaction.\n01 / Spatial intelligence · Research and engineering prototype\nWORLDIR — World Model Assisted Scene Compiler\nExploring how world-model outputs can become structured, traceable, and editable 3D scenes. Spatial queries, scene compilation, and asset-fitting experiments distinguish observed evidence, unknown regions, and design inference. Selected workflows are implemented; the general architecture remains in development.\nWorld modelsSpatial reconstructionScene GraphPythonBlenderUnreal Engine 5\nView project and experiments\n02 / Core project · Personal tool prototype\nMATE — AI Material Analysis & Procedural Weathering\nA desktop material tool I developed to connect multi-view AI analysis, human review, region binding, and an editable effect stack—so surface changes on existing 3D assets remain inspectable, adjustable, and comparable.\nElectronTypeScriptThree.jsAI-assisted workflowsMaterial tools\nView project\n03 / Tool developmentTrack Assembly Tool\nAI analysis turns a reference thumbnail into layout data. Unreal Editor Python, Spline analysis, and HISM then assemble the track assets, with adjustable rules and manual region overrides that keep layout decisions in the artist's hands.\nUnreal Engine 5Editor PythonSpline analysisHISMReference-driven assembly\nView project\n04 / AI-assisted modeling · Two case studiesFace Value & AI Asset Production\nBefore generation, Face Value analyzes a reference image to propose an explainable triangle budget. After generation, my asset pipeline uses modular breakdown, Blender cleanup, and Unreal Engine validation. Together, the two cases explore what makes AI-generated models usable in real-time prototypes.\nGeometry budgetsAI structure analysisAsset pipelinesBlenderUnreal Engine 5\nView both case studies\n05 / Interactive prototypeAI NPC Interaction Prototype\nAn Unreal Engine 5 prototype connecting proximity detection, player input modes, a dialogue interface, external API requests, response parsing, and conversation history.\nUnreal Engine 5BlueprintsUIAPI integrationInteraction prototyping\nView project\nTechnical skillsHands-on experience from personal projects and my internship, focused on AI image workflows, tools, and 3D asset integration.\n01AI imagery & workflowsStable Diffusion since 2023ComfyUI workflow setup and debuggingKrea2 + LoRA image-to-imagePrompt design and style controlReference preservation, conditioning, and sampling\n02Tools & pipelinesUnreal Editor Python toolsSpline analysis and HISM placementStructured JSON and API integrationElectron / React / Three.jsAI-assisted development and parameterized tools\n033D assets & real-timeTripo modeling and asset breakdownBlender asset optimizationUE5 scene assembly and asset validationBasic Blueprint interaction and NPC prototypesPhotoshop and AI image creation\n04Validation & collaborationAsset health checks and UV preflightService status, logs, and regression checksOrbit capture and 3DGS workflow validationTechnical documentation and test recordsReading English technical documentation\nAbout me\nI'm Kian (Kaixin) Kang, an undergraduate in Public Art at Sichuan Fine Arts Institute, focused on AI-assisted asset production and technical art tools. I enjoy turning specific production needs into tools artists can use, inspect, and refine.\nSince 2023, I've used Stable Diffusion for novel illustrations, character design, and commissioned illustration, building experience in prompt design and style control. That work now extends into 3D: from AI concepts and Tripo modeling to Blender cleanup and validation in UE5 scenes.\nIn August 2026, I joined NetEase Games' ArtSpark team as a Technical Art / AI Pipeline intern. I contribute to a multimodal AI workflow canvas, ComfyUI image-to-image workflows, and stylized track and asset integration. I also develop Unreal Editor Python orbit-capture tools for 3DGS workflow validation. In my personal projects—MATE, Track Assembly, and Face Value—I explore material control, procedural assembly, and geometry budget planning.\nEducationSichuan Fine Arts InstituteBachelor's student in Public Art · 2023–2027Focus: public art, spatial design, and digital artExpected graduation: 2027\nOpportunities\nSeeking technical art opportunities from 2027, with a focus on AI-assisted asset production, pipeline tools, and workflow development.\nFor eligible U.S. internships, I can explore J-1 sponsorship through a designated third-party sponsor after receiving a host-company offer, subject to sponsor review, an approved training plan, and visa approval.\nBeyond the workFitness, tennis, travel, and a little adventure.\nFitness\nTennis\nTravel\nAdventure\nFrom playing tennis to founding and running my university's tennis club.\nMaking room for what I love, on and off the screen.Select a photo to view it full sizePause scrolling\nContactChongqing, China122880509@qq.comGitHubResumeChinese version\nKian KangTechnical Artist · Chongqing, China122880509@qq.com\n© 2026 Kian Kang"
+      },
+      "header": {
+        "wordmark": {
+          "text": "KIAN KANG",
+          "class": "wordmark",
+          "href": "en/index.html",
+          "aria-label": "Kian Kang home"
+        },
+        "navigationLinks": [
+          {
+            "text": "Work",
+            "href": "#work"
+          },
+          {
+            "text": "About",
+            "href": "#about"
+          },
+          {
+            "text": "Resume",
+            "href": "en/resume-source.html"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/K-k-ing",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "Contact",
+            "href": "#contact"
+          },
+          {
+            "text": "中文",
+            "href": "index.html",
+            "lang": "zh-CN",
+            "hreflang": "zh-CN",
+            "aria-label": "View the Chinese version"
+          }
+        ],
+        "navToggle": {
+          "class": "nav-toggle",
+          "type": "button",
+          "aria-label": "Open navigation",
+          "aria-expanded": "false",
+          "aria-controls": "site-navigation",
+          "data-nav-toggle": ""
+        },
+        "html": "<header class=\"site-header\">\n    <div class=\"header-inner\">\n      <a class=\"wordmark\" href=\"en/index.html\" aria-label=\"Kian Kang home\">KIAN KANG</a>\n      <button class=\"nav-toggle\" type=\"button\" aria-label=\"Open navigation\" aria-expanded=\"false\" aria-controls=\"site-navigation\" data-nav-toggle><span></span><span></span></button>\n      <nav class=\"site-nav\" id=\"site-navigation\" aria-label=\"Main navigation\" data-site-nav>\n        <a href=\"#work\">Work</a><a href=\"#about\">About</a><a href=\"en/resume-source.html\">Resume</a>\n        <a href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a><a href=\"#contact\">Contact</a>\n        <a href=\"index.html\" lang=\"zh-CN\" hreflang=\"zh-CN\" aria-label=\"View the Chinese version\">中文</a>\n      </nav>\n    </div>\n  </header>"
+      },
+      "skipLink": {
+        "text": "Skip to main content",
+        "href": "#main",
+        "html": "<a class=\"skip-link\" href=\"#main\">Skip to main content</a>"
+      },
+      "experience": {
+        "heading": "Experience",
+        "entries": [
+          {
+            "organization": "NetEase Games - ArtSpark",
+            "role": "Technical Art & AI Pipeline Intern",
+            "period": "Aug–Oct 2026",
+            "responsibilities": [
+              "Contribute to implementation and debugging of a multimodal AI workflow canvas. The team's product has more than 200 regular users, with double-digit weekly user additions.",
+              "Build and refine Krea2 + LoRA image-to-image workflows in ComfyUI, testing reference-image preservation, conditioning, and advanced sampling; maintain test records and workflow documentation.",
+              "Support cartoon racetrack scenes and AI asset integration. Developed an Unreal Editor Python orbital capture tool with trajectory planning, capture validation, and image-sequence output for 3D Gaussian Splatting workflow tests.",
+              "Participate in evaluations of emerging AI tools, including GPT-6 Astra, World Labs Atlas, and DeepSeek Harness; support asset generation for other studios, including the Fantasy Westward Journey and Tianxia teams."
+            ],
+            "links": [],
+            "html": "<article class=\"resume-entry\">\n          <div class=\"entry-heading\">\n            <div><h3>NetEase Games - ArtSpark</h3><p>Technical Art &amp; AI Pipeline Intern</p></div>\n            <p>Aug 2026 - Present</p>\n          </div>\n          <ul>\n            <li>Contribute to implementation and debugging of a multimodal AI workflow canvas. The team's product has more than 200 regular users, with double-digit weekly user additions.</li>\n            <li>Build and refine Krea2 + LoRA image-to-image workflows in ComfyUI, testing reference-image preservation, conditioning, and advanced sampling; maintain test records and workflow documentation.</li>\n            <li>Support cartoon racetrack scenes and AI asset integration. Developed an Unreal Editor Python orbital capture tool with trajectory planning, capture validation, and image-sequence output for 3D Gaussian Splatting workflow tests.</li>\n            <li>Participate in evaluations of emerging AI tools, including GPT-6 Astra, World Labs Atlas, and DeepSeek Harness; support asset generation for other studios, including the <em>Fantasy Westward Journey</em> and <em>Tianxia</em> teams.</li>\n          </ul>\n        </article>",
+            "source": {
+              "file": "en/resume-source.html",
+              "section": "experience-title",
+              "line": 52
+            }
+          }
+        ]
+      },
+      "resume": {
+        "pageUrl": "en/resume-source.html",
+        "actions": [
+          {
+            "text": "Back to portfolio",
+            "href": "en/index.html#about"
+          },
+          {
+            "text": "Download English PDF",
+            "href": "en/assets/resume/Kaixin_Kang_Technical_Artist_Resume_EN.pdf",
+            "download": ""
+          },
+          {
+            "text": "View PDF (2 pages)",
+            "href": "en/assets/resume/Kaixin_Kang_Technical_Artist_Resume_EN.pdf",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "Chinese version",
+            "href": "resume-source.html",
+            "lang": "zh-CN"
+          }
+        ]
+      }
+    },
+    "zh": {
+      "language": "zh-CN",
+      "title": "Kaixin Kang — 技术美术作品集",
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "property": "og:locale",
+          "content": "zh_CN"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "description",
+          "content": "Kaixin Kang 的技术美术作品集：WORLDIR 世界模型辅助场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助三维资产管线与交互原型。"
+        },
+        {
+          "property": "og:title",
+          "content": "Kaixin Kang — 技术美术作品集"
+        },
+        {
+          "property": "og:description",
+          "content": "WORLDIR 世界模型与空间智能实验、MATE AI 材质工具、Unreal Engine 5 程序化场景、AI 辅助资产制作与实时交互。"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:site_name",
+          "content": "Kaixin Kang 技术美术作品集"
+        },
+        {
+          "property": "og:url",
+          "content": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/"
+        },
+        {
+          "property": "og:image",
+          "content": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/assets/projects/mate/screens/material-profile.webp"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "MATE 桌面材质工具的真实界面与飞行器材质预览"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        }
+      ],
+      "headLinks": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "assets/favicon.svg"
+        },
+        {
+          "rel": "canonical",
+          "href": "https://k-k-ing.github.io/kaixin-technical-art-portfolio/"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "styles.css"
+        },
+        {
+          "rel": "stylesheet",
+          "href": "geometry.css"
+        }
+      ],
+      "navigation": [
+        {
+          "text": "KAIXIN KANG",
+          "class": "wordmark",
+          "href": "index.html",
+          "aria-label": "Kaixin Kang 首页"
+        },
+        {
+          "text": "作品",
+          "href": "#work"
+        },
+        {
+          "text": "关于我",
+          "href": "#about"
+        },
+        {
+          "text": "简历",
+          "href": "resume-source.html"
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/K-k-ing",
+          "target": "_blank",
+          "rel": "noreferrer"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "#linkedin"
+        },
+        {
+          "text": "联系",
+          "href": "#contact"
+        }
+      ],
+      "hero": {
+        "title": "技术美术",
+        "subtitle": "程序化工具 · 生产管线 · 实时制作",
+        "intro": [
+          "我是一名技术美术，专注于程序化工具、AI 辅助资产管线与实时制作工作流。",
+          "公共艺术与空间设计的学习背景，让我更关注 Unreal Engine 5 工具开发、Blender Python 自动化、美术可用的参数控制，以及面向实际制作的技术文档。"
+        ],
+        "status": "网易互娱 ArtSpark 实习生 · 技术美术 / AI 管线 · 2026 年 8 月—10 月",
+        "actions": [
+          {
+            "text": "浏览作品",
+            "class": "button button-primary",
+            "href": "#work"
+          },
+          {
+            "text": "查看简历",
+            "class": "button",
+            "href": "resume-source.html"
+          },
+          {
+            "text": "GitHub",
+            "class": "button",
+            "href": "https://github.com/K-k-ing",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "联系我",
+            "class": "button",
+            "href": "mailto:122880509@qq.com"
+          }
+        ],
+        "media": [
+          {
+            "src": "assets/projects/mate/screens/material-profile.webp",
+            "alt": "MATE 真实软件界面：飞行器材质预览与可编辑 PBR 参数",
+            "width": "2559",
+            "height": "1335",
+            "fetchpriority": "high",
+            "data-hide-on-error": ""
+          }
+        ],
+        "mediaLinks": [
+          {
+            "text": "",
+            "href": "projects/mate.html",
+            "aria-label": "了解 MATE 材质工具"
+          }
+        ],
+        "html": "<section class=\"hero\" aria-labelledby=\"hero-title\">\n      <div class=\"container hero-grid\">\n        <div class=\"hero-copy\" data-reveal>\n          <h1 id=\"hero-title\">技术美术</h1>\n          <p class=\"hero-subtitle\">程序化工具 · 生产管线 · 实时制作</p>\n          <div class=\"hero-intro\">\n            <p>我是一名技术美术，专注于程序化工具、AI 辅助资产管线与实时制作工作流。</p>\n            <p>公共艺术与空间设计的学习背景，让我更关注 Unreal Engine 5 工具开发、Blender Python 自动化、美术可用的参数控制，以及面向实际制作的技术文档。</p>\n          </div>\n          <p class=\"hero-status\">网易互娱 ArtSpark 实习生 · 技术美术 / AI 管线 · 2026 年 8 月至今</p>\n          <div class=\"button-row\">\n            <a class=\"button button-primary\" href=\"#work\">浏览作品</a>\n            <a class=\"button\" href=\"resume-source.html\">查看简历</a>\n            <a class=\"button\" href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>\n            <a class=\"button\" href=\"mailto:122880509@qq.com\">联系我</a>\n          </div>\n        </div>\n\n        <figure class=\"hero-media hero-media-mate\" data-reveal data-optional-media>\n          <a href=\"projects/mate.html\" aria-label=\"了解 MATE 材质工具\"><img src=\"assets/projects/mate/screens/material-profile.webp\" alt=\"MATE 真实软件界面：飞行器材质预览与可编辑 PBR 参数\" width=\"2559\" height=\"1335\" fetchpriority=\"high\" data-hide-on-error></a>\n        </figure>\n      </div>\n    </section>",
+        "titleHtml": "技术美术"
+      },
+      "work": {
+        "heading": "精选作品",
+        "intro": [
+          "通过工具、场景与交互原型，将美术创意转化为可重复使用的实时制作流程。",
+          "项目涵盖 WORLDIR 世界模型场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。"
+        ],
+        "projectIds": [
+          "worldir",
+          "mate",
+          "track-assembly",
+          "asset-pipeline",
+          "ai-npc"
+        ],
+        "html": "<div class=\"section-heading\" data-reveal>\n          <h2 id=\"work-title\">精选作品</h2>\n          <div class=\"section-heading-copy\">\n            <p>通过工具、场景与交互原型，将美术创意转化为可重复使用的实时制作流程。</p>\n            <p class=\"project-ecosystem\">项目涵盖 WORLDIR 世界模型场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。</p>\n          </div>\n        </div>"
+      },
+      "skills": {
+        "heading": "技术能力",
+        "intro": [
+          "围绕 AI 图像工作流、工具开发与三维资产落地，在个人项目和实习中持续积累制作经验。"
+        ],
+        "groups": [
+          {
+            "number": "01",
+            "heading": "AI 图像与工作流",
+            "items": [
+              "Stable Diffusion · 2023 年起",
+              "ComfyUI 工作流搭建与调试",
+              "Krea2 + LoRA 图生图",
+              "Prompt 设计与风格控制",
+              "参考图保持、条件控制与采样"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">01</span>\n            <h3>AI 图像与工作流</h3>\n            <ul class=\"plain-list\">\n              <li>Stable Diffusion · 2023 年起</li>\n              <li>ComfyUI 工作流搭建与调试</li>\n              <li>Krea2 + LoRA 图生图</li>\n              <li>Prompt 设计与风格控制</li>\n              <li>参考图保持、条件控制与采样</li>\n            </ul>\n          </article>"
+          },
+          {
+            "number": "02",
+            "heading": "工具与管线开发",
+            "items": [
+              "UE Editor Python 工具开发",
+              "Spline 分析与 HISM 批量布置",
+              "JSON 结构化数据与 API 集成",
+              "Electron / React / Three.js",
+              "AI 辅助开发与参数化工具设计"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">02</span>\n            <h3>工具与管线开发</h3>\n            <ul class=\"plain-list\">\n              <li>UE Editor Python 工具开发</li>\n              <li>Spline 分析与 HISM 批量布置</li>\n              <li>JSON 结构化数据与 API 集成</li>\n              <li>Electron / React / Three.js</li>\n              <li>AI 辅助开发与参数化工具设计</li>\n            </ul>\n          </article>"
+          },
+          {
+            "number": "03",
+            "heading": "三维资产与实时引擎",
+            "items": [
+              "Tripo 建模与资产拆分",
+              "Blender 资产优化",
+              "UE5 场景搭建与资产验证",
+              "基础蓝图交互与 NPC 原型",
+              "Photoshop 与 AI 图像创作"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">03</span>\n            <h3>三维资产与实时引擎</h3>\n            <ul class=\"plain-list\">\n              <li>Tripo 建模与资产拆分</li>\n              <li>Blender 资产优化</li>\n              <li>UE5 场景搭建与资产验证</li>\n              <li>基础蓝图交互与 NPC 原型</li>\n              <li>Photoshop 与 AI 图像创作</li>\n            </ul>\n          </article>"
+          },
+          {
+            "number": "04",
+            "heading": "验证与制作协作",
+            "items": [
+              "资产健康检查与 UV 预检",
+              "服务状态、日志与回归验证",
+              "环绕采集与 3DGS 流程验证",
+              "技术文档、测试记录与资源管理",
+              "英文技术资料阅读"
+            ],
+            "html": "<article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">04</span>\n            <h3>验证与制作协作</h3>\n            <ul class=\"plain-list\">\n              <li>资产健康检查与 UV 预检</li>\n              <li>服务状态、日志与回归验证</li>\n              <li>环绕采集与 3DGS 流程验证</li>\n              <li>技术文档、测试记录与资源管理</li>\n              <li>英文技术资料阅读</li>\n            </ul>\n          </article>"
+          }
+        ],
+        "html": "<section class=\"section section-border\" id=\"skills\" aria-labelledby=\"skills-title\">\n      <div class=\"container\">\n        <div class=\"section-heading\" data-reveal>\n          <h2 id=\"skills-title\">技术能力</h2>\n          <p>围绕 AI 图像工作流、工具开发与三维资产落地，在个人项目和实习中持续积累制作经验。</p>\n        </div>\n\n        <div class=\"capability-grid\">\n          <article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">01</span>\n            <h3>AI 图像与工作流</h3>\n            <ul class=\"plain-list\">\n              <li>Stable Diffusion · 2023 年起</li>\n              <li>ComfyUI 工作流搭建与调试</li>\n              <li>Krea2 + LoRA 图生图</li>\n              <li>Prompt 设计与风格控制</li>\n              <li>参考图保持、条件控制与采样</li>\n            </ul>\n          </article>\n\n          <article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">02</span>\n            <h3>工具与管线开发</h3>\n            <ul class=\"plain-list\">\n              <li>UE Editor Python 工具开发</li>\n              <li>Spline 分析与 HISM 批量布置</li>\n              <li>JSON 结构化数据与 API 集成</li>\n              <li>Electron / React / Three.js</li>\n              <li>AI 辅助开发与参数化工具设计</li>\n            </ul>\n          </article>\n\n          <article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">03</span>\n            <h3>三维资产与实时引擎</h3>\n            <ul class=\"plain-list\">\n              <li>Tripo 建模与资产拆分</li>\n              <li>Blender 资产优化</li>\n              <li>UE5 场景搭建与资产验证</li>\n              <li>基础蓝图交互与 NPC 原型</li>\n              <li>Photoshop 与 AI 图像创作</li>\n            </ul>\n          </article>\n\n          <article class=\"capability-group\" data-reveal>\n            <span class=\"capability-number\">04</span>\n            <h3>验证与制作协作</h3>\n            <ul class=\"plain-list\">\n              <li>资产健康检查与 UV 预检</li>\n              <li>服务状态、日志与回归验证</li>\n              <li>环绕采集与 3DGS 流程验证</li>\n              <li>技术文档、测试记录与资源管理</li>\n              <li>英文技术资料阅读</li>\n            </ul>\n          </article>\n        </div>\n      </div>\n    </section>"
+      },
+      "about": {
+        "heading": "关于我",
+        "paragraphs": [
+          "我是康凯鑫，四川美术学院公共艺术专业本科在读，专注于 AI 辅助资产生产与技术美术工具开发。我希望把美术制作中的具体需求，转化为可以操作、检查和反复调整的工具。",
+          "自 2023 年起，我使用 Stable Diffusion 开展小说插画、角色设计与定制插画实践，积累 Prompt 设计和风格控制经验。现在，我将这些探索延伸到三维资产，从 AI 概念生成、Tripo 建模、Blender 拆分优化，一直推进到 UE5 场景验证。",
+          "2026 年 8 月至 10 月，我在网易互娱 ArtSpark 实习，方向为技术美术与 AI 管线，参与多模态 AI 工作流画布制作与调试、ComfyUI 图生图流程优化，以及卡通赛道和 AI 资产落地实践；同时开发 UE Editor Python 环绕采集工具，用于 3DGS 流程验证。个人项目中，我通过 MATE、赛道重建工具与面子果实，继续探索材质控制、程序化搭建和几何预算规划。"
+        ],
+        "education": {
+          "heading": "教育背景",
+          "paragraphs": [
+            "四川美术学院",
+            "公共艺术专业 · 本科在读 · 2023–2027",
+            "主修方向：公共艺术设计、空间艺术设计、数字艺术表达",
+            "预计 2027 年毕业"
+          ],
+          "html": "<div class=\"education\">\n            <h3>教育背景</h3>\n            <p><strong>四川美术学院</strong></p>\n            <p>公共艺术专业 · 本科在读 · 2023–2027</p>\n            <p>主修方向：公共艺术设计、空间艺术设计、数字艺术表达</p>\n            <p>预计 2027 年毕业</p>\n          </div>"
+        },
+        "availability": {
+          "heading": "求职意向",
+          "paragraphs": [
+            "寻求自 2027 年起的技术美术（AI 管线方向）相关岗位，关注 AI 辅助资产生产、工具与工作流开发。"
+          ],
+          "html": "<aside class=\"availability\" aria-labelledby=\"availability-title\">\n            <h3 id=\"availability-title\">求职意向</h3>\n            <p>寻求自 2027 年起的技术美术（AI 管线方向）相关岗位，关注 AI 辅助资产生产、工具与工作流开发。</p>\n          </aside>"
+        },
+        "media": [
+          {
+            "src": "assets/profile/4f76deb857faec1193e3f031d27fddc1.png",
+            "alt": "Kaixin Kang 的个人照片",
+            "width": "711",
+            "height": "983",
+            "loading": "lazy",
+            "decoding": "async",
+            "data-hide-on-error": ""
+          }
+        ],
+        "html": "<section class=\"section section-border\" id=\"about\" aria-labelledby=\"about-title\">\n      <div class=\"container about-layout\">\n        <figure class=\"profile-figure\" data-reveal data-optional-media>\n          <img src=\"assets/profile/4f76deb857faec1193e3f031d27fddc1.png\" alt=\"Kaixin Kang 的个人照片\" width=\"711\" height=\"983\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n        </figure>\n\n        <div class=\"about-copy\" data-reveal>\n          <h2 id=\"about-title\">关于我</h2>\n          <div class=\"about-body\">\n            <p>我是康凯鑫，四川美术学院公共艺术专业本科在读，专注于 AI 辅助资产生产与技术美术工具开发。我希望把美术制作中的具体需求，转化为可以操作、检查和反复调整的工具。</p>\n            <p>自 2023 年起，我使用 Stable Diffusion 开展小说插画、角色设计与定制插画实践，积累 Prompt 设计和风格控制经验。现在，我将这些探索延伸到三维资产，从 AI 概念生成、Tripo 建模、Blender 拆分优化，一直推进到 UE5 场景验证。</p>\n            <p>2026 年 8 月起，我在网易互娱 ArtSpark 实习，方向为技术美术与 AI 管线，参与多模态 AI 工作流画布制作与调试、ComfyUI 图生图流程优化，以及卡通赛道和 AI 资产落地实践；同时开发 UE Editor Python 环绕采集工具，用于 3DGS 流程验证。个人项目中，我通过 MATE、赛道重建工具与面子果实，继续探索材质控制、程序化搭建和几何预算规划。</p>\n          </div>\n          <div class=\"education\">\n            <h3>教育背景</h3>\n            <p><strong>四川美术学院</strong></p>\n            <p>公共艺术专业 · 本科在读 · 2023–2027</p>\n            <p>主修方向：公共艺术设计、空间艺术设计、数字艺术表达</p>\n            <p>预计 2027 年毕业</p>\n          </div>\n          <aside class=\"availability\" aria-labelledby=\"availability-title\">\n            <h3 id=\"availability-title\">求职意向</h3>\n            <p>寻求自 2027 年起的技术美术（AI 管线方向）相关岗位，关注 AI 辅助资产生产、工具与工作流开发。</p>\n          </aside>\n        </div>\n      </div>\n    </section>",
+        "bodyHtml": "<div class=\"about-body\">\n            <p>我是康凯鑫，四川美术学院公共艺术专业本科在读，专注于 AI 辅助资产生产与技术美术工具开发。我希望把美术制作中的具体需求，转化为可以操作、检查和反复调整的工具。</p>\n            <p>自 2023 年起，我使用 Stable Diffusion 开展小说插画、角色设计与定制插画实践，积累 Prompt 设计和风格控制经验。现在，我将这些探索延伸到三维资产，从 AI 概念生成、Tripo 建模、Blender 拆分优化，一直推进到 UE5 场景验证。</p>\n            <p>2026 年 8 月起，我在网易互娱 ArtSpark 实习，方向为技术美术与 AI 管线，参与多模态 AI 工作流画布制作与调试、ComfyUI 图生图流程优化，以及卡通赛道和 AI 资产落地实践；同时开发 UE Editor Python 环绕采集工具，用于 3DGS 流程验证。个人项目中，我通过 MATE、赛道重建工具与面子果实，继续探索材质控制、程序化搭建和几何预算规划。</p>\n          </div>"
+      },
+      "interests": {
+        "heading": "工作之外",
+        "description": [
+          "健身、网球、旅行，还有极限运动。"
+        ],
+        "note": [
+          "从打网球，到创办并运营大学网球社。\n让热爱成为生活的一部分。"
+        ],
+        "figures": [
+          {
+            "caption": "健身",
+            "media": [
+              {
+                "src": "assets/interests/fitness.jpg",
+                "alt": "在健身房拍下的训练日常",
+                "width": "1080",
+                "height": "1920",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-fitness",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "查看健身照片大图"
+              }
+            ]
+          },
+          {
+            "caption": "网球",
+            "media": [
+              {
+                "src": "assets/interests/tennis.jpg",
+                "alt": "在室内网球场打球",
+                "width": "1128",
+                "height": "855",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-tennis",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "查看网球照片大图"
+              }
+            ]
+          },
+          {
+            "caption": "旅行",
+            "media": [
+              {
+                "src": "assets/interests/travel.jpg",
+                "alt": "旅行途中眺望夕阳下的山景",
+                "width": "1672",
+                "height": "941",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo interest-photo-travel",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "查看旅行照片大图"
+              }
+            ]
+          },
+          {
+            "caption": "极限运动",
+            "media": [
+              {
+                "src": "assets/interests/skydiving.jpg",
+                "alt": "双人跳伞时的合影",
+                "width": "1913",
+                "height": "1080",
+                "loading": "lazy",
+                "decoding": "async"
+              }
+            ],
+            "buttonAttributes": [
+              {
+                "class": "interest-photo",
+                "type": "button",
+                "data-lightbox": "",
+                "aria-label": "查看跳伞照片大图"
+              }
+            ]
+          }
+        ],
+        "controls": "点击照片查看原图\n暂停滚动",
+        "html": "<section class=\"section section-border interests-section\" id=\"interests\" aria-labelledby=\"interests-title\">\n      <div class=\"container interests-heading\" data-reveal>\n          <h2 id=\"interests-title\">工作之外</h2>\n          <p>健身、网球、旅行，还有极限运动。</p>\n      </div>\n\n      <div class=\"interests-gallery\" id=\"interests-gallery\" aria-label=\"生活照片，点击可查看原图\">\n        <div class=\"interests-ribbon\">\n          <figure class=\"interest-card\">\n            <button class=\"interest-photo interest-photo-fitness\" type=\"button\" data-lightbox aria-label=\"查看健身照片大图\">\n              <img src=\"assets/interests/fitness.jpg\" alt=\"在健身房拍下的训练日常\" width=\"1080\" height=\"1920\" loading=\"lazy\" decoding=\"async\">\n            </button>\n            <figcaption>健身</figcaption>\n          </figure>\n\n          <figure class=\"interest-card\">\n            <button class=\"interest-photo interest-photo-tennis\" type=\"button\" data-lightbox aria-label=\"查看网球照片大图\">\n              <img src=\"assets/interests/tennis.jpg\" alt=\"在室内网球场打球\" width=\"1128\" height=\"855\" loading=\"lazy\" decoding=\"async\">\n            </button>\n            <figcaption>网球</figcaption>\n          </figure>\n\n          <figure class=\"interest-card\">\n            <button class=\"interest-photo interest-photo-travel\" type=\"button\" data-lightbox aria-label=\"查看旅行照片大图\">\n              <img src=\"assets/interests/travel.jpg\" alt=\"旅行途中眺望夕阳下的山景\" width=\"1672\" height=\"941\" loading=\"lazy\" decoding=\"async\">\n            </button>\n            <figcaption>旅行</figcaption>\n          </figure>\n\n          <figure class=\"interest-card\">\n            <button class=\"interest-photo\" type=\"button\" data-lightbox aria-label=\"查看跳伞照片大图\">\n              <img src=\"assets/interests/skydiving.jpg\" alt=\"双人跳伞时的合影\" width=\"1913\" height=\"1080\" loading=\"lazy\" decoding=\"async\">\n            </button>\n            <figcaption>极限运动</figcaption>\n          </figure>\n        </div>\n      </div>\n\n      <div class=\"container interests-note\" data-reveal>\n        <p>从打网球，到创办并运营大学网球社。<br>让热爱成为生活的一部分。</p>\n        <div class=\"interests-controls\">\n          <span>点击照片查看原图</span>\n          <button type=\"button\" data-interests-motion aria-controls=\"interests-gallery\" hidden>暂停滚动</button>\n        </div>\n      </div>\n    </section>",
+        "controlLabels": {
+          "instruction": "点击照片查看原图",
+          "motionButton": "暂停滚动"
+        }
+      },
+      "contact": {
+        "heading": "联系",
+        "items": [
+          {
+            "text": "中国 · 重庆",
+            "links": [
+              {
+                "text": "中国 · 重庆",
+                "href": "https://www.google.com/maps/search/?api=1&query=Chongqing%2C%20China",
+                "target": "_blank",
+                "rel": "noreferrer"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "122880509@qq.com",
+            "links": [
+              {
+                "text": "122880509@qq.com",
+                "href": "mailto:122880509@qq.com"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "GitHub",
+            "links": [
+              {
+                "text": "GitHub",
+                "href": "https://github.com/K-k-ing",
+                "target": "_blank",
+                "rel": "noreferrer"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "简历",
+            "links": [
+              {
+                "text": "简历",
+                "href": "resume-source.html"
+              }
+            ],
+            "attributes": {}
+          },
+          {
+            "text": "LinkedIn\nLINKEDIN_URL_HERE",
+            "links": [],
+            "attributes": {
+              "id": "linkedin"
+            }
+          }
+        ],
+        "html": "<section class=\"contact-band\" id=\"contact\" aria-labelledby=\"contact-title\">\n      <div class=\"container contact-inner\">\n        <h2 id=\"contact-title\">联系</h2>\n        <ul class=\"contact-list\">\n          <li><a href=\"https://www.google.com/maps/search/?api=1&amp;query=Chongqing%2C%20China\" target=\"_blank\" rel=\"noreferrer\">中国 · 重庆</a></li>\n          <li><a href=\"mailto:122880509@qq.com\">122880509@qq.com</a></li>\n          <li><a href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a></li>\n          <li><a href=\"resume-source.html\">简历</a></li>\n          <li id=\"linkedin\"><span>LinkedIn<br><code>LINKEDIN_URL_HERE</code></span></li>\n        </ul>\n      </div>\n    </section>"
+      },
+      "footer": {
+        "paragraphs": [
+          "Kaixin Kang",
+          "技术美术 · 中国重庆",
+          "122880509@qq.com\n© 2026 Kaixin Kang"
+        ],
+        "links": [
+          {
+            "text": "122880509@qq.com",
+            "class": "text-link",
+            "href": "mailto:122880509@qq.com"
+          }
+        ],
+        "html": "<footer class=\"site-footer\">\n    <div class=\"container footer-inner\">\n      <div>\n        <p class=\"footer-name\">Kaixin Kang</p>\n        <p class=\"footer-role\">技术美术 · 中国重庆</p>\n      </div>\n      <p class=\"footer-meta\"><a class=\"text-link\" href=\"mailto:122880509@qq.com\">122880509@qq.com</a><br>&copy; 2026 Kaixin Kang</p>\n    </div>\n  </footer>"
+      },
+      "source": {
+        "file": "index.html",
+        "sha256": "23495ca91017977add79374800a2c7bfa373415491ca11191d9e7c59f99e1957",
+        "visibleText": "跳转到主要内容\n\nKAIXIN KANG\n\n作品\n关于我\n简历\nGitHub\nLinkedIn\n联系\n\n技术美术\n程序化工具 · 生产管线 · 实时制作\n我是一名技术美术，专注于程序化工具、AI 辅助资产管线与实时制作工作流。\n公共艺术与空间设计的学习背景，让我更关注 Unreal Engine 5 工具开发、Blender Python 自动化、美术可用的参数控制，以及面向实际制作的技术文档。\n网易互娱 ArtSpark 实习生 · 技术美术 / AI 管线 · 2026 年 8 月至今\n浏览作品\n查看简历\nGitHub\n联系我\n\n精选作品\n通过工具、场景与交互原型，将美术创意转化为可重复使用的实时制作流程。\n项目涵盖 WORLDIR 世界模型场景编译、MATE 材质工具、参考驱动的赛道重建、AI 辅助资产制作与实时交互系统。\n\n01 / 空间智能 · 研究与工程原型\nWORLDIR — 世界模型辅助场景编译\n探索将世界模型输出转为结构化、可追溯、可编辑的三维场景。围绕空间查询、场景编译与资产拟合开展实验，明确区分观测证据、未知区域与设计推断。部分流程已实现，通用架构持续开发中。\n世界模型空间重建Scene GraphPythonBlenderUnreal Engine 5\n查看中文项目详情\n\n02 / 核心项目 · 个人工具原型\nMATE — AI 材质分析与程序化做旧\n我开发的桌面材质工具，将多视角 AI 分析、人工审核、区域绑定与可编辑效果栈连接起来，让已有 3D 资产的表面变化可以继续检查、调整和比较。\nElectron\nTypeScript\nThree.js\nAI 辅助工作流\n材质工具\n查看项目\n\n03 / 工具开发\n赛道重建工具 — Track Assembly Tool\n从参考缩略图出发，利用 AI 分析生成布局数据，再通过 Unreal Editor Python、Spline 分析与 HISM 搭建赛道资产。用可调规则与区域手动覆盖，保留美术对布局和排列的控制。\nUnreal Engine 5\nEditor Python\nSpline 分析\nHISM\n参考驱动重建\n查看项目\n\n04 / AI 辅助建模 · 两个案例\n面子果实与 AI 资产生产管线\n生成前，用“面子果实”分析参考图结构，规划可解释的三角面预算；生成后，通过原有资产管线进行模块化拆分、Blender 修复与 Unreal Engine 验证。两个案例共同探索 AI 建模的制作可用性。\n几何预算规划\nAI 结构分析\n资产生产管线\nBlender\nUnreal Engine 5\n查看两个案例\n\n05 / 交互原型\nAI NPC 交互原型\n基于 Unreal Engine 5 的交互原型，整合距离检测、玩家输入切换、对话界面、外部 API 通信、响应解析与连续对话记录。\nUnreal Engine 5\n蓝图\n用户界面\nAPI 集成\n交互原型\n查看项目\n\n技术能力\n围绕 AI 图像工作流、工具开发与三维资产落地，在个人项目和实习中持续积累制作经验。\n\n01\nAI 图像与工作流\nStable Diffusion · 2023 年起\nComfyUI 工作流搭建与调试\nKrea2 + LoRA 图生图\nPrompt 设计与风格控制\n参考图保持、条件控制与采样\n\n02\n工具与管线开发\nUE Editor Python 工具开发\nSpline 分析与 HISM 批量布置\nJSON 结构化数据与 API 集成\nElectron / React / Three.js\nAI 辅助开发与参数化工具设计\n\n03\n三维资产与实时引擎\nTripo 建模与资产拆分\nBlender 资产优化\nUE5 场景搭建与资产验证\n基础蓝图交互与 NPC 原型\nPhotoshop 与 AI 图像创作\n\n04\n验证与制作协作\n资产健康检查与 UV 预检\n服务状态、日志与回归验证\n环绕采集与 3DGS 流程验证\n技术文档、测试记录与资源管理\n英文技术资料阅读\n\n关于我\n我是康凯鑫，四川美术学院公共艺术专业本科在读，专注于 AI 辅助资产生产与技术美术工具开发。我希望把美术制作中的具体需求，转化为可以操作、检查和反复调整的工具。\n自 2023 年起，我使用 Stable Diffusion 开展小说插画、角色设计与定制插画实践，积累 Prompt 设计和风格控制经验。现在，我将这些探索延伸到三维资产，从 AI 概念生成、Tripo 建模、Blender 拆分优化，一直推进到 UE5 场景验证。\n2026 年 8 月起，我在网易互娱 ArtSpark 实习，方向为技术美术与 AI 管线，参与多模态 AI 工作流画布制作与调试、ComfyUI 图生图流程优化，以及卡通赛道和 AI 资产落地实践；同时开发 UE Editor Python 环绕采集工具，用于 3DGS 流程验证。个人项目中，我通过 MATE、赛道重建工具与面子果实，继续探索材质控制、程序化搭建和几何预算规划。\n教育背景\n四川美术学院\n公共艺术专业 · 本科在读 · 2023–2027\n主修方向：公共艺术设计、空间艺术设计、数字艺术表达\n预计 2027 年毕业\n求职意向\n寻求自 2027 年起的技术美术（AI 管线方向）相关岗位，关注 AI 辅助资产生产、工具与工作流开发。\n\n工作之外\n健身、网球、旅行，还有极限运动。\n\n健身\n\n网球\n\n旅行\n\n极限运动\n\n从打网球，到创办并运营大学网球社。\n让热爱成为生活的一部分。\n点击照片查看原图\n暂停滚动\n\n联系\n中国 · 重庆\n122880509@qq.com\nGitHub\n简历\nLinkedIn\nLINKEDIN_URL_HERE\n\nKaixin Kang\n技术美术 · 中国重庆\n122880509@qq.com\n© 2026 Kaixin Kang"
+      },
+      "header": {
+        "wordmark": {
+          "text": "KAIXIN KANG",
+          "class": "wordmark",
+          "href": "index.html",
+          "aria-label": "Kaixin Kang 首页"
+        },
+        "navigationLinks": [
+          {
+            "text": "作品",
+            "href": "#work"
+          },
+          {
+            "text": "关于我",
+            "href": "#about"
+          },
+          {
+            "text": "简历",
+            "href": "resume-source.html"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/K-k-ing",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "#linkedin"
+          },
+          {
+            "text": "联系",
+            "href": "#contact"
+          }
+        ],
+        "navToggle": {
+          "class": "nav-toggle",
+          "type": "button",
+          "aria-label": "展开导航",
+          "aria-expanded": "false",
+          "aria-controls": "site-navigation",
+          "data-nav-toggle": ""
+        },
+        "html": "<header class=\"site-header\">\n    <div class=\"header-inner\">\n      <a class=\"wordmark\" href=\"index.html\" aria-label=\"Kaixin Kang 首页\">KAIXIN KANG</a>\n      <button class=\"nav-toggle\" type=\"button\" aria-label=\"展开导航\" aria-expanded=\"false\" aria-controls=\"site-navigation\" data-nav-toggle>\n        <span></span>\n        <span></span>\n      </button>\n      <nav class=\"site-nav\" id=\"site-navigation\" aria-label=\"主导航\" data-site-nav>\n        <a href=\"#work\">作品</a>\n        <a href=\"#about\">关于我</a>\n        <a href=\"resume-source.html\">简历</a>\n        <a href=\"https://github.com/K-k-ing\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>\n        <a href=\"#linkedin\">LinkedIn</a>\n        <a href=\"#contact\">联系</a>\n      </nav>\n    </div>\n  </header>"
+      },
+      "skipLink": {
+        "text": "跳转到主要内容",
+        "href": "#main",
+        "html": "<a class=\"skip-link\" href=\"#main\">跳转到主要内容</a>"
+      },
+      "experience": {
+        "heading": "实习经历",
+        "entries": [
+          {
+            "organization": "网易互娱 ArtSpark",
+            "role": "实习生（技术美术 + AI 管线方向）",
+            "period": "2026.08–2026.10",
+            "responsibilities": [
+              "多模态 AI 工作流画布：参与制作与调试多模态 AI 工作流画布，目前稳定用户超过 200，每周以两位数稳定新增用户。",
+              "AI 工作流：搭建并优化 ComfyUI 中 Krea2 + LoRA 图生图流程，研究参考图保持、条件控制与高级采样，整理测试记录及工作流文档。",
+              "场景与采集：参与卡通赛道关卡与 AI 资产落地实践；开发 UE Editor Python 环绕采集工具，支持轨迹规划、采集校验及图像序列输出，用于 3DGS 流程验证。",
+              "AI 工具测评：参与 GPT-6 Astra、World Labs Atlas、DeepSeek Harness 等前沿 AI 工具测评。",
+              "资产生成支持：参与支援其他工作室的资产生成，如《梦幻西游》《天下》等。"
+            ],
+            "links": [],
+            "html": "<article class=\"resume-entry\">\n        <div class=\"entry-heading\">\n          <div><h3>网易互娱 ArtSpark</h3><p>实习生（技术美术 + AI 管线方向）</p></div>\n          <p>2026.08–至今</p>\n        </div>\n        <ul>\n          <li><strong>多模态 AI 工作流画布：</strong>参与制作与调试多模态 AI 工作流画布，目前稳定用户超过 200，每周以两位数稳定新增用户。</li>\n          <li><strong>AI 工作流：</strong>搭建并优化 ComfyUI 中 Krea2 + LoRA 图生图流程，研究参考图保持、条件控制与高级采样，整理测试记录及工作流文档。</li>\n          <li><strong>场景与采集：</strong>参与卡通赛道关卡与 AI 资产落地实践；开发 UE Editor Python 环绕采集工具，支持轨迹规划、采集校验及图像序列输出，用于 3DGS 流程验证。</li>\n          <li><strong>AI 工具测评：</strong>参与 GPT-6 Astra、World Labs Atlas、DeepSeek Harness 等前沿 AI 工具测评。</li>\n          <li><strong>资产生成支持：</strong>参与支援其他工作室的资产生成，如《梦幻西游》《天下》等。</li>\n        </ul>\n      </article>",
+            "source": {
+              "file": "resume-source.html",
+              "section": "experience-title",
+              "line": 44
+            }
+          }
+        ]
+      },
+      "resume": {
+        "pageUrl": "resume-source.html",
+        "actions": [
+          {
+            "text": "返回作品集",
+            "href": "index.html#about"
+          },
+          {
+            "text": "下载中文 PDF",
+            "href": "assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf",
+            "download": ""
+          },
+          {
+            "text": "查看原版 PDF（2 页）",
+            "href": "assets/resume/Kaixin_Kang_Technical_Artist_Resume.pdf",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          {
+            "text": "下载 Word 原件",
+            "href": "assets/resume/Kaixin_Kang_Technical_Artist_Resume.docx",
+            "download": ""
+          }
+        ]
+      }
+    }
+  }
+}

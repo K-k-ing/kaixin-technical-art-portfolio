@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "categoryIds": [
+    "spatial-ai",
+    "technical-art",
+    "tools",
+    "interactive"
+  ],
+  "metadataNote": "Category IDs and featured/rank are layout organization metadata. Localized project titles, summaries, status labels, technology tags, and links are preserved from the original main-page cards. Status is the original card category/index text, not a new implementation claim.",
+  "projects": [
+    {
+      "id": "worldir",
+      "slug": "worldir",
+      "sourceOrder": 1,
+      "rank": 1,
+      "featured": true,
+      "category": [
+        "spatial-ai",
+        "technical-art",
+        "tools"
+      ],
+      "locales": {
+        "en": {
+          "title": "WORLDIR — World Model Assisted Scene Compiler",
+          "subtitle": null,
+          "summary": "Exploring how world-model outputs can become structured, traceable, and editable 3D scenes. Spatial queries, scene compilation, and asset-fitting experiments distinguish observed evidence, unknown regions, and design inference. Selected workflows are implemented; the general architecture remains in development.",
+          "status": "01 / Spatial intelligence · Research and engineering prototype",
+          "techTags": [
+            "World models",
+            "Spatial reconstruction",
+            "Scene Graph",
+            "Python",
+            "Blender",
+            "Unreal Engine 5"
+          ],
+          "media": {
+            "src": "assets/projects/worldir/evidence/evidence-087.webp",
+            "alt": "WORLDIR's Blender corridor experiment with spatial reconstruction, wireframes, and a generated window candidate",
+            "width": 1581,
+            "height": 912
+          },
+          "projectUrl": "en/projects/worldir.html",
+          "ariaLabel": "View the WORLDIR world-model scene compiler project",
+          "ctaLabel": "View project and experiments",
+          "html": "<a class=\"project-link project-link-featured\" href=\"en/projects/worldir.html\" aria-label=\"View the WORLDIR world-model scene compiler project\">\n              <div class=\"project-media\" data-optional-media><img src=\"assets/projects/worldir/evidence/evidence-087.webp\" alt=\"WORLDIR's Blender corridor experiment with spatial reconstruction, wireframes, and a generated window candidate\" width=\"1581\" height=\"912\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">01 / Spatial intelligence · Research and engineering prototype</p>\n                <h3>WORLDIR — World Model Assisted Scene Compiler</h3>\n                <p>Exploring how world-model outputs can become structured, traceable, and editable 3D scenes. Spatial queries, scene compilation, and asset-fitting experiments distinguish observed evidence, unknown regions, and design inference. Selected workflows are implemented; the general architecture remains in development.</p>\n                <ul class=\"tags\" aria-label=\"Project tools\"><li>World models</li><li>Spatial reconstruction</li><li>Scene Graph</li><li>Python</li><li>Blender</li><li>Unreal Engine 5</li></ul>\n                <span class=\"text-link\">View project and experiments</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "en/index.html",
+            "line": 67
+          }
+        },
+        "zh": {
+          "title": "WORLDIR — 世界模型辅助场景编译",
+          "subtitle": null,
+          "summary": "探索将世界模型输出转为结构化、可追溯、可编辑的三维场景。围绕空间查询、场景编译与资产拟合开展实验，明确区分观测证据、未知区域与设计推断。部分流程已实现，通用架构持续开发中。",
+          "status": "01 / 空间智能 · 研究与工程原型",
+          "techTags": [
+            "世界模型",
+            "空间重建",
+            "Scene Graph",
+            "Python",
+            "Blender",
+            "Unreal Engine 5"
+          ],
+          "media": {
+            "src": "assets/projects/worldir/evidence/evidence-087.webp",
+            "alt": "WORLDIR 的真实 Blender 走廊实验：空间重建、线框与生成窗体候选资产",
+            "width": 1581,
+            "height": 912
+          },
+          "projectUrl": "projects/worldir.html",
+          "ariaLabel": "查看 WORLDIR 世界模型辅助场景编译项目",
+          "ctaLabel": "查看中文项目详情",
+          "html": "<a class=\"project-link project-link-featured\" href=\"projects/worldir.html\" aria-label=\"查看 WORLDIR 世界模型辅助场景编译项目\">\n              <div class=\"project-media\" data-optional-media>\n                <img src=\"assets/projects/worldir/evidence/evidence-087.webp\" alt=\"WORLDIR 的真实 Blender 走廊实验：空间重建、线框与生成窗体候选资产\" width=\"1581\" height=\"912\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n              </div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">01 / 空间智能 · 研究与工程原型</p>\n                <h3>WORLDIR — 世界模型辅助场景编译</h3>\n                <p>探索将世界模型输出转为结构化、可追溯、可编辑的三维场景。围绕空间查询、场景编译与资产拟合开展实验，明确区分观测证据、未知区域与设计推断。部分流程已实现，通用架构持续开发中。</p>\n                <ul class=\"tags\" aria-label=\"项目工具\">\n                  <li>世界模型</li><li>空间重建</li><li>Scene Graph</li><li>Python</li><li>Blender</li><li>Unreal Engine 5</li>\n                </ul>\n                <span class=\"text-link\">查看中文项目详情</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "index.html",
+            "line": 81
+          }
+        }
+      }
+    },
+    {
+      "id": "mate",
+      "slug": "mate",
+      "sourceOrder": 2,
+      "rank": 2,
+      "featured": true,
+      "category": [
+        "technical-art",
+        "tools"
+      ],
+      "locales": {
+        "en": {
+          "title": "MATE — AI Material Analysis & Procedural Weathering",
+          "subtitle": null,
+          "summary": "A desktop material tool I developed to connect multi-view AI analysis, human review, region binding, and an editable effect stack—so surface changes on existing 3D assets remain inspectable, adjustable, and comparable.",
+          "status": "02 / Core project · Personal tool prototype",
+          "techTags": [
+            "Electron",
+            "TypeScript",
+            "Three.js",
+            "AI-assisted workflows",
+            "Material tools"
+          ],
+          "media": {
+            "src": "assets/en/mate/screens/effect-stack.webp",
+            "alt": "An aircraft in MATE with an editable surface-effect stack",
+            "width": 2559,
+            "height": 1377
+          },
+          "projectUrl": "en/projects/mate.html",
+          "ariaLabel": "View the MATE project",
+          "ctaLabel": "View project",
+          "html": "<a class=\"project-link project-link-featured\" href=\"en/projects/mate.html\" aria-label=\"View the MATE project\">\n              <div class=\"project-media project-media-mate\" data-optional-media><img src=\"assets/en/mate/screens/effect-stack.webp\" alt=\"An aircraft in MATE with an editable surface-effect stack\" width=\"2559\" height=\"1377\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">02 / Core project · Personal tool prototype</p>\n                <h3>MATE — AI Material Analysis &amp; Procedural Weathering</h3>\n                <p>A desktop material tool I developed to connect multi-view AI analysis, human review, region binding, and an editable effect stack—so surface changes on existing 3D assets remain inspectable, adjustable, and comparable.</p>\n                <ul class=\"tags\" aria-label=\"Project tools\"><li>Electron</li><li>TypeScript</li><li>Three.js</li><li>AI-assisted workflows</li><li>Material tools</li></ul>\n                <span class=\"text-link\">View project</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "en/index.html",
+            "line": 79
+          }
+        },
+        "zh": {
+          "title": "MATE — AI 材质分析与程序化做旧",
+          "subtitle": null,
+          "summary": "我开发的桌面材质工具，将多视角 AI 分析、人工审核、区域绑定与可编辑效果栈连接起来，让已有 3D 资产的表面变化可以继续检查、调整和比较。",
+          "status": "02 / 核心项目 · 个人工具原型",
+          "techTags": [
+            "Electron",
+            "TypeScript",
+            "Three.js",
+            "AI 辅助工作流",
+            "材质工具"
+          ],
+          "media": {
+            "src": "assets/projects/mate/screens/material-profile.webp",
+            "alt": "MATE 中的模型表面处理预览与材质参数 Inspector",
+            "width": 2559,
+            "height": 1335
+          },
+          "projectUrl": "projects/mate.html",
+          "ariaLabel": "查看 MATE 材质工具项目",
+          "ctaLabel": "查看项目",
+          "html": "<a class=\"project-link project-link-featured\" href=\"projects/mate.html\" aria-label=\"查看 MATE 材质工具项目\">\n              <div class=\"project-media project-media-mate\" data-optional-media>\n                <img src=\"assets/projects/mate/screens/material-profile.webp\" alt=\"MATE 中的模型表面处理预览与材质参数 Inspector\" width=\"2559\" height=\"1335\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n              </div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">02 / 核心项目 · 个人工具原型</p>\n                <h3>MATE — AI 材质分析与程序化做旧</h3>\n                <p>我开发的桌面材质工具，将多视角 AI 分析、人工审核、区域绑定与可编辑效果栈连接起来，让已有 3D 资产的表面变化可以继续检查、调整和比较。</p>\n                <ul class=\"tags\" aria-label=\"项目工具\">\n                  <li>Electron</li>\n                  <li>TypeScript</li>\n                  <li>Three.js</li>\n                  <li>AI 辅助工作流</li>\n                  <li>材质工具</li>\n                </ul>\n                <span class=\"text-link\">查看项目</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "index.html",
+            "line": 98
+          }
+        }
+      }
+    },
+    {
+      "id": "asset-pipeline",
+      "slug": "ai-asset-pipeline",
+      "sourceOrder": 4,
+      "rank": 3,
+      "featured": true,
+      "category": [
+        "spatial-ai",
+        "technical-art",
+        "tools"
+      ],
+      "locales": {
+        "en": {
+          "title": "Face Value & AI Asset Production",
+          "subtitle": null,
+          "summary": "Before generation, Face Value analyzes a reference image to propose an explainable triangle budget. After generation, my asset pipeline uses modular breakdown, Blender cleanup, and Unreal Engine validation. Together, the two cases explore what makes AI-generated models usable in real-time prototypes.",
+          "status": "04 / AI-assisted modeling · Two case studies",
+          "techTags": [
+            "Geometry budgets",
+            "AI structure analysis",
+            "Asset pipelines",
+            "Blender",
+            "Unreal Engine 5"
+          ],
+          "media": {
+            "src": "assets/projects/geometry-planner/screens/planner-analysis-result.png",
+            "alt": "Face Value's bilingual analysis interface with a boot reference, three triangle budgets, and geometry-versus-texture guidance",
+            "width": 1519,
+            "height": 935
+          },
+          "projectUrl": "en/projects/ai-asset-pipeline.html",
+          "ariaLabel": "View Face Value and the AI-assisted asset pipeline",
+          "ctaLabel": "View both case studies",
+          "html": "<a class=\"project-link\" href=\"en/projects/ai-asset-pipeline.html\" aria-label=\"View Face Value and the AI-assisted asset pipeline\">\n              <div class=\"project-media project-media-geometry\" data-optional-media><img src=\"assets/projects/geometry-planner/screens/planner-analysis-result.png\" alt=\"Face Value's bilingual analysis interface with a boot reference, three triangle budgets, and geometry-versus-texture guidance\" width=\"1519\" height=\"935\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">04 / AI-assisted modeling · Two case studies</p><h3>Face Value &amp; AI Asset Production</h3>\n                <p>Before generation, Face Value analyzes a reference image to propose an explainable triangle budget. After generation, my asset pipeline uses modular breakdown, Blender cleanup, and Unreal Engine validation. Together, the two cases explore what makes AI-generated models usable in real-time prototypes.</p>\n                <ul class=\"tags\" aria-label=\"Project tools\"><li>Geometry budgets</li><li>AI structure analysis</li><li>Asset pipelines</li><li>Blender</li><li>Unreal Engine 5</li></ul>\n                <span class=\"text-link\">View both case studies</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "en/index.html",
+            "line": 102
+          }
+        },
+        "zh": {
+          "title": "面子果实与 AI 资产生产管线",
+          "subtitle": null,
+          "summary": "生成前，用“面子果实”分析参考图结构，规划可解释的三角面预算；生成后，通过原有资产管线进行模块化拆分、Blender 修复与 Unreal Engine 验证。两个案例共同探索 AI 建模的制作可用性。",
+          "status": "04 / AI 辅助建模 · 两个案例",
+          "techTags": [
+            "几何预算规划",
+            "AI 结构分析",
+            "资产生产管线",
+            "Blender",
+            "Unreal Engine 5"
+          ],
+          "media": {
+            "src": "assets/projects/geometry-planner/screens/planner-analysis-result.png",
+            "alt": "面子果实的真实分析界面，展示鞋子参考图、三档三角面预算与几何贴图分工",
+            "width": 1519,
+            "height": 935
+          },
+          "projectUrl": "projects/ai-asset-pipeline.html",
+          "ariaLabel": "查看 AI 辅助建模：面子果实与三维资产生产管线",
+          "ctaLabel": "查看两个案例",
+          "html": "<a class=\"project-link\" href=\"projects/ai-asset-pipeline.html\" aria-label=\"查看 AI 辅助建模：面子果实与三维资产生产管线\">\n              <div class=\"project-media project-media-geometry\" data-optional-media>\n                <img src=\"assets/projects/geometry-planner/screens/planner-analysis-result.png\" alt=\"面子果实的真实分析界面，展示鞋子参考图、三档三角面预算与几何贴图分工\" width=\"1519\" height=\"935\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n              </div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">04 / AI 辅助建模 · 两个案例</p>\n                <h3>面子果实与 AI 资产生产管线</h3>\n                <p>生成前，用“面子果实”分析参考图结构，规划可解释的三角面预算；生成后，通过原有资产管线进行模块化拆分、Blender 修复与 Unreal Engine 验证。两个案例共同探索 AI 建模的制作可用性。</p>\n                <ul class=\"tags\" aria-label=\"项目工具\">\n                  <li>几何预算规划</li>\n                  <li>AI 结构分析</li>\n                  <li>资产生产管线</li>\n                  <li>Blender</li>\n                  <li>Unreal Engine 5</li>\n                </ul>\n                <span class=\"text-link\">查看两个案例</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "index.html",
+            "line": 140
+          }
+        }
+      }
+    },
+    {
+      "id": "track-assembly",
+      "slug": "track-assembly",
+      "sourceOrder": 3,
+      "rank": 4,
+      "featured": false,
+      "category": [
+        "technical-art",
+        "tools"
+      ],
+      "locales": {
+        "en": {
+          "title": "Track Assembly Tool",
+          "subtitle": null,
+          "summary": "AI analysis turns a reference thumbnail into layout data. Unreal Editor Python, Spline analysis, and HISM then assemble the track assets, with adjustable rules and manual region overrides that keep layout decisions in the artist's hands.",
+          "status": "03 / Tool development",
+          "techTags": [
+            "Unreal Engine 5",
+            "Editor Python",
+            "Spline analysis",
+            "HISM",
+            "Reference-driven assembly"
+          ],
+          "media": {
+            "src": "assets/projects/track-assembly/screens/track-overview.webp",
+            "alt": "A reconstructed track with barriers and trackside props in Unreal Engine",
+            "width": 864,
+            "height": 575
+          },
+          "projectUrl": "en/projects/track-assembly.html",
+          "ariaLabel": "View the Track Assembly Tool project",
+          "ctaLabel": "View project",
+          "html": "<a class=\"project-link\" href=\"en/projects/track-assembly.html\" aria-label=\"View the Track Assembly Tool project\">\n              <div class=\"project-media\" data-optional-media><img src=\"assets/projects/track-assembly/screens/track-overview.webp\" alt=\"A reconstructed track with barriers and trackside props in Unreal Engine\" width=\"864\" height=\"575\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">03 / Tool development</p><h3>Track Assembly Tool</h3>\n                <p>AI analysis turns a reference thumbnail into layout data. Unreal Editor Python, Spline analysis, and HISM then assemble the track assets, with adjustable rules and manual region overrides that keep layout decisions in the artist's hands.</p>\n                <ul class=\"tags\" aria-label=\"Project tools\"><li>Unreal Engine 5</li><li>Editor Python</li><li>Spline analysis</li><li>HISM</li><li>Reference-driven assembly</li></ul>\n                <span class=\"text-link\">View project</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "en/index.html",
+            "line": 91
+          }
+        },
+        "zh": {
+          "title": "赛道重建工具 — Track Assembly Tool",
+          "subtitle": null,
+          "summary": "从参考缩略图出发，利用 AI 分析生成布局数据，再通过 Unreal Editor Python、Spline 分析与 HISM 搭建赛道资产。用可调规则与区域手动覆盖，保留美术对布局和排列的控制。",
+          "status": "03 / 工具开发",
+          "techTags": [
+            "Unreal Engine 5",
+            "Editor Python",
+            "Spline 分析",
+            "HISM",
+            "参考驱动重建"
+          ],
+          "media": {
+            "src": "assets/projects/track-assembly/screens/track-overview.webp",
+            "alt": "Unreal Engine 中重建的赛道、护栏与路侧装饰",
+            "width": 864,
+            "height": 575
+          },
+          "projectUrl": "projects/track-assembly.html",
+          "ariaLabel": "查看赛道重建工具项目",
+          "ctaLabel": "查看项目",
+          "html": "<a class=\"project-link\" href=\"projects/track-assembly.html\" aria-label=\"查看赛道重建工具项目\">\n              <div class=\"project-media\" data-optional-media>\n                <img src=\"assets/projects/track-assembly/screens/track-overview.webp\" alt=\"Unreal Engine 中重建的赛道、护栏与路侧装饰\" width=\"864\" height=\"575\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n              </div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">03 / 工具开发</p>\n                <h3>赛道重建工具 — Track Assembly Tool</h3>\n                <p>从参考缩略图出发，利用 AI 分析生成布局数据，再通过 Unreal Editor Python、Spline 分析与 HISM 搭建赛道资产。用可调规则与区域手动覆盖，保留美术对布局和排列的控制。</p>\n                <ul class=\"tags\" aria-label=\"项目工具\">\n                  <li>Unreal Engine 5</li>\n                  <li>Editor Python</li>\n                  <li>Spline 分析</li>\n                  <li>HISM</li>\n                  <li>参考驱动重建</li>\n                </ul>\n                <span class=\"text-link\">查看项目</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "index.html",
+            "line": 119
+          }
+        }
+      }
+    },
+    {
+      "id": "ai-npc",
+      "slug": "ai-npc",
+      "sourceOrder": 5,
+      "rank": 5,
+      "featured": false,
+      "category": [
+        "technical-art",
+        "interactive"
+      ],
+      "locales": {
+        "en": {
+          "title": "AI NPC Interaction Prototype",
+          "subtitle": null,
+          "summary": "An Unreal Engine 5 prototype connecting proximity detection, player input modes, a dialogue interface, external API requests, response parsing, and conversation history.",
+          "status": "05 / Interactive prototype",
+          "techTags": [
+            "Unreal Engine 5",
+            "Blueprints",
+            "UI",
+            "API integration",
+            "Interaction prototyping"
+          ],
+          "media": {
+            "src": "assets/projects/ai-npc/screens/dialogue-hero.png",
+            "alt": "An AI NPC dialogue interface running in an Unreal Engine forest scene",
+            "width": 1681,
+            "height": 936
+          },
+          "projectUrl": "en/projects/ai-npc.html",
+          "ariaLabel": "View the AI NPC interaction prototype",
+          "ctaLabel": "View project",
+          "html": "<a class=\"project-link\" href=\"en/projects/ai-npc.html\" aria-label=\"View the AI NPC interaction prototype\">\n              <div class=\"project-media\" data-optional-media><img src=\"assets/projects/ai-npc/screens/dialogue-hero.png\" alt=\"An AI NPC dialogue interface running in an Unreal Engine forest scene\" width=\"1681\" height=\"936\" loading=\"lazy\" decoding=\"async\" data-hide-on-error></div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">05 / Interactive prototype</p><h3>AI NPC Interaction Prototype</h3>\n                <p>An Unreal Engine 5 prototype connecting proximity detection, player input modes, a dialogue interface, external API requests, response parsing, and conversation history.</p>\n                <ul class=\"tags\" aria-label=\"Project tools\"><li>Unreal Engine 5</li><li>Blueprints</li><li>UI</li><li>API integration</li><li>Interaction prototyping</li></ul>\n                <span class=\"text-link\">View project</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "en/index.html",
+            "line": 113
+          }
+        },
+        "zh": {
+          "title": "AI NPC 交互原型",
+          "subtitle": null,
+          "summary": "基于 Unreal Engine 5 的交互原型，整合距离检测、玩家输入切换、对话界面、外部 API 通信、响应解析与连续对话记录。",
+          "status": "05 / 交互原型",
+          "techTags": [
+            "Unreal Engine 5",
+            "蓝图",
+            "用户界面",
+            "API 集成",
+            "交互原型"
+          ],
+          "media": {
+            "src": "assets/projects/ai-npc/screens/dialogue-hero.png",
+            "alt": "在 Unreal Engine 森林场景中运行的 AI NPC 对话界面",
+            "width": 1681,
+            "height": 936
+          },
+          "projectUrl": "projects/ai-npc.html",
+          "ariaLabel": "查看 AI NPC 交互原型",
+          "ctaLabel": "查看项目",
+          "html": "<a class=\"project-link\" href=\"projects/ai-npc.html\" aria-label=\"查看 AI NPC 交互原型\">\n              <div class=\"project-media\" data-optional-media>\n                <img src=\"assets/projects/ai-npc/screens/dialogue-hero.png\" alt=\"在 Unreal Engine 森林场景中运行的 AI NPC 对话界面\" width=\"1681\" height=\"936\" loading=\"lazy\" decoding=\"async\" data-hide-on-error>\n              </div>\n              <div class=\"project-copy\">\n                <p class=\"project-index\">05 / 交互原型</p>\n                <h3>AI NPC 交互原型</h3>\n                <p>基于 Unreal Engine 5 的交互原型，整合距离检测、玩家输入切换、对话界面、外部 API 通信、响应解析与连续对话记录。</p>\n                <ul class=\"tags\" aria-label=\"项目工具\">\n                  <li>Unreal Engine 5</li>\n                  <li>蓝图</li>\n                  <li>用户界面</li>\n                  <li>API 集成</li>\n                  <li>交互原型</li>\n                </ul>\n                <span class=\"text-link\">查看项目</span>\n              </div>\n            </a>",
+          "source": {
+            "file": "index.html",
+            "line": 161
+          }
+        }
+      }
+    }
+  ]
+}

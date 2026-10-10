@@ -1,0 +1,18 @@
+/* Portfolio Main tokens. Opt-in only; existing case studies remain isolated. */
+:root {
+  --kp-bg: #0c0f12;
+  --kp-surface: #13181c;
+  --kp-surface-hover: #191f24;
+  --kp-text: #f3f5f5;
+  --kp-muted: #a9b1b7;
+  --kp-accent: #75d5e2;
+  --kp-border: #2b3339;
+  --kp-font: 'Segoe UI', 'Helvetica Neue', Arial, 'Microsoft YaHei', sans-serif;
+  --kp-mono: 'Consolas', 'SFMono-Regular', monospace;
+  --kp-max: 1440px;
+  --kp-gutter: clamp(24px, 5vw, 80px);
+  --kp-section: clamp(80px, 9vw, 144px);
+  --kp-radius: 8px;
+  --kp-duration: 220ms;
+  --kp-ease: cubic-bezier(.2,.7,.2,1);
+}

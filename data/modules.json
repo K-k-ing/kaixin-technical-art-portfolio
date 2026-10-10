@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "homepageNamespace": "kp-",
+  "modules": [
+    {
+      "id": "playground",
+      "namespace": "playground-",
+      "status": "coming-soon",
+      "href": null,
+      "enabled": false
+    },
+    {
+      "id": "worldir-interactive",
+      "namespace": "worldir-",
+      "status": "coming-soon",
+      "href": null,
+      "enabled": false
+    }
+  ]
+}
