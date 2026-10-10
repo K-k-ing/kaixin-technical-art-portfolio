@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "software",
+      "heading": { "en": "Software & AI tools", "zh": "软件与 AI 工具" },
+      "items": [
+        { "name": "Unreal Engine 5", "icon": "unrealengine" },
+        { "name": "Blender", "icon": "blender" },
+        { "name": "Photoshop", "icon": "photoshop" },
+        { "name": "ComfyUI", "icon": "comfyui" },
+        { "name": "Tripo", "icon": "tripo" },
+        { "name": "Krea", "icon": "krea" }
+      ]
+    },
+    {
+      "id": "development",
+      "heading": { "en": "Code & frameworks", "zh": "编程与开发框架" },
+      "items": [
+        { "name": "Python", "icon": "python" },
+        { "name": "Blueprint", "icon": "workflow", "note": { "en": "Basic interactions", "zh": "基础交互" } },
+        { "name": "JSON", "icon": "json" },
+        { "name": "React", "icon": "react" },
+        { "name": "Electron", "icon": "electron" },
+        { "name": "Three.js", "icon": "threedotjs" }
+      ]
+    }
+  ],
+  "capabilitiesHeading": { "en": "Production skills", "zh": "制作与工程能力" },
+  "detailsLabel": { "en": "Explore my hands-on experience", "zh": "展开查看具体实践经验" },
+  "capabilities": [
+    { "icon": "wrench", "label": { "en": "Tool development", "zh": "工具开发" } },
+    { "icon": "image", "label": { "en": "AI image workflows", "zh": "AI 图像工作流" } },
+    { "icon": "box", "label": { "en": "Generative 3D assets", "zh": "生成式三维资产" } },
+    { "icon": "scan", "label": { "en": "Asset optimization", "zh": "资产优化" } },
+    { "icon": "route", "label": { "en": "Procedural assembly", "zh": "程序化搭建" } },
+    { "icon": "cable", "label": { "en": "API integration", "zh": "API 集成" } },
+    { "icon": "boxes", "label": { "en": "Scene assembly", "zh": "场景搭建" } },
+    { "icon": "scan-line", "label": { "en": "Asset / UV checks", "zh": "资产与 UV 检查" } },
+    { "icon": "camera", "label": { "en": "Camera & 3DGS workflows", "zh": "相机与 3DGS 流程" } },
+    { "icon": "layers", "label": { "en": "Material workflows", "zh": "材质工作流" } },
+    { "icon": "file-text", "label": { "en": "Technical documentation", "zh": "技术文档" } },
+    { "icon": "list-checks", "label": { "en": "Regression validation", "zh": "回归验证" } }
+  ]
+}
